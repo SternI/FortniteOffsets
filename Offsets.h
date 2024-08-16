@@ -5,8 +5,8 @@ namespace Offsets {
 
     uintptr_t Mesh = 0x310; // ACharacter->Mesh
     uintptr_t BoneArray = 0x570;
-    uintptr_t LastSubmitTime = 0x328;
-    uintptr_t LastRenderTime = 0x330;
+    uintptr_t LastSubmitTime = 0x2E0;
+    uintptr_t LastRenderTime = 0x2E8;
     uintptr_t TeamIndex = 0x11d1;
     uintptr_t ProjectileSpeed = 0x1d08;
     uintptr_t ProjectileGravity = 0x1d0c;
