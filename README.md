@@ -8,7 +8,7 @@ Latest Version: **``++Fortnite+Release-31.00-CL-35447195-Windows``**
 ## New Offsets
 ### ++Fortnite+Release-31.00-CL-35447195-Windows
 - UWorld: ``0x11ECD148``
-- GObjects: ``Dumping..``
-- GNames: ``Dumping..``
+- GObjects: ``0x11EA4EE0``
+- GNames: ``0x120A7A43``
 
 ### If anyone going to post it somewhere Please Credit!
