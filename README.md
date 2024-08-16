@@ -14,5 +14,6 @@ Latest Version: **``++Fortnite+Release-31.00-CL-35447195-Windows``**
 - BoneArray: ``0x570``
 - LastSubmitTime: ``0x328``
 - LastRenderTime: ``0x330``
+- TeamIndex: ``0x11d1``
 
 ### If anyone going to post it somewhere Please Credit!
