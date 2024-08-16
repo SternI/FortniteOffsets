@@ -10,4 +10,5 @@ namespace Offsets {
     uintptr_t TeamIndex = 0x11d1;
     uintptr_t ProjectileSpeed = 0x1d08;
     uintptr_t ProjectileGravity = 0x1d0c;
+    uintptr_t PlayerName = 0xA68;
 }
