@@ -15,5 +15,7 @@ Latest Version: **``++Fortnite+Release-31.00-CL-35447195-Windows``**
 - LastSubmitTime: ``0x328``
 - LastRenderTime: ``0x330``
 - TeamIndex: ``0x11d1``
+- ProjectileSpeed: ``0x1d08``
+- ProjectileGravity: ``0x1d0c``
 
 ### If anyone going to post it somewhere Please Credit!
