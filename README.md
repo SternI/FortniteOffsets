@@ -11,6 +11,7 @@ Latest Version: **``++Fortnite+Release-31.10-CL-35815136-Windows``**
 - TeamIndex: ``0x1201``
 - ProjectileSpeed: ``0x1D20``
 - ProjectileGravity: ``0x1D24``
+- PlayerName: ``0xA98``
 ### ++Fortnite+Release-31.00-CL-35447195-Windows
 - UWorld: ``0x11ECD148``
 - GObjects: ``0x11EA4EE0``
