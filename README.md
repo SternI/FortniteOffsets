@@ -7,8 +7,7 @@ Latest Version: **``++Fortnite+Release-31.10-CL-35815136-Windows``**
 ##### **More Offsets Will Be Dumped After I Completely Finish My Dumper.**
 ## New Offsets
 ### ++Fortnite+Release-31.10-CL-35815136-Windows
-- va_text: ``0``
-- UWorld: ``0x11FD4D78``
+- UWorld: ``0x11FD3D78``
 ### ++Fortnite+Release-31.00-CL-35447195-Windows
 - UWorld: ``0x11ECD148``
 - GObjects: ``0x11EA4EE0``
