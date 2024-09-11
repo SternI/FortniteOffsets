@@ -8,6 +8,8 @@ Latest Version: **``++Fortnite+Release-31.10-CL-35815136-Windows``**
 ## New Offsets
 ### ++Fortnite+Release-31.10-CL-35815136-Windows
 - UWorld: ``0x11FD3D78``
+- GObjects: ``0x11FABA60``
+- GNames: ``0x121B1400``
 - TeamIndex: ``0x1201``
 - ProjectileSpeed: ``0x1D20``
 - ProjectileGravity: ``0x1D24``
