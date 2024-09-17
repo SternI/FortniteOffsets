@@ -14,6 +14,7 @@ Latest Version: **``++Fortnite+Release-31.20-CL-36253989-Windows``**
 - ProjectileSpeed: ``0x1E40``
 - ProjectileGravity: ``0x1E44``
 - PlayerName: ``0xAA8``
+- HabaneroComponent: ``0x9E8``
 ### ++Fortnite+Release-31.10-CL-35815136-Windows
 - UWorld: ``0x11FD3D78``
 - GObjects: ``0x11FABA60``
