@@ -9,7 +9,7 @@ Latest Version: **``++Fortnite+Release-31.20-CL-36253989-Windows``**
 ### ++Fortnite+Release-31.20-CL-36253989-Windows
 - UWorld: ``0x1215C178``
 - GObjects: ``0x12133D70``
-- GNames: ``0x1233C1A0``
+- GNames: ``0x1233C1C0``
 - TeamIndex: ``0x1211``
 - ProjectileSpeed: ``0x1E40``
 - ProjectileGravity: ``0x1E44``
