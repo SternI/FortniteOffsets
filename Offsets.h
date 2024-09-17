@@ -1,7 +1,7 @@
 namespace Offsets {
     uintptr_t UWorld = 0x1215C178;
     uintptr_t GObjects = 0x12133D70;
-    uintptr_t GNames = 0x1233C1A0;
+    uintptr_t GNames = 0x1233C1C0;
 
     uintptr_t Mesh = 0x310; // ACharacter->Mesh
     uintptr_t BoneArray = 0x570;
