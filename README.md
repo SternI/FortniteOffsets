@@ -1,11 +1,22 @@
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=SternI&label=Repo%20views&color=0e75b6&style=flat" alt="Repo Views" /> </p>
 
+### https://discord.gg/pnEvzVgdn9
+
 # Fortnite Offsets
 
 #### Latest Fortnite Offsets Always Updated.
-Latest Version: **``++Fortnite+Release-31.20-CL-36253989-Windows``**
+Latest Version: **``++Fortnite+Release-31.30-CL-36600465-Windows``**
 ##### **More Offsets Will Be Dumped After I Completely Finish My Dumper.**
+
 ## New Offsets
+### ++Fortnite+Release-31.30-CL-36600465-Windows
+- UWorld: ``0x12300468``
+- GObjects: ``0x122D8000``
+- GNames: ``0x124DE7C0``
+- WeaponData: ``0x520``
+- ProjectileSpeed: ``0x1CC4`` | ``0x1F30``
+- ProjectileGravity: ``0x1F34``
+
 ### ++Fortnite+Release-31.20-CL-36253989-Windows
 - UWorld: ``0x1215C178``
 - GObjects: ``0x12133D70``
@@ -15,6 +26,7 @@ Latest Version: **``++Fortnite+Release-31.20-CL-36253989-Windows``**
 - ProjectileGravity: ``0x1E44``
 - PlayerName: ``0xAA8``
 - HabaneroComponent: ``0x9E8``
+
 ### ++Fortnite+Release-31.10-CL-35815136-Windows
 - UWorld: ``0x11FD3D78``
 - GObjects: ``0x11FABA60``
@@ -23,6 +35,7 @@ Latest Version: **``++Fortnite+Release-31.20-CL-36253989-Windows``**
 - ProjectileSpeed: ``0x1D20``
 - ProjectileGravity: ``0x1D24``
 - PlayerName: ``0xA98``
+
 ### ++Fortnite+Release-31.00-CL-35447195-Windows
 - UWorld: ``0x11ECD148``
 - GObjects: ``0x11EA4EE0``
