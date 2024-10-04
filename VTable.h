@@ -1,3 +1,3 @@
 namespace VTable {
-    int ProcessEvent = 0x69; // 105
+    int ProcessEvent = 0x4F; // 79
 }

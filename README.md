@@ -23,7 +23,7 @@ ProjectileGravity: 0x1F34
 
 ### VTable
 ```yaml
-ProcessEvent: 0x69
+ProcessEvent: 0x4F
 ```
 
 ## ++Fortnite+Release-31.20-CL-36253989-Windows
