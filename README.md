@@ -1,7 +1,5 @@
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=SternI&label=Repo%20views&color=0e75b6&style=flat" alt="Repo Views" /> </p>
 
-### https://discord.gg/pnEvzVgdn9
-
 # Fortnite Offsets
 
 #### Latest Fortnite Offsets Always Updated.
@@ -67,4 +65,4 @@ ProjectileGravity: 0x1d0c
 PlayerName: 0xA68
 ```
 
-### If anyone going to post it somewhere Please Credit!
+### If anyone going to post it somewhere Please Credit: https://discord.gg/pnEvzVgdn9 or just Stern
