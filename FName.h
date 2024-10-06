@@ -1,3 +1,4 @@
+// make sure your uworld is the same as the repo
 class FName {
 public:
     int ComparisonIndex;
