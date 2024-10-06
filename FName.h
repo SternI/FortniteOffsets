@@ -1,4 +1,3 @@
-// Make Sure Your UWorld Is The Same As This Repo
 class FName {
 public:
     int ComparisonIndex;
@@ -6,23 +5,18 @@ public:
     std::string ToString() {
         const int NAME_SIZE = 2048;
 
-        const unsigned int ChunkOffset = ComparisonIndex >> 16;
-        const unsigned short NameOffset = ComparisonIndex;
-
-        auto NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x124DE7C0 + 8 * ChunkOffset + 16)) + 2 * NameOffset;
+        auto NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x124DE7C0 + 8 * (ComparisonIndex >> 16) + 16)) + 2 * ((unsigned short)ComparisonIndex);
         auto Pool = DotMem::Read<uint16_t>(NamePoolChunk);
 
         if (Pool < 64) {
-            const int CompIndex = DotMem::Read<DWORD>(NamePoolChunk + 2);
-            const unsigned int _chunkOffset = CompIndex >> 16;
-            const unsigned short _nameOffset = CompIndex;
-            NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x124DE7C0 + 8 * _chunkOffset + 16)) + 2 * _nameOffset;
+            auto Index = DotMem::Read<int>(NamePoolChunk + 2);
+            NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x124DE7C0 + 8 * (Index >> 16) + 16)) + 2 * ((unsigned short)Index);
             Pool = DotMem::Read<uint16_t>(NamePoolChunk);
         }
 
-        const auto NameLength = Pool >> 6;
+        auto NameLength = min(Pool >> 6, NAME_SIZE);
         char NameBuffer[NAME_SIZE + 1] = { 0 };
-        Driver::ReadPhysical(reinterpret_cast<void*>(NamePoolChunk + 2), NameBuffer, NameLength < NAME_SIZE ? NameLength : NAME_SIZE);
+        Driver::ReadPhysical(PVOID(NamePoolChunk + 2), NameBuffer, NameLength);
 
         DecryptFName(NameBuffer, NameLength);
         return std::string(NameBuffer);
@@ -39,12 +33,10 @@ private:
         v4 = DotMem::Read<unsigned int>(va_text + 0x123DA2D8);
         v5 = (v4 << 8) | (v4 >> 8);
         v6 = v4 >> 2;
-        if (length)
-        {
+        if (length) {
             v7 = buffer;
             v8 = length;
-            do
-            {
+            do {
                 v5 += v6;
                 *v7++ ^= v5;
                 --v8;
