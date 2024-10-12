@@ -14,6 +14,7 @@ Latest Version: **``++Fortnite+Release-31.40-CL-36874825-Windows``**
 UWorld: 0x12300E58
 GObjects: 0x122D8A00
 GNames: 0x124E04C0
+TeamIndex: 0x1201
 ```
 
 ## ++Fortnite+Release-31.30-CL-36600465-Windows

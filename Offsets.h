@@ -7,7 +7,7 @@ namespace Offsets {
     uintptr_t BoneArray = 0x570;
     uintptr_t LastSubmitTime = 0x2E0;
     uintptr_t LastRenderTime = 0x2E8;
-    uintptr_t TeamIndex = 0x1211;
+    uintptr_t TeamIndex = 0x1201;
     uintptr_t WeaponData = 0x520;
     uintptr_t ProjectileSpeed = 0x1CC4; // AND 0x1F30
     uintptr_t ProjectileGravity = 0x1F34;
