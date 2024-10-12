@@ -6,12 +6,12 @@ public:
     std::string ToString() {
         const int NAME_SIZE = 2048;
 
-        auto NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x124DE7C0 + 8 * (ComparisonIndex >> 16) + 16)) + 2 * ((unsigned short)ComparisonIndex);
+        auto NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x124E04C0 + 8 * (ComparisonIndex >> 16) + 16)) + 2 * ((unsigned short)ComparisonIndex);
         auto Pool = DotMem::Read<uint16_t>(NamePoolChunk);
 
         if (Pool < 64) {
             auto Index = DotMem::Read<int>(NamePoolChunk + 2);
-            NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x124DE7C0 + 8 * (Index >> 16) + 16)) + 2 * ((unsigned short)Index);
+            NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x124E04C0 + 8 * (Index >> 16) + 16)) + 2 * ((unsigned short)Index);
             Pool = DotMem::Read<uint16_t>(NamePoolChunk);
         }
 
@@ -31,9 +31,9 @@ private:
         char* v7; // rcx
         __int64 v8; // rax
 
-        v4 = DotMem::Read<unsigned int>(va_text + 0x123DA2D8);
+        v4 = DotMem::Read<unsigned int>(va_text + 0x123DAF88);
         v5 = (v4 << 8) | (v4 >> 8);
-        v6 = v4 >> 2;
+        v6 = v4 >> 9;
         if (length) {
             v7 = buffer;
             v8 = length;
