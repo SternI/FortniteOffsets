@@ -6,6 +6,15 @@
 Latest Version: **``++Fortnite+Release-31.40-CL-37076506-Windows``**
 ##### **More Offsets Will Be Dumped After I Completely Finish My Dumper.**
 
+# Current Text Section (va_text) Method
+```cpp
+for (auto i = 0; i < 25; i++) {
+    if (DotMem::Read<__int32>(BaseAddress + (i * 0x1000) + 0x250) == 0x70F8600) {
+        va_text = BaseAddress + ((i + 1) * 0x1000);
+    }
+}
+```
+
 # Changes
 
 ## ++Fortnite+Release-31.40-CL-37076506-Windows
