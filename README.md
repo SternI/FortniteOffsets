@@ -8,8 +8,8 @@ Latest Version: **``++Fortnite+Release-31.41-CL-37324991-Windows``**
 
 # Current Text Section (va_text) Method
 ```cpp
-for (auto i = 0; i < 25; i++) {
-    if (DotMem::Read<__int32>(BaseAddress + (i * 0x1000) + 0x250) == 0x70F8600) {
+for (auto i = 0; i < 255; i++) {
+    if (DotMem::Read<__int32>(BaseAddress + (i * 0x1000)) == 0x905A4D) {
         va_text = BaseAddress + ((i + 1) * 0x1000);
     }
 }
