@@ -7,15 +7,17 @@ Latest Version: **``++Fortnite+Release-31.41-CL-37324991-Windows``**
 ##### **More Offsets Will Be Dumped After I Completely Finish My Dumper.**
 
 # Current Text Section (va_text) Method
-```cpp
-for (auto i = 0; i < 255; i++) {
-    if (DotMem::Read<__int32>(BaseAddress + (i * 0x1000)) == 0x905A4D) {
-        va_text = BaseAddress + ((i + 1) * 0x1000);
-    }
-}
-```
+### It is no longer needed, so Base + Offset
 
 # Changes
+
+## ++Fortnite+Release-31.41-CL-37324991-Windows (Base + Offset)
+### Offsets
+```yaml
+UWorld: 0x1221C738
+GObjects: 0x121F4380
+GNames: 0x123FBFC0
+```
 
 ## ++Fortnite+Release-31.41-CL-37324991-Windows
 ### Offsets

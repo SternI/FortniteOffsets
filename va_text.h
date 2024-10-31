@@ -1,3 +1,5 @@
+// NO NEED FOR ALL THIS NOW, SO JUST Base + Offset
+
 for (auto i = 0; i < FLT_MAX; i++) {
     va_text = BaseAddress + i * 0x1000; // va_text must be out
     auto UWorld = read<uintptr_t>(va_text + Offsets::UWorld);

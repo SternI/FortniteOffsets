@@ -8,13 +8,13 @@ public:
     {
         const int NAME_SIZE = 2048;
 
-        auto NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x123FAFC0 + 8 * (ComparisonIndex >> 16) + 16)) + 2 * ((unsigned short)ComparisonIndex);
+        auto NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x123FBFC0 + 8 * (ComparisonIndex >> 16) + 16)) + 2 * ((unsigned short)ComparisonIndex);
         auto Pool = DotMem::Read<uint16_t>(NamePoolChunk);
 
         if (Pool < 64)
         {
             auto Index = DotMem::Read<int>(NamePoolChunk + 2);
-            NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x124AE500 + 8 * (Index >> 16) + 16)) + 2 * ((unsigned short)Index);
+            NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x123FBFC0 + 8 * (Index >> 16) + 16)) + 2 * ((unsigned short)Index);
             Pool = DotMem::Read<uint16_t>(NamePoolChunk);
         }
 
