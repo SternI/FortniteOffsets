@@ -3,13 +3,21 @@
 # Fortnite Offsets
 
 #### Latest Fortnite Offsets Always Updated.
-Latest Version: **``++Fortnite+Release-31.41-CL-37324991-Windows``**
+Latest Version: **``++Fortnite+Release-32.00-CL-37505882-Windows``**
 ##### **More Offsets Will Be Dumped After I Completely Finish My Dumper.**
 
 # Current Text Section (va_text) Method
 ### It is no longer needed, so Base + Offset
 
 # Changes
+
+## ++Fortnite+Release-32.00-CL-37505882-Windows (Base + Offset)
+### Offsets
+```yaml
+UWorld: 0x12DA3A98
+GObjects: 0x12E4DF88
+GNames: 0x12F88800
+```
 
 ## ++Fortnite+Release-31.41-CL-37324991-Windows (Base + Offset)
 ### Offsets
