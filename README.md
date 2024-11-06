@@ -18,6 +18,8 @@ UWorld: 0x12D17A08
 GNames: 0x12EFC740
 OwningGameInstance: 0x1F0
 GameState: 0x178
+CameraLocation: 0x120
+CameraRotation: 0x130
 ```
 
 ## ++Fortnite+Release-32.00-CL-37505882-Windows (Base + Offset)
