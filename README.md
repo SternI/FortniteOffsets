@@ -15,6 +15,7 @@ Latest Version: **``++Fortnite+Release-32.00-CL-37770125-Windows``**
 ### Offsets
 ```yaml
 UWorld: 0x12D17A08
+GNames: 0x12EFC740
 OwningGameInstance: 0x1F0
 GameState: 0x178
 ```
