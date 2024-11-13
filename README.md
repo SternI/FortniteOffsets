@@ -20,6 +20,7 @@ OwningGameInstance: 0x200
 GameState: 0x188
 CameraLocation: 0x128
 CameraRotation: 0x138
+NamePrivate: 0xC
 ```
 
 ## ++Fortnite+Release-32.00-CL-37770125-Windows (Base + Offset)
