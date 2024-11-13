@@ -1,56 +1,55 @@
-// make sure your uworld is the same as the repo
 class FName
 {
 public:
-    int ComparisonIndex;
+    int32_t ComparisonIndex;
 
     std::string ToString()
     {
-        const int NAME_SIZE = 2048;
+        return ToString(ComparisonIndex);
+    }
 
-        auto NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x123FBFC0 + 8 * (ComparisonIndex >> 16) + 16)) + 2 * ((unsigned short)ComparisonIndex);
-        auto Pool = DotMem::Read<uint16_t>(NamePoolChunk);
+    static std::string ToString(int32_t index)
+    {
+        int32_t DecryptedIndex = DecryptIndex(index);
+        uint64_t NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x12F8D640 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
+        uint16_t Pool = DotMem::Read<uint16_t>(NamePoolChunk);
 
-        if (Pool < 64)
+        if ((((Pool ^ 0x238) >> 1) & 0x3FF) == 0)
         {
-            auto Index = DotMem::Read<int>(NamePoolChunk + 2);
-            NamePoolChunk = DotMem::Read<uint64_t>(va_text + (0x123FBFC0 + 8 * (Index >> 16) + 16)) + 2 * ((unsigned short)Index);
+            DecryptedIndex = DecryptIndex(DotMem::Read<int32_t>(NamePoolChunk + 6));
+            NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x12F8D640 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
             Pool = DotMem::Read<uint16_t>(NamePoolChunk);
         }
 
-        auto NameLength = min(Pool >> 6, NAME_SIZE);
-        char NameBuffer[NAME_SIZE + 1] = {0};
-        Driver::ReadPhysical(PVOID(NamePoolChunk + 2), NameBuffer, NameLength);
-
-        DecryptFName(NameBuffer, NameLength);
+        char NameBuffer[2048];
+        Driver::ReadPhysical(PVOID(NamePoolChunk + 2), NameBuffer, ((Pool ^ 0x238) >> 1) & 0x3FF);
+        DecryptFName(NameBuffer, ((Pool ^ 0x238) >> 1) & 0x3FF);
         return std::string(NameBuffer);
     }
 
-private:
-    static void DecryptFName(char *buffer, int length)
+    static int32_t DecryptIndex(int32_t index)
     {
-        int v0;          // ebx
-        char *v1;        // rdi
-        int v2;          // ecx
-        int v3;          // edx
-        int v4;          // eax
-        unsigned int v5; // edx
-        char result;     // al
+        if (index)
+        {
+            int32_t DecryptedIndex = ((((index - 1) ^ 0xFE3643FE) >> 10) | (((index - 1) ^ 0xFE3643FE) << 22)) + 1;
+            return DecryptedIndex ? DecryptedIndex : 4223600;
+        }
 
-        v2 = 0;
-        v3 = 28;
+        return 0;
+    }
+
+    static void DecryptFName(char* buffer, int length)
+    {
         if (length)
         {
-            v0 = length;
-            v1 = buffer;
-            do
+            int v4 = 8713 * length + 18979312;
+            for (int i = 0; i < length; ++i)
             {
-                v4 = v2++;
-                v5 = (v4 | 0xB000) + v3;
-                result = v5 ^ ~*v1;
-                v3 = v5 >> 2;
-                *v1++ = result;
-            } while (v2 < v0);
+                buffer[i] = ((uint8_t(buffer[i] ^ v4) >> 3) | (uint8_t(buffer[i] ^ v4) << 5));
+                v4 = 8713 * v4 + 18979312;
+            }
         }
+
+        buffer[length] = '\0';
     }
 };

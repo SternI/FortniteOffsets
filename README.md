@@ -15,9 +15,11 @@ Latest Version: **``++Fortnite+Release-32.10-CL-37958378-Window``**
 ### Offsets
 ```yaml
 UWorld: 0x12D9F408
-GNames: 0x12F88B00
+GNames: 0x12F8D640
 OwningGameInstance: 0x200
 GameState: 0x188
+CameraLocation: 0x128
+CameraRotation: 0x138
 ```
 
 ## ++Fortnite+Release-32.00-CL-37770125-Windows (Base + Offset)
