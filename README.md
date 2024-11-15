@@ -4,7 +4,6 @@
 
 #### Latest Fortnite Offsets Always Updated.
 Latest Version: **``++Fortnite+Release-32.10-CL-37958378-Window``**
-##### **More Offsets Will Be Dumped After I Completely Finish My Dumper.**
 
 # Current Text Section (va_text) Method
 ### It is no longer needed, so Base + Offset
