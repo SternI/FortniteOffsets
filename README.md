@@ -3,14 +3,20 @@
 # Fortnite Offsets
 
 #### Latest Fortnite Offsets Always Updated.
-Latest Version: **``++Fortnite+Release-32.10-CL-37958378-Window``**
+Latest Version: **``++Fortnite+Release-32.11-CL-38202817-Windows``**
 
 # Current Text Section (va_text) Method
 ### It is no longer needed, so Base + Offset
 
 # Changes
 
-## ++Fortnite+Release-32.10-CL-37958378-Window (Base + Offset)
+## ++Fortnite+Release-32.11-CL-38202817-Windows
+### Offsets
+```yaml
+UWorld: 0x12ED8E38
+```
+
+## ++Fortnite+Release-32.10-CL-37958378-Window
 ### Offsets
 ```yaml
 UWorld: 0x12D9F408
@@ -22,7 +28,7 @@ CameraRotation: 0x138
 NamePrivate: 0xC
 ```
 
-## ++Fortnite+Release-32.00-CL-37770125-Windows (Base + Offset)
+## ++Fortnite+Release-32.00-CL-37770125-Windows
 ### Offsets
 ```yaml
 UWorld: 0x12D17A08
@@ -33,7 +39,7 @@ CameraLocation: 0x120
 CameraRotation: 0x130
 ```
 
-## ++Fortnite+Release-32.00-CL-37505882-Windows (Base + Offset)
+## ++Fortnite+Release-32.00-CL-37505882-Windows
 ### Offsets
 ```yaml
 UWorld: 0x12DA3A98
@@ -41,7 +47,7 @@ GObjects: 0x12E4DF88
 GNames: 0x12F88800
 ```
 
-## ++Fortnite+Release-31.41-CL-37324991-Windows (Base + Offset)
+## ++Fortnite+Release-31.41-CL-37324991-Windows
 ### Offsets
 ```yaml
 UWorld: 0x1221C738
