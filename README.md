@@ -14,6 +14,7 @@ Latest Version: **``++Fortnite+Release-32.11-CL-38202817-Windows``**
 ### Offsets
 ```yaml
 UWorld: 0x12ED8E38
+GNames: 0x130C2A80
 ```
 
 ## ++Fortnite+Release-32.10-CL-37958378-Window
