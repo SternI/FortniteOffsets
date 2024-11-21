@@ -850,6 +850,8 @@ UWidgetBlueprintGeneratedClass.NamedSlots: 0x3a0
 UWidgetBlueprintGeneratedClass.WidgetTree: 0x360
 UWidgetBlueprintGeneratedClass.bCanCallInitializedWithoutPlayerContext: 0x378
 UWidgetBlueprintGeneratedClass.bClassRequiresNativeTick: 0x378
+UWorld.WorldTime: 0x148
+UWorld.TimeSeconds: 0x6D0
 UWorld.AISystem: 0x180
 UWorld.AuthorityGameMode: 0x170
 UWorld.CanvasForDrawMaterialToRenderTarget: 0x210
