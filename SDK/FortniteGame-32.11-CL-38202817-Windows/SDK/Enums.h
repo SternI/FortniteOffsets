@@ -414,7 +414,7 @@ enum EDataValidationUsecase : uint8_t
 {
     EDataValidationUsecase__None = 0,
     EDataValidationUsecase__Manual = 1,
-    EDataValidationUsecase__Commandlet = 2,
+    HHHH‹Á”⁄Á˚„’ÁÂ„’Û⁄Ÿﬂ‘Á‰ﬂmmandlet = 2,
     EDataValidationUsecase__Save = 3,
     EDataValidationUsecase__PreSubmit = 4,
     EDataValidationUsecase__Script = 5
@@ -654,7 +654,7 @@ enum EPixelFormat : uint8_t
     PF_ASTC_4x4_NORM_RG = 87,
     PF_ASTC_6x6_NORM_RG = 88,
     PF_ASTC_8x8_NORM_RG = 89,
-    ˚HˆÈ˚ˆ˘˙È–ÈÙıM_RG = 90,
+    PF_ASTC_10x10_NORM_RG = 90,
     PF_ASTC_12x12_NORM_RG = 91,
     PF_R16G16_SINT = 92
 };
@@ -744,18 +744,7 @@ enum EUnit : uint8_t
     EUnit__Milliseconds = 61,
     EUnit__Seconds = 62,
     EUnit__Minutes = 63,
-    EUnit__Hours = 64,
-    EUnit__Days = 65,
-    EUnit__Months = 66,
-    EUnit__Years = 67,
-    EUnit__PixelsPerInch = 68,
-    EUnit__Percentage = 69,
-    EUnit__Multiplier = 70,
-    EUnit__Pascals = 71,
-    EUnit__KiloPascals = 72,
-    EUnit__MegaPascals = 73,
-    EUnit__GigaPascals = 74,
-    EUnit__Unspecified = 75
+    EUnit__Hours = 64
 };
 
 enum EPropertyAccessChangeNotifyMode : uint8_t
@@ -821,7 +810,7 @@ enum EDataValidationResult : uint8_t
 
 enum EOverriddenPropertyOperation : uint8_t
 {
-    HHHHHÔFπeÿHHFiªârHHHHHHtion__None = 0,
+    EOverriddenPropertyOperation__None = 0,
     EOverriddenPropertyOperation__Modified = 1,
     EOverriddenPropertyOperation__Replace = 2,
     EOverriddenPropertyOperation__Add = 3,
@@ -954,7 +943,7 @@ enum EConsoleForGamepadLabels : uint8_t
 {
     EConsoleForGamepadLabels__None = 0,
     EConsoleForGamepadLabels__XBoxOne = 1,
-    ŸoleForGamepadLabels__PS4 = 2
+    EConsoleForGamepadLabels__PS4 = 2
 };
 
 enum ETouchType : uint8_t
@@ -1060,7 +1049,7 @@ enum EHorizontalAlignment : uint8_t
 
 enum EVerticalAlignment : uint8_t
 {
-    VAlign_Fill = 0,
+    HHFHHHHHHll = 0,
     VAlign_Top = 1,
     VAlign_Center = 2,
     VAlign_Bottom = 3
@@ -1091,8 +1080,7 @@ enum EOrientation : uint8_t
 
 enum EScrollDirection : uint8_t
 {
-    Scroll_Down = 0,
-    Scroll_Up = 1
+    Scroll_Down = 0
 };
 
 enum ETextCommit : uint8_t
@@ -1134,7 +1122,7 @@ enum ESlateDebuggingInputEvent : uint8_t
 {
     ESlateDebuggingInputEvent__MouseMove = 0,
     ESlateDebuggingInputEvent__MouseEnter = 1,
-    ÷„‘⁄„’”Ÿ˚‘⁄„“‘”ÿ⁄ˇ·⁄ﬂ··MouseLeave = 2,
+    ESlateDebuggingInputEvent__MouseLeave = 2,
     ESlateDebuggingInputEvent__PreviewMouseButtonDown = 3,
     ESlateDebuggingInputEvent__MouseButtonDown = 4,
     ESlateDebuggingInputEvent__MouseButtonUp = 5,
@@ -1201,7 +1189,7 @@ enum EFontLoadingPolicy : uint8_t
 
 enum EFontLayoutMethod : uint8_t
 {
-    EFontLayoutMethod__Metrics = 0,
+    d(HHG¢YŸô`HHHHHHHFHHHHHHcs = 0,
     EFontLayoutMethod__BoundingBox = 1
 };
 
@@ -1269,7 +1257,7 @@ enum ESlateBrushImageType : uint8_t
     ESlateBrushImageType__NoImage = 0,
     ESlateBrushImageType__FullColor = 1,
     ESlateBrushImageType__Linear = 2,
-    ÷Á„⁄ﬂ¸„ÿœÙ„·geType__Vector = 3
+    ESlateBrushImageType__Vector = 3
 };
 
 enum ESlateBrushRoundingType : uint8_t
@@ -1425,18 +1413,19 @@ enum EMultiBoxType : uint8_t
 {
     EMultiBoxType__MenuBar = 0,
     EMultiBoxType__ToolBar = 1,
-    HÔFπeÿHH÷Á‹ŸŸÙ„ÿœÙ–lToolBar = 2,
+    EMultiBoxType__VerticalToolBar = 2,
     EMultiBoxType__SlimHorizontalToolBar = 3,
     EMultiBoxType__UniformToolBar = 4,
     EMultiBoxType__Menu = 5,
-    EMultiBoxType__ButtonRow = 6
+    EMultiBoxType__ButtonRow = 6,
+    EMultiBoxType__SlimHorizontalUniformToolBar = 7
 };
 
 enum EMultiBlockType : uint8_t
 {
     EMultiBlockType__None = 0,
     EMultiBlockType__ButtonRow = 1,
-    EMultiBlockType__EditableText = 2,
+    ÁQH—Ÿˆ⁄lockType__EditableText = 2,
     EMultiBlockType__Heading = 3,
     EMultiBlockType__MenuEntry = 4,
     EMultiBlockType__Separator = 5,
@@ -1544,9 +1533,7 @@ enum EProgressBarFillType : uint8_t
     EProgressBarFillType__LeftToRight = 0,
     EProgressBarFillType__RightToLeft = 1,
     EProgressBarFillType__FillFromCenter = 2,
-    EProgressBarFillType__FillFromCenterHorizontal = 3,
-    EProgressBarFillType__FillFromCenterVertical = 4,
-    EProgressBarFillType__TopToBottom = 5
+    EProgressBarFillType__FillFromCenterHorizontal = 3
 };
 
 enum EProgressBarFillStyle : uint8_t
@@ -1563,7 +1550,7 @@ enum EListItemAlignment : uint8_t
     EListItemAlignment__LeftAligned = 3,
     EListItemAlignment__RightAligned = 4,
     EListItemAlignment__CenterAligned = 5,
-    ‘⁄„‘⁄mAlignment__Fill = 6
+    EListItemAlignment__Fill = 6
 };
 
 enum EScrollIntoViewAlignment : uint8_t
@@ -1894,7 +1881,7 @@ enum EChaosBufferMode : uint8_t
     EChaosBufferMode__Double = 0,
     EChaosBufferMode__Triple = 1,
     EChaosBufferMode__Num = 2,
-    H„‹H€”˙„‰Ÿ˚÷„‚‚”’Ÿalid = 3
+    EChaosBufferMode__Invalid = 3
 };
 
 enum EChaosSoftsSimulationSpace : uint8_t
@@ -1980,35 +1967,7 @@ enum EPhysicalSurface : uint8_t
     SurfaceType32 = 32,
     SurfaceType33 = 33,
     SurfaceType34 = 34,
-    SurfaceType35 = 35,
-    SurfaceType36 = 36,
-    SurfaceType37 = 37,
-    SurfaceType38 = 38,
-    SurfaceType39 = 39,
-    SurfaceType40 = 40,
-    SurfaceType41 = 41,
-    SurfaceType42 = 42,
-    SurfaceType43 = 43,
-    SurfaceType44 = 44,
-    SurfaceType45 = 45,
-    SurfaceType46 = 46,
-    SurfaceType47 = 47,
-    SurfaceType48 = 48,
-    SurfaceType49 = 49,
-    SurfaceType50 = 50,
-    SurfaceType51 = 51,
-    SurfaceType52 = 52,
-    SurfaceType53 = 53,
-    SurfaceType54 = 54,
-    SurfaceType55 = 55,
-    SurfaceType56 = 56,
-    SurfaceType57 = 57,
-    SurfaceType58 = 58,
-    SurfaceType59 = 59,
-    SurfaceType60 = 60,
-    SurfaceType61 = 61,
-    SurfaceType62 = 62,
-    SurfaceType_Max = 63
+    SurfaceType35 = 35
 };
 
 enum ERadialImpulseFalloff : uint8_t
@@ -2092,7 +2051,7 @@ enum ENetCloseResult : uint8_t
     ENetCloseResult__Unknown = 14,
     ENetCloseResult__Success = 15,
     ENetCloseResult__Extended = 16,
-    HÁ‘ÁH‰„’Ÿ‹H‰„‰__HostClosedConnection = 17,
+    ENetCloseResult__HostClosedConnection = 17,
     ENetCloseResult__Disconnect = 18,
     ENetCloseResult__Upgrade = 19,
     ENetCloseResult__PreLoginFailure = 20,
@@ -2176,18 +2135,7 @@ enum ENetCloseResult : uint8_t
     ENetCloseResult__BeaconUnableToParsePacket = 98,
     ENetCloseResult__BeaconAuthenticationFailure = 99,
     ENetCloseResult__BeaconLoginInvalidIdError = 100,
-    ENetCloseResult__BeaconLoginInvalidAuthHandlerError = 101,
-    ENetCloseResult__BeaconAuthError = 102,
-    ENetCloseResult__BeaconSpawnClientWorldPackageNameError = 103,
-    ENetCloseResult__BeaconSpawnExistingActorError = 104,
-    ENetCloseResult__BeaconSpawnFailureError = 105,
-    ENetCloseResult__BeaconSpawnNetGUIDAckNoActor = 106,
-    ENetCloseResult__BeaconSpawnNetGUIDAckNoHost = 107,
-    ENetCloseResult__BeaconSpawnUnexpectedError = 108,
-    ENetCloseResult__IrisProtocolMismatch = 109,
-    ENetCloseResult__IrisNetRefHandleError = 110,
-    ENetCloseResult__FaultDisconnect = 111,
-    ENetCloseResult__NotRecoverable = 112
+    ENetCloseResult__BeaconLoginInvalidAuthHandlerError = 101
 };
 
 enum EDataStreamSendStatus : uint8_t
@@ -2255,7 +2203,7 @@ enum ESoundWaveCloudStreamingPlatformProjectEnableType : uint8_t
 enum ESoundWaveCloudStreamingPlatformEnableType : uint8_t
 {
     ESoundWaveCloudStreamingPlatformEnableType__Inherited = 0,
-    ESoundWaveCloudStreamingPlatformEnableType__Disabled = 1,
+    „‘ﬂ÷„‡⁄ˇ„ÿœÙ„‹ÊÁ⁄€÷Ÿ‚‘Á‹¯·⁄ﬂ€Á„÷‘ı‰”Ÿ‹„“Disabled = 1,
     ESoundWaveCloudStreamingPlatformEnableType__SWC_MultipleValues = 2
 };
 
@@ -2425,7 +2373,7 @@ enum EXRTrackedDeviceType : uint16_t
 {
     EXRTrackedDeviceType__HeadMountedDisplay = 0,
     EXRTrackedDeviceType__Controller = 1,
-    Á‹ÿ’ﬂHkedDeviceType__TrackingReference = 2,
+    EXRTrackedDeviceType__TrackingReference = 2,
     EXRTrackedDeviceType__Tracker = 3,
     EXRTrackedDeviceType__Other = 4,
     EXRTrackedDeviceType__Invalid = 254,
@@ -2568,7 +2516,7 @@ enum EWeightmapRTType : uint8_t
     EWeightmapRTType__WeightmapRT_Mip2 = 6,
     EWeightmapRTType__WeightmapRT_Mip3 = 7,
     EWeightmapRTType__WeightmapRT_Mip4 = 8,
-    ÿﬂ˚ÈÙˆÿÁ€‘‡·ﬂ„Ò„ÿœÙhtmapRT_Mip5 = 9,
+    EWeightmapRTType__WeightmapRT_Mip5 = 9,
     EWeightmapRTType__WeightmapRT_Mip6 = 10,
     EWeightmapRTType__WeightmapRT_Mip7 = 11,
     EWeightmapRTType__WeightmapRT_Count = 12
@@ -2589,7 +2537,7 @@ enum ELandscapeClearMode : uint8_t
 
 enum ELandscapeToolTargetType : uint8_t
 {
-    ELandscapeToolTargetType__Heightmap = 0,
+    HHHHHHÁQ≤d(HHlTargetType__Heightmap = 0,
     ELandscapeToolTargetType__Weightmap = 1,
     ELandscapeToolTargetType__Visibility = 2,
     ELandscapeToolTargetType__Invalid = 3,
@@ -2813,16 +2761,6 @@ enum EMovieSceneGroupConditionOperator : uint8_t
     EMovieSceneGroupConditionOperator__Xor = 2
 };
 
-enum EMovieSceneSubSectionFlags : uint8_t
-{
-    EMovieSceneSubSectionFlags__None = 0,
-    EMovieSceneSubSectionFlags__OverrideKeepState = 1,
-    EMovieSceneSubSectionFlags__OverrideRestoreState = 2,
-    EMovieSceneSubSectionFlags__IgnoreHierarchicalBias = 4,
-    EMovieSceneSubSectionFlags__BlendHierarchicalBias = 8,
-    EMovieSceneSubSectionFlags__AnyRestoreStateOverride = 3
-};
-
 enum ESectionEvaluationFlags : uint8_t
 {
     ESectionEvaluationFlags__None = 0,
@@ -2903,7 +2841,7 @@ enum EMovieSceneBuiltInEasing : uint8_t
     EMovieSceneBuiltInEasing__CubicInOut = 10,
     EMovieSceneBuiltInEasing__HermiteCubicInOut = 11,
     EMovieSceneBuiltInEasing__QuartIn = 12,
-    EMovieSceneBuiltInEasing__QuartOut = 13,
+    H⁄ˇ‘÷Á”˜·⁄ﬂ’Á⁄ˇ‘‹ﬂ”„⁄„QuartOut = 13,
     EMovieSceneBuiltInEasing__QuartInOut = 14,
     EMovieSceneBuiltInEasing__QuintIn = 15,
     EMovieSceneBuiltInEasing__QuintOut = 16,
@@ -2961,14 +2899,6 @@ enum EClusterConnectionTypeEnum : uint8_t
     EClusterConnectionTypeEnum__Chaos_BoundsOverlapFilteredDelaunayTriangulation = 4,
     EClusterConnectionTypeEnum__Chaos_None = 5,
     EClusterConnectionTypeEnum__Chaos_EClsuterCreationParameters_Max = 6
-};
-
-enum ERelativeTransformSpace : uint8_t
-{
-    RTS_World = 0,
-    RTS_Actor = 1,
-    RTS_Component = 2,
-    RTS_ParentBoneSpace = 3
 };
 
 enum EAttachLocation : uint8_t
@@ -3266,7 +3196,7 @@ enum EEasingFuncType : uint8_t
     EEasingFuncType__QuarticInOut = 6,
     EEasingFuncType__QuinticInOut = 7,
     EEasingFuncType__CircularIn = 8,
-    EEasingFuncType__CircularOut = 9,
+    H⁄ˇ÷Á‹”Â÷ﬂ„ÿœÙÂ⁄”·⁄ﬂ’Áut = 9,
     EEasingFuncType__CircularInOut = 10,
     EEasingFuncType__ExpIn = 11,
     EEasingFuncType__ExpOut = 12,
@@ -3349,8 +3279,7 @@ enum ESnapshotSourceMode : uint8_t
 enum ESequenceEvalReinit : uint8_t
 {
     ESequenceEvalReinit__NoReset = 0,
-    ESequenceEvalReinit__StartPosition = 1,
-    ESequenceEvalReinit__ExplicitTime = 2
+    ESequenceEvalReinit__StartPosition = 1
 };
 
 enum ESwapRootBone : uint8_t
@@ -3404,7 +3333,7 @@ enum EDrivenDestinationMode : uint8_t
 enum EConstraintOffsetOption : uint8_t
 {
     EConstraintOffsetOption__None = 0,
-    EConstraintOffsetOption__Offset_RefPose = 1
+    HHHHHHHHHH„⁄Ÿ˙⁄Ÿﬂ‘ÿ˘‘„’‚‚˘‘⁄ﬂÁ÷‘’⁄Ÿse = 1
 };
 
 enum CopyBoneDeltaMode : uint8_t
@@ -3505,7 +3434,7 @@ enum EHandleEvent : uint8_t
     EHandleEvent__LocalTransformUpdated = 0,
     EHandleEvent__GlobalTransformUpdated = 1,
     EHandleEvent__ComponentUpdated = 2,
-    ‰„‘Á‰H‰„‘Á‰ÿÛ‘⁄„perDependencyUpdated = 3,
+    EHandleEvent__UpperDependencyUpdated = 3,
     EHandleEvent__Max = 4
 };
 
@@ -3527,7 +3456,7 @@ enum EMovieSceneScalabilityConditionGroup : uint8_t
 enum EMovieSceneScalabilityConditionOperator : uint8_t
 {
     EMovieSceneScalabilityConditionOperator__LessThan = 0,
-    EMovieSceneScalabilityConditionOperator__LessThanOrEqualTo = 1,
+    ﬂ‹HHHHHHH⁄Á‡calabilityConditionOperator__LessThanOrEqualTo = 1,
     EMovieSceneScalabilityConditionOperator__EqualTo = 2,
     EMovieSceneScalabilityConditionOperator__GreaterThanOrEqualTo = 3,
     EMovieSceneScalabilityConditionOperator__GreaterThan = 4
@@ -3616,7 +3545,7 @@ enum EDynamicBoxType : uint8_t
 {
     EDynamicBoxType__Horizontal = 0,
     EDynamicBoxType__Vertical = 1,
-    ‘÷„Ú„ÿœÙ–ŸÂﬂ€ÁWrap = 2,
+    EDynamicBoxType__Wrap = 2,
     EDynamicBoxType__VerticalWrap = 3,
     EDynamicBoxType__Radial = 4,
     EDynamicBoxType__Overlay = 5
@@ -3654,12 +3583,6 @@ enum EWidgetGeometryMode : uint8_t
 {
     EWidgetGeometryMode__Plane = 0,
     EWidgetGeometryMode__Cylinder = 1
-};
-
-enum EWindowVisibility : uint8_t
-{
-    EWindowVisibility__Visible = 0,
-    EWindowVisibility__SelfHitTestInvisible = 1
 };
 
 enum ETickMode : uint8_t
@@ -4002,6 +3925,15 @@ enum EMediaVideoCaptureDeviceFilter : uint8_t
     EMediaVideoCaptureDeviceFilter__Webcam = 8
 };
 
+enum EMediaWebcamCaptureDeviceFilter : uint8_t
+{
+    EMediaWebcamCaptureDeviceFilter__None = 0,
+    EMediaWebcamCaptureDeviceFilter__DepthSensor = 1,
+    EMediaWebcamCaptureDeviceFilter__Front = 2,
+    EMediaWebcamCaptureDeviceFilter__Rear = 4,
+    EMediaWebcamCaptureDeviceFilter__Unknown = 8
+};
+
 enum EMeshTrackerVertexColorMode : uint8_t
 {
     EMeshTrackerVertexColorMode__None = 0,
@@ -4013,7 +3945,7 @@ enum ELocalFileReplayResult : uint8_t
 {
     ELocalFileReplayResult__Success = 0,
     ELocalFileReplayResult__InvalidReplayInfo = 1,
-    ELocalFileReplayResult__StreamChunkIndexMismatch = 2,
+    HHHHHHHŸ‚⁄ˇœÁ‹ÿ„ˆ‰ﬂ‹Á“⁄ˇ‘‹”’„ˆœÁ‹ÿ„ˆ„‹Mismatch = 2,
     ELocalFileReplayResult__DecompressBuffer = 3,
     ELocalFileReplayResult__CompressionNotSupported = 4,
     ELocalFileReplayResult__DecryptBuffer = 5,
@@ -4129,7 +4061,7 @@ enum ERawCurveTrackTypes : uint8_t
 enum ERootMotionRootLock : uint8_t
 {
     ERootMotionRootLock__RefPose = 0,
-    HHHHHMotionRootLock__AnimFirstFrame = 1,
+    ERootMotionRootLock__AnimFirstFrame = 1,
     ERootMotionRootLock__Zero = 2
 };
 
@@ -4317,7 +4249,7 @@ enum EBlendSpacePerBoneBlendMode : uint8_t
 enum ENotifyTriggerMode : uint8_t
 {
     ENotifyTriggerMode__AllAnimations = 0,
-    HHHHHHHHHHH’⁄Ÿﬂ‘Á€ﬂ⁄‹ghestWeightedAnimation = 1,
+    ENotifyTriggerMode__HighestWeightedAnimation = 1,
     ENotifyTriggerMode__None = 2
 };
 
@@ -4501,6 +4433,12 @@ enum ENodeEnabledState : uint8_t
     ENodeEnabledState__DevelopmentOnly = 2
 };
 
+enum EBlueprintPinStyleType : uint8_t
+{
+    BPST_Original = 0,
+    BPST_VariantA = 1
+};
+
 enum EGraphType : uint8_t
 {
     GT_Function = 0,
@@ -4554,7 +4492,7 @@ enum EMouseCaptureMode : uint8_t
 {
     EMouseCaptureMode__NoCapture = 0,
     EMouseCaptureMode__CapturePermanently = 1,
-    EMouseCaptureMode__CapturePermanently_IncludingInitialMouseDown = 2,
+    œ‘÷„ÿŸHHHHHHHHHHHHHHHHHHHHœ‹‘⁄„⁄Á€÷ly_IncludingInitialMouseDown = 2,
     EMouseCaptureMode__CaptureDuringMouseDown = 3,
     EMouseCaptureMode__CaptureDuringRightMouseDown = 4
 };
@@ -4747,7 +4685,7 @@ enum EMegaLightsShadowMethod : uint8_t
 {
     EMegaLightsShadowMethod__Default = 0,
     EMegaLightsShadowMethod__RayTracing = 1,
-    EMegaLightsShadowMethod__VirtualShadowMap = 2
+    HHHHHH·⁄ﬂÂÁ÷ÙœÁowMethod__VirtualShadowMap = 2
 };
 
 enum ESceneCaptureSource : uint8_t
@@ -4825,18 +4763,7 @@ enum EMaterialSamplerType : uint8_t
     SAMPLERTYPE_Alpha = 2,
     SAMPLERTYPE_Normal = 3,
     SAMPLERTYPE_Masks = 4,
-    SAMPLERTYPE_DistanceFieldFont = 5,
-    SAMPLERTYPE_LinearColor = 6,
-    SAMPLERTYPE_LinearGrayscale = 7,
-    SAMPLERTYPE_Data = 8,
-    SAMPLERTYPE_External = 9,
-    SAMPLERTYPE_VirtualColor = 10,
-    SAMPLERTYPE_VirtualGrayscale = 11,
-    SAMPLERTYPE_VirtualAlpha = 12,
-    SAMPLERTYPE_VirtualNormal = 13,
-    SAMPLERTYPE_VirtualMasks = 14,
-    SAMPLERTYPE_VirtualLinearColor = 15,
-    SAMPLERTYPE_VirtualLinearGrayscale = 16
+    SAMPLERTYPE_DistanceFieldFont = 5
 };
 
 enum EMaterialStencilCompare : uint8_t
@@ -4855,12 +4782,21 @@ enum EMaterialStencilCompare : uint8_t
 enum EMaterialShadingRate : uint8_t
 {
     MSR_1x1 = 0,
-    MSR_2x1 = 1
+    MSR_2x1 = 1,
+    MSR_1x2 = 2,
+    MSR_2x2 = 3,
+    MSR_4x2 = 4,
+    MSR_2x4 = 5,
+    MSR_4x4 = 6,
+    MSR_Count = 7
 };
 
 enum ELightingBuildQuality : uint8_t
 {
-    Quality_Preview = 0
+    Quality_Preview = 0,
+    Quality_Medium = 1,
+    Quality_High = 2,
+    Quality_Production = 3
 };
 
 enum ENetworkSmoothingMode : uint8_t
@@ -4959,7 +4895,7 @@ enum EAutoReceiveInput : uint8_t
     EAutoReceiveInput__Player2 = 3,
     EAutoReceiveInput__Player3 = 4,
     EAutoReceiveInput__Player4 = 5,
-    EAutoReceiveInput__Player5 = 6,
+    ÷„œÁ‹¯‘”ÿInput__Player5 = 6,
     EAutoReceiveInput__Player6 = 7,
     EAutoReceiveInput__Player7 = 8
 };
@@ -5037,7 +4973,9 @@ enum EHISMViewRelevanceType : uint8_t
 enum EHitProxyPriority : uint8_t
 {
     HPP_World = 0,
-    HPP_Wireframe = 1
+    HPP_Wireframe = 1,
+    HPP_Foreground = 2,
+    HPP_UI = 3
 };
 
 enum EHierarchicalSimplificationMethod : uint8_t
@@ -5084,7 +5022,7 @@ enum EDateTimeStyle : uint8_t
 enum EViewStatusForScreenPercentage : uint8_t
 {
     EViewStatusForScreenPercentage__NonRealtime = 0,
-    ‹Á„ˆ⁄Ÿ˙„·ForScreenPercentage__Desktop = 1,
+    EViewStatusForScreenPercentage__Desktop = 1,
     EViewStatusForScreenPercentage__Mobile = 2,
     EViewStatusForScreenPercentage__VR = 3,
     EViewStatusForScreenPercentage__PathTracer = 4
@@ -5324,14 +5262,6 @@ enum ESpeedTreeLODType : uint8_t
     STLOD_Smooth = 1
 };
 
-enum ESwitchMaterialOutputType : uint8_t
-{
-    TMMOT_Float1 = 0,
-    TMMOT_Float2 = 1,
-    TMMOT_Float3 = 2,
-    TMMOT_Float4 = 3
-};
-
 enum ETextureCollectionMemberType : uint8_t
 {
     ETextureCollectionMemberType__Texture2D = 0,
@@ -5464,7 +5394,7 @@ enum ETextureSizingType : uint8_t
     TextureSizingType_UseSingleTextureSize = 0,
     TextureSizingType_UseAutomaticBiasedSizes = 1,
     TextureSizingType_UseManualOverrideTextureSize = 2,
-    Œﬂı„÷”‘–„Ù„‰ﬂ÷÷„“˘‹Á”⁄Á˚„’ÛÈ„nAutomaticSizing = 3,
+    TextureSizingType_UseSimplygonAutomaticSizing = 3,
     TextureSizingType_AutomaticFromTexelDensity = 4,
     TextureSizingType_AutomaticFromMeshScreenSize = 5,
     TextureSizingType_AutomaticFromMeshDrawDistance = 6
@@ -5506,7 +5436,16 @@ enum ESceneTextureId : uint8_t
     PPI_CustomStencil = 25,
     PPI_StoredBaseColor = 26,
     PPI_StoredSpecular = 27,
-    PPI_Velocity = 28
+    PPI_Velocity = 28,
+    PPI_WorldTangent = 29,
+    PPI_Anisotropy = 30,
+    PPI_UserSceneTexture0 = 32,
+    PPI_UserSceneTexture1 = 33,
+    PPI_UserSceneTexture2 = 34,
+    „÷”‘–„Ù„⁄„Âı÷„xture3 = 35,
+    PPI_UserSceneTexture4 = 36,
+    PPI_UserSceneTexture5 = 37,
+    PPI_UserSceneTexture6 = 38
 };
 
 enum ELWCFunctionKind : uint8_t
@@ -5625,7 +5564,7 @@ enum EStaticMeshReductionTerimationCriterion : uint8_t
 
 enum EMicroTransactionDelegate : uint8_t
 {
-    MTD_PurchaseQueryComplete = 0,
+    (HHG¢YtHHeQueryComplete = 0,
     MTD_PurchaseComplete = 1
 };
 
@@ -5731,9 +5670,7 @@ enum EParticleSystemInsignificanceReaction : uint8_t
 {
     EParticleSystemInsignificanceReaction__Auto = 0,
     EParticleSystemInsignificanceReaction__Complete = 1,
-    EParticleSystemInsignificanceReaction__DisableTick = 2,
-    EParticleSystemInsignificanceReaction__DisableTickAndKill = 3,
-    EParticleSystemInsignificanceReaction__Num = 4
+    EParticleSystemInsignificanceReaction__DisableTick = 2
 };
 
 enum EModuleType : uint8_t
@@ -5794,7 +5731,7 @@ enum EParticleCameraOffsetUpdateMethod : uint8_t
 enum EParticleCollisionComplete : uint8_t
 {
     EPCC_Kill = 0,
-    HH‹‹ﬂFreeze = 1,
+    EPCC_Freeze = 1,
     EPCC_HaltCollisions = 2,
     EPCC_FreezeTranslation = 3,
     EPCC_FreezeRotation = 4,
@@ -5852,7 +5789,7 @@ enum EParticleAxisLock : uint8_t
     EPAL_X = 1,
     EPAL_Y = 2,
     EPAL_Z = 3,
-    EPAL_NEGATIVE_X = 4,
+    HHHHHNEGATIVE_X = 4,
     EPAL_NEGATIVE_Y = 5,
     EPAL_NEGATIVE_Z = 6,
     EPAL_ROTATE_X = 7,
@@ -6116,7 +6053,7 @@ enum ERichCurveKeyTimeCompressionFormat : uint8_t
 
 enum ERuntimePartitionCellBoundsMethod : uint8_t
 {
-    ERuntimePartitionCellBoundsMethod__UseContent = 0,
+    HHHHHHHHHHHHHHHHÁQ≤d(BoundsMethod__UseContent = 0,
     ERuntimePartitionCellBoundsMethod__UseCellBounds = 1,
     ERuntimePartitionCellBoundsMethod__UseMinContentCellBounds = 2
 };
@@ -6211,7 +6148,7 @@ enum EMobilePlanarReflectionMode : uint8_t
 enum EMaterialProperty : uint8_t
 {
     MP_EmissiveColor = 0,
-    “ﬂ_Opacity = 1,
+    MP_Opacity = 1,
     MP_OpacityMask = 2,
     MP_DiffuseColor = 3,
     MP_SpecularColor = 4,
@@ -6270,7 +6207,7 @@ enum SkeletalMeshOptimizationType : uint8_t
 {
     SMOT_NumOfTriangles = 0,
     SMOT_MaxDeviation = 1,
-    SMOT_TriangleOrDeviation = 2
+    HHG¢H’H⁄Ÿﬂ‘Áﬂ“„–Á˚Ètion = 2
 };
 
 enum SkeletalMeshOptimizationImportance : uint8_t
@@ -6403,7 +6340,7 @@ enum ModulationParamMode : uint8_t
 enum ESourceBusSendLevelControlMethod : uint8_t
 {
     ESourceBusSendLevelControlMethod__Linear = 0,
-    HHHurceBusSendLevelControlMethod__CustomCurve = 1,
+    ESourceBusSendLevelControlMethod__CustomCurve = 1,
     ESourceBusSendLevelControlMethod__Manual = 2
 };
 
@@ -6435,16 +6372,6 @@ enum ESoundAssetCompressionType : uint8_t
     ESoundAssetCompressionType__PlatformSpecific = 4,
     ESoundAssetCompressionType__ProjectDefined = 5,
     ESoundAssetCompressionType__RADAudio = 6
-};
-
-enum ESoundWaveLoadingBehavior : uint16_t
-{
-    ESoundWaveLoadingBehavior__Inherited = 0,
-    ESoundWaveLoadingBehavior__RetainOnLoad = 1,
-    ESoundWaveLoadingBehavior__PrimeOnLoad = 2,
-    ESoundWaveLoadingBehavior__LoadOnDemand = 3,
-    ESoundWaveLoadingBehavior__ForceInline = 4,
-    ESoundWaveLoadingBehavior__Uninitialized = 255
 };
 
 enum EStereoLayerType : uint8_t
@@ -6528,44 +6455,7 @@ enum TextureGroup : uint8_t
     TEXTUREGROUP_Terrain_Weightmap = 25,
     TEXTUREGROUP_Bokeh = 26,
     TEXTUREGROUP_IESLightProfile = 27,
-    TEXTUREGROUP_Pixels2D = 28,
-    TEXTUREGROUP_HierarchicalLOD = 29,
-    TEXTUREGROUP_Impostor = 30,
-    TEXTUREGROUP_ImpostorNormalDepth = 31,
-    TEXTUREGROUP_8BitData = 32,
-    TEXTUREGROUP_16BitData = 33,
-    TEXTUREGROUP_Project01 = 34,
-    TEXTUREGROUP_Project02 = 35,
-    TEXTUREGROUP_Project03 = 36,
-    TEXTUREGROUP_Project04 = 37,
-    TEXTUREGROUP_Project05 = 38,
-    TEXTUREGROUP_Project06 = 39,
-    TEXTUREGROUP_Project07 = 40,
-    TEXTUREGROUP_Project08 = 41,
-    TEXTUREGROUP_Project09 = 42,
-    TEXTUREGROUP_Project10 = 43,
-    TEXTUREGROUP_Project11 = 44,
-    TEXTUREGROUP_Project12 = 45,
-    TEXTUREGROUP_Project13 = 46,
-    TEXTUREGROUP_Project14 = 47,
-    TEXTUREGROUP_Project15 = 48,
-    TEXTUREGROUP_Project16 = 49,
-    TEXTUREGROUP_Project17 = 50,
-    TEXTUREGROUP_Project18 = 51,
-    TEXTUREGROUP_Project19 = 52,
-    TEXTUREGROUP_Project20 = 53,
-    TEXTUREGROUP_Project21 = 54,
-    TEXTUREGROUP_Project22 = 55,
-    TEXTUREGROUP_Project23 = 56,
-    TEXTUREGROUP_Project24 = 57,
-    TEXTUREGROUP_Project25 = 58,
-    TEXTUREGROUP_Project26 = 59,
-    TEXTUREGROUP_Project27 = 60,
-    TEXTUREGROUP_Project28 = 61,
-    TEXTUREGROUP_Project29 = 62,
-    TEXTUREGROUP_Project30 = 63,
-    TEXTUREGROUP_Project31 = 64,
-    TEXTUREGROUP_Project32 = 65
+    TEXTUREGROUP_Pixels2D = 28
 };
 
 enum TextureMipGenSettings : uint8_t
@@ -6620,12 +6510,6 @@ enum ETextureMipLoadOptions : uint8_t
     ETextureMipLoadOptions__OnlyFirstMip = 2
 };
 
-enum ETextureAvailability : uint8_t
-{
-    ETextureAvailability__GPU = 0,
-    ETextureAvailability__CPU = 1
-};
-
 enum ETextureDownscaleOptions : uint8_t
 {
     ETextureDownscaleOptions__Default = 0,
@@ -6647,13 +6531,19 @@ enum ETextureDownscaleOptions : uint8_t
 enum ETextureLossyCompressionAmount : uint8_t
 {
     TLCA_Default = 0,
-    TLCA_None = 1
+    TLCA_None = 1,
+    TLCA_Lowest = 2,
+    TLCA_Low = 3,
+    TLCA_Medium = 4,
+    TLCA_High = 5,
+    TLCA_Highest = 6
 };
 
 enum ETextureEncodeSpeed : uint8_t
 {
     ETextureEncodeSpeed__Final = 0,
-    ETextureEncodeSpeed__FinalIfAvailable = 1
+    ETextureEncodeSpeed__FinalIfAvailable = 1,
+    ETextureEncodeSpeed__Fast = 2
 };
 
 enum ETextureClass : uint8_t
@@ -6755,7 +6645,7 @@ enum ETextureColorSpace : uint8_t
     ETextureColorSpace__TCS_ACESAP1 = 4,
     ETextureColorSpace__TCS_P3DCI = 5,
     ETextureColorSpace__TCS_P3D65 = 6,
-    HHHHHH¯ÈıÙ„ÂÁÿı÷REDWideGamut = 7,
+    ETextureColorSpace__TCS_REDWideGamut = 7,
     ETextureColorSpace__TCS_SonySGamut3 = 8,
     ETextureColorSpace__TCS_SonySGamut3Cine = 9,
     ETextureColorSpace__TCS_AlexaWideGamut = 10,
@@ -7062,7 +6952,7 @@ enum EDrawDebugItemType : uint8_t
     EDrawDebugItemType__Point = 5,
     EDrawDebugItemType__Circle = 6,
     EDrawDebugItemType__Cone = 7,
-    ‘’œı„‘ÁH„H„⁄Ÿ„ÿœÙ€„‘ˇ·”Ê„essage = 8,
+    EDrawDebugItemType__InWorldMessage = 8,
     EDrawDebugItemType__Capsule = 9
 };
 
@@ -7098,7 +6988,7 @@ enum EPinHidingMode : uint8_t
     EPinHidingMode__NeverAsPin = 0,
     EPinHidingMode__PinHiddenByDefault = 1,
     EPinHidingMode__PinShownByDefault = 2,
-    EPinHidingMode__AlwaysAsPin = 3
+    œ⁄—Ÿ‡ı⁄gMode__AlwaysAsPin = 3
 };
 
 enum EAnimNodeDataFlags : uint8_t
@@ -7281,8 +7171,7 @@ enum EPrimaryAssetCookRule : uint8_t
     EPrimaryAssetCookRule__DevelopmentCook = 2,
     EPrimaryAssetCookRule__DevelopmentAlwaysProductionNeverCook = 3,
     EPrimaryAssetCookRule__DevelopmentAlwaysCook = 3,
-    EPrimaryAssetCookRule__DevelopmentAlwaysProductionUnknownCook = 4,
-    EPrimaryAssetCookRule__AlwaysCook = 5
+    EPrimaryAssetCookRule__DevelopmentAlwaysProductionUnknownCook = 4
 };
 
 enum EAttenuationDistanceModel : uint8_t
@@ -7322,7 +7211,7 @@ enum EAudioBusChannels : uint8_t
 
 enum EVoiceSampleRate : uint16_t
 {
-    FπeÿHHFk)©jHHte__Low16000Hz = 16000,
+    EVoiceSampleRate__Low16000Hz = 16000,
     EVoiceSampleRate__Normal24000Hz = 24000
 };
 
@@ -7377,9 +7266,7 @@ enum ECameraShakePatternUpdateResultFlags : uint8_t
 
 enum ECameraShakeDurationType : uint8_t
 {
-    ECameraShakeDurationType__Fixed = 0,
-    ECameraShakeDurationType__Infinite = 1,
-    ECameraShakeDurationType__Custom = 2
+    ECameraShakeDurationType__Fixed = 0
 };
 
 enum ECameraShakeAttenuation : uint8_t
@@ -7474,7 +7361,7 @@ enum EPhysicsTransformUpdateMode : uint8_t
 
 enum ESkyAtmosphereTransformMode : uint8_t
 {
-    ESkyAtmosphereTransformMode__PlanetTopAtAbsoluteWorldOrigin = 0,
+    ˚ÈHHHHHHHHereTransformMode__PlanetTopAtAbsoluteWorldOrigin = 0,
     ESkyAtmosphereTransformMode__PlanetTopAtComponentTransform = 1,
     ESkyAtmosphereTransformMode__PlanetCenterAtComponentTransform = 2
 };
@@ -7568,7 +7455,8 @@ enum EGrammaticalNumber : uint8_t
 
 enum ETypedElementWorldType : uint8_t
 {
-    ETypedElementWorldType__Game = 0
+    ETypedElementWorldType__Game = 0,
+    ETypedElementWorldType__Editor = 1
 };
 
 enum ECustomTimeStepSynchronizationState : uint8_t
@@ -7581,7 +7469,7 @@ enum ECustomTimeStepSynchronizationState : uint8_t
 
 enum EVectorQuantization : uint8_t
 {
-    HHHHHHHQuantization__RoundWholeNumber = 0,
+    EVectorQuantization__RoundWholeNumber = 0,
     EVectorQuantization__RoundOneDecimal = 1,
     EVectorQuantization__RoundTwoDecimals = 2
 };
@@ -7726,7 +7614,7 @@ enum EDecalBlendMode : uint8_t
     DBM_DBuffer_NormalRoughness = 9,
     DBM_DBuffer_Roughness = 10,
     DBM_DBuffer_Emissive = 11,
-    ’„⁄‡HHuffer_AlphaComposite = 12,
+    DBM_DBuffer_AlphaComposite = 12,
     DBM_DBuffer_EmissiveAlphaComposite = 13,
     DBM_Volumetric_DistanceFunction = 14,
     DBM_AlphaComposite = 15,
@@ -7773,7 +7661,7 @@ enum EReplayResult : uint8_t
     EReplayResult__Corrupt = 2,
     EReplayResult__UnsupportedCheckpoint = 3,
     EReplayResult__GameSpecific = 4,
-    EReplayResult__InitConnect = 5,
+    ﬂ‚ﬂÂlayResult__InitConnect = 5,
     EReplayResult__LoadMap = 6,
     EReplayResult__Serialization = 7,
     EReplayResult__StreamerError = 8,
@@ -7903,7 +7791,7 @@ enum EPropertyAccessCopyType : uint8_t
     EPropertyAccessCopyType__PromoteBoolToDouble = 12,
     EPropertyAccessCopyType__PromoteByteToInt32 = 13,
     EPropertyAccessCopyType__PromoteByteToInt64 = 14,
-    EPropertyAccessCopyType__PromoteByteToFloat = 15,
+    ‘⁄ˇŸÙ„‘œ„‘Ÿ€Ÿ÷¯„ÿœÙœÿŸomoteByteToFloat = 15,
     EPropertyAccessCopyType__PromoteByteToDouble = 16,
     EPropertyAccessCopyType__PromoteInt32ToInt64 = 17,
     EPropertyAccessCopyType__PromoteInt32ToFloat = 18,
@@ -7999,7 +7887,7 @@ enum EMobileAntiAliasingMethod : uint8_t
     EMobileAntiAliasingMethod__None = 0,
     EMobileAntiAliasingMethod__FXAA = 1,
     EMobileAntiAliasingMethod__TemporalAA = 2,
-    ÿMobileAntiAliasingMethod__MSAA = 3
+    EMobileAntiAliasingMethod__MSAA = 3
 };
 
 enum EMobileFloatPrecisionMode : uint8_t
@@ -8031,7 +7919,7 @@ enum EShaderCompressionFormat : uint8_t
 
 enum ELumenSoftwareTracingMode : uint8_t
 {
-    ELumenSoftwareTracingMode__DetailTracing = 1,
+    HHHHHHHHHHHÁQ≤d(acingMode__DetailTracing = 1,
     ELumenSoftwareTracingMode__GlobalTracing = 0
 };
 
@@ -8139,7 +8027,7 @@ enum ESkeletalMeshAsyncProperties : uint64_t
     ESkeletalMeshAsyncProperties__AssetImportData = 4398046511104,
     ESkeletalMeshAsyncProperties__ThumbnailInfo = 8796093022208,
     ESkeletalMeshAsyncProperties__HasCustomDefaultEditorCamera = 17592186044416,
-    ESkeletalMeshAsyncProperties__DefaultEditorCameraLocation = 35184372088832,
+    ÷SkeletalMeshAsyncProperties__DefaultEditorCameraLocation = 35184372088832,
     ESkeletalMeshAsyncProperties__DefaultEditorCameraRotation = 70368744177664,
     ESkeletalMeshAsyncProperties__RequiresLODScreenSizeConversion = 140737488355328,
     ESkeletalMeshAsyncProperties__PostProcessAnimBlueprint = 281474976710656,
@@ -8229,7 +8117,7 @@ enum EModulationDestination : uint8_t
 enum ESourceBusChannels : uint8_t
 {
     ESourceBusChannels__Mono = 0,
-    eHŸ⁄Ÿ˚’‹„⁄annels__Stereo = 1
+    ESourceBusChannels__Stereo = 1
 };
 
 enum EFFTSize : uint8_t
@@ -8288,7 +8176,9 @@ enum EAudioRecordingExportType : uint8_t
 
 enum ESendLevelControlMethod : uint8_t
 {
-    ESendLevelControlMethod__Linear = 0
+    ESendLevelControlMethod__Linear = 0,
+    ESendLevelControlMethod__CustomCurve = 1,
+    ESendLevelControlMethod__Manual = 2
 };
 
 enum ESubmixSendStage : uint8_t
@@ -8403,7 +8293,7 @@ enum EFontDPI : uint8_t
 
 enum EHardwareDeviceSupportedFeatures : uint32_t
 {
-    HHHHHHHHHHHHHHHHÔFπeÿHHFR˛tures__Unspecified = 0,
+    EHardwareDeviceSupportedFeatures__Unspecified = 0,
     EHardwareDeviceSupportedFeatures__Keypress = 1,
     EHardwareDeviceSupportedFeatures__Pointer = 2,
     EHardwareDeviceSupportedFeatures__Gamepad = 4,
@@ -8501,6 +8391,13 @@ enum EWorldPartitionStreamingPerformance : uint8_t
     EWorldPartitionStreamingPerformance__Good = 0,
     EWorldPartitionStreamingPerformance__Slow = 1,
     EWorldPartitionStreamingPerformance__Critical = 2
+};
+
+enum EWorldPartitionCVarProjectDefaultOverride : uint8_t
+{
+    EWorldPartitionCVarProjectDefaultOverride__ProjectDefault = 0,
+    EWorldPartitionCVarProjectDefaultOverride__Disabled = 1,
+    EWorldPartitionCVarProjectDefaultOverride__Enabled = 2
 };
 
 enum EStreamingSourceTargetBehavior : uint8_t
@@ -8618,7 +8515,7 @@ enum EPartyReservationResult : uint8_t
     EPartyReservationResult__NoResult = 0,
     EPartyReservationResult__RequestPending = 1,
     EPartyReservationResult__GeneralError = 2,
-    EPartyReservationResult__PartyLimitReached = 3,
+    HHH·H÷Ÿ÷÷‹Á÷„ionResult__PartyLimitReached = 3,
     EPartyReservationResult__IncorrectPlayerCount = 4,
     EPartyReservationResult__RequestTimedOut = 5,
     EPartyReservationResult__ReservationDuplicate = 6,
@@ -8716,7 +8613,7 @@ enum ESupervisedSettingsRestrictiveOrder : uint8_t
     ESupervisedSettingsRestrictiveOrder__LowPermissive = 3,
     ESupervisedSettingsRestrictiveOrder__FalseRestrictive = 4,
     ESupervisedSettingsRestrictiveOrder__FalsePermissive = 5,
-    ESupervisedSettingsRestrictiveOrder__None = 6
+    ’‹Á÷„‰÷˘„“ﬂ‘Âﬂ÷‘RestrictiveOrder__None = 6
 };
 
 enum ESupervisedSettingsValueType : uint8_t
@@ -8805,7 +8702,7 @@ enum ETaskResourceOverlapPolicy : uint8_t
     ETaskResourceOverlapPolicy__StartOnTop = 0,
     ETaskResourceOverlapPolicy__StartAtEnd = 1,
     ETaskResourceOverlapPolicy__RequestCancelAndStartOnTop = 2,
-    ETaskResourceOverlapPolicy__RequestCancelAndStartAtEnd = 3
+    ÿŸÙ⁄˘‘÷Á‘ı‰⁄‹„Â⁄Á‘’„licy__RequestCancelAndStartAtEnd = 3
 };
 
 enum EGameplayTaskState : uint8_t
@@ -8813,8 +8710,7 @@ enum EGameplayTaskState : uint8_t
     EGameplayTaskState__Uninitialized = 0,
     EGameplayTaskState__AwaitingActivation = 1,
     EGameplayTaskState__Paused = 2,
-    EGameplayTaskState__Active = 3,
-    EGameplayTaskState__Finished = 4
+    EGameplayTaskState__Active = 3
 };
 
 enum EGameplayTaskRunResult : uint8_t
@@ -8900,7 +8796,7 @@ enum EPathFollowingResult : uint8_t
 
 enum EEnvQueryStatus : uint8_t
 {
-    EEnvQueryStatus__Processing = 0,
+    ≤d(HHG¢Y©^HHHHHHHFHHHHHHng = 0,
     EEnvQueryStatus__Success = 1,
     EEnvQueryStatus__Failed = 2,
     EEnvQueryStatus__Aborted = 3,
@@ -9011,7 +8907,7 @@ enum EEnvTestPurpose : uint8_t
 
 enum EEnvTestFilterType : uint8_t
 {
-    πeÿHHFR˛…nterType__Minimum = 0,
+    EEnvTestFilterType__Minimum = 0,
     EEnvTestFilterType__Maximum = 1,
     EEnvTestFilterType__Range = 2,
     EEnvTestFilterType__Match = 3
@@ -9051,7 +8947,7 @@ enum EEnvTestFilterOperator : uint8_t
 
 enum EEnvTestScoreOperator : uint8_t
 {
-    EEnvTestScoreOperator__AverageScore = 0,
+    HHHHHHÁQ≤d(HHG¢YôjHHHHHHHFageScore = 0,
     EEnvTestScoreOperator__MinScore = 1,
     EEnvTestScoreOperator__MaxScore = 2,
     EEnvTestScoreOperator__Multiply = 3
@@ -9363,7 +9259,15 @@ enum EStateTreePropertyRefType : uint8_t
     EStateTreePropertyRefType__Int64 = 4,
     EStateTreePropertyRefType__Float = 5,
     EStateTreePropertyRefType__Double = 6,
-    EStateTreePropertyRefType__Name = 7
+    EStateTreePropertyRefType__Name = 7,
+    EStateTreePropertyRefType__String = 8,
+    EStateTreePropertyRefType__Text = 9,
+    EStateTreePropertyRefType__Enum = 10,
+    EStateTreePropertyRefType__Struct = 11,
+    EStateTreePropertyRefType__Object = 12,
+    EStateTreePropertyRefType__SoftObject = 13,
+    EStateTreePropertyRefType__Class = 14,
+    EStateTreePropertyRefType__SoftClass = 15
 };
 
 enum EStateTreeTraceStatus : uint8_t
@@ -9425,7 +9329,7 @@ enum EStateTreeBindableStructSource : uint8_t
     EStateTreeBindableStructSource__Condition = 6,
     EStateTreeBindableStructSource__Consideration = 7,
     EStateTreeBindableStructSource__TransitionEvent = 8,
-    ⁄Ÿﬂ‘ﬂ’⁄Á÷Ù„Â÷”Ÿı‘Â”÷‘ı„‹ÊÁ‰⁄ﬂ„„÷ÙeEvent = 9,
+    EStateTreeBindableStructSource__StateEvent = 9,
     EStateTreeBindableStructSource__PropertyFunction = 10
 };
 
@@ -9527,12 +9431,6 @@ enum EStateTreeDataSourceType : uint8_t
     EStateTreeDataSourceType__StateEvent = 13
 };
 
-enum EStateTreeSelectionFallback : uint8_t
-{
-    EStateTreeSelectionFallback__None = 0,
-    EStateTreeSelectionFallback__NextSelectableSibling = 1
-};
-
 enum EStateTreeExternalDataRequirement : uint8_t
 {
     EStateTreeExternalDataRequirement__Required = 0,
@@ -9617,7 +9515,7 @@ enum ERigVMOpCode : uint8_t
     ERigVMOpCode__Execute_25_Operands = 25,
     ERigVMOpCode__Execute_26_Operands = 26,
     ERigVMOpCode__Execute_27_Operands = 27,
-    ’‰⁄Á÷„ÿ˘ÈÈ„‘”Â„–_28_Operands = 28,
+    ERigVMOpCode__Execute_28_Operands = 28,
     ERigVMOpCode__Execute_29_Operands = 29,
     ERigVMOpCode__Execute_30_Operands = 30,
     ERigVMOpCode__Execute_31_Operands = 31,
@@ -9631,7 +9529,66 @@ enum ERigVMOpCode : uint8_t
     ERigVMOpCode__Execute_39_Operands = 39,
     ERigVMOpCode__Execute_40_Operands = 40,
     ERigVMOpCode__Execute_41_Operands = 41,
-    ERigVMOpCode__Execute_42_Operands = 42
+    ERigVMOpCode__Execute_42_Operands = 42,
+    ERigVMOpCode__Execute_43_Operands = 43,
+    ERigVMOpCode__Execute_44_Operands = 44,
+    ERigVMOpCode__Execute_45_Operands = 45,
+    ERigVMOpCode__Execute_46_Operands = 46,
+    ERigVMOpCode__Execute_47_Operands = 47,
+    ERigVMOpCode__Execute_48_Operands = 48,
+    ERigVMOpCode__Execute_49_Operands = 49,
+    ERigVMOpCode__Execute_50_Operands = 50,
+    ERigVMOpCode__Execute_51_Operands = 51,
+    ERigVMOpCode__Execute_52_Operands = 52,
+    ERigVMOpCode__Execute_53_Operands = 53,
+    ERigVMOpCode__Execute_54_Operands = 54,
+    ERigVMOpCode__Execute_55_Operands = 55,
+    ERigVMOpCode__Execute_56_Operands = 56,
+    ERigVMOpCode__Execute_57_Operands = 57,
+    ERigVMOpCode__Execute_58_Operands = 58,
+    ERigVMOpCode__Execute_59_Operands = 59,
+    ERigVMOpCode__Execute_60_Operands = 60,
+    ERigVMOpCode__Execute_61_Operands = 61,
+    ERigVMOpCode__Execute_62_Operands = 62,
+    ERigVMOpCode__Execute_63_Operands = 63,
+    ERigVMOpCode__Execute_64_Operands = 64,
+    ERigVMOpCode__Zero = 65,
+    ERigVMOpCode__BoolFalse = 66,
+    ERigVMOpCode__BoolTrue = 67,
+    ERigVMOpCode__Copy = 68,
+    ERigVMOpCode__Increment = 69,
+    ERigVMOpCode__Decrement = 70,
+    ERigVMOpCode__Equals = 71,
+    ERigVMOpCode__NotEquals = 72,
+    ERigVMOpCode__JumpAbsolute = 73,
+    ERigVMOpCode__JumpForward = 74,
+    ERigVMOpCode__JumpBackward = 75,
+    ERigVMOpCode__JumpAbsoluteIf = 76,
+    ERigVMOpCode__JumpForwardIf = 77,
+    ERigVMOpCode__JumpBackwardIf = 78,
+    ERigVMOpCode__ChangeType = 79,
+    ERigVMOpCode__Exit = 80,
+    ERigVMOpCode__BeginBlock = 81,
+    ERigVMOpCode__EndBlock = 82,
+    ERigVMOpCode__ArrayReset = 83,
+    ERigVMOpCode__ArrayGetNum = 84,
+    ERigVMOpCode__ArraySetNum = 85,
+    ERigVMOpCode__ArrayGetAtIndex = 86,
+    ERigVMOpCode__ArraySetAtIndex = 87,
+    ERigVMOpCode__ArrayAdd = 88,
+    ERigVMOpCode__ArrayInsert = 89,
+    ERigVMOpCode__ArrayRemove = 90,
+    ERigVMOpCode__ArrayFind = 91,
+    ERigVMOpCode__ArrayAppend = 92,
+    ERigVMOpCode__ArrayClone = 93,
+    ERigVMOpCode__ArrayIterator = 94,
+    ERigVMOpCode__ArrayUnion = 95,
+    ERigVMOpCode__ArrayDifference = 96,
+    ERigVMOpCode__ArrayIntersection = 97,
+    ERigVMOpCode__ArrayReverse = 98,
+    ERigVMOpCode__InvokeEntry = 99,
+    ERigVMOpCode__JumpToBranch = 100,
+    ERigVMOpCode__Execute = 101
 };
 
 enum ERigVMCopyType : uint8_t
@@ -9698,7 +9655,7 @@ enum ERigUnitDebugTransformMode : uint8_t
     ERigUnitDebugTransformMode__Point = 0,
     ERigUnitDebugTransformMode__Axes = 1,
     ERigUnitDebugTransformMode__Box = 2,
-    –ŸgUnitDebugTransformMode__Max = 3
+    ERigUnitDebugTransformMode__Max = 3
 };
 
 enum ERigUnitVisualDebugPointMode : uint8_t
@@ -9739,7 +9696,7 @@ enum ERigVMAnimEasingType : uint8_t
     ERigVMAnimEasingType__QuadraticEaseOut = 2,
     ERigVMAnimEasingType__QuadraticEaseInOut = 3,
     ERigVMAnimEasingType__CubicEaseIn = 4,
-    ERigVMAnimEasingType__CubicEaseOut = 5,
+    H⁄ˇ„’ÁÂﬂÊ”„ÿœÙ·⁄ﬂ’Á€ﬂ⁄aseOut = 5,
     ERigVMAnimEasingType__CubicEaseInOut = 6,
     ERigVMAnimEasingType__QuarticEaseIn = 7,
     ERigVMAnimEasingType__QuarticEaseOut = 8,
@@ -9817,7 +9774,7 @@ enum EUpdateResult : uint8_t
     EUpdateResult__ErrorOptimized = 3,
     EUpdateResult__ErrorReplaced = 4,
     EUpdateResult__ErrorDiscarded = 5,
-    HHHHH‰„‰÷ÁÂ’ﬂ÷Ÿ÷÷‘‹”’„ˆ„‘Á‰ÿex = 6
+    EUpdateResult__Error16BitBoneIndex = 6
 };
 
 enum ECustomizableObjectNumBoneInfluences : uint8_t
@@ -9841,7 +9798,7 @@ enum EMutableParameterType : uint8_t
     EMutableParameterType__Int = 2,
     EMutableParameterType__Float = 3,
     EMutableParameterType__Color = 4,
-    EMutableParameterType__Projector = 5,
+    HHHH÷Ÿ‹Ÿ„ÿœterType__Projector = 5,
     EMutableParameterType__Texture = 6,
     EMutableParameterType__Transform = 7
 };
@@ -9902,6 +9859,15 @@ enum EInputActionValueType : uint8_t
     EInputActionValueType__Axis1D = 1,
     EInputActionValueType__Axis2D = 2,
     EInputActionValueType__Axis3D = 3
+};
+
+enum EMappingQueryResult : uint8_t
+{
+    EMappingQueryResult__Error_EnhancedInputNotEnabled = 0,
+    EMappingQueryResult__Error_InputContextNotInActiveContexts = 1,
+    EMappingQueryResult__Error_InvalidAction = 2,
+    EMappingQueryResult__NotMappable = 3,
+    EMappingQueryResult__MappingAvailable = 4
 };
 
 enum EMappingQueryIssue : uint8_t
@@ -10018,8 +9984,9 @@ enum ECommonInputMode : uint8_t
 
 enum ECommonInputEventFlowBehavior : uint8_t
 {
-    HHHHHHHHnputEventFlowBehavior__BlockIfActive = 0,
-    ECommonInputEventFlowBehavior__BlockIfHandled = 1
+    ECommonInputEventFlowBehavior__BlockIfActive = 0,
+    ECommonInputEventFlowBehavior__BlockIfHandled = 1,
+    ECommonInputEventFlowBehavior__NeverBlock = 2
 };
 
 enum ERotatorDirection : uint8_t
@@ -10161,7 +10128,7 @@ enum EScriptDiagnosticMessageType : uint8_t
 {
     EScriptDiagnosticMessageType__Debug = 0,
     EScriptDiagnosticMessageType__Verbose = 1,
-    EScriptDiagnosticMessageType__Normal = 2,
+    ’ŸÊ÷„Ú„ÿœÙ„·Á’cMessageType__Normal = 2,
     EScriptDiagnosticMessageType__Warning = 3,
     EScriptDiagnosticMessageType__Error = 4
 };
@@ -10250,7 +10217,7 @@ enum ENiagaraAssetLibraryAssetTypes : uint8_t
 
 enum ENiagaraAssetTagDefinitionImportance : uint8_t
 {
-    ENiagaraAssetTagDefinitionImportance__Primary = 0,
+    HNiagaraAssetTagDefinitionImportance__Primary = 0,
     ENiagaraAssetTagDefinitionImportance__Secondary = 1,
     ENiagaraAssetTagDefinitionImportance__Internal = 2
 };
@@ -10351,7 +10318,7 @@ enum ENiagaraDataSetType : uint8_t
 
 enum ENiagaraInputNodeUsage : uint8_t
 {
-    HHHHÔFπeÿnputNodeUsage__Undefined = 0,
+    ENiagaraInputNodeUsage__Undefined = 0,
     ENiagaraInputNodeUsage__Parameter = 1,
     ENiagaraInputNodeUsage__Attribute = 2,
     ENiagaraInputNodeUsage__SystemConstant = 3,
@@ -10378,7 +10345,7 @@ enum ENiagaraScriptUsage : uint8_t
     ENiagaraScriptUsage__ParticleSpawnScript = 3,
     ENiagaraScriptUsage__ParticleSpawnScriptInterpolated = 4,
     ENiagaraScriptUsage__ParticleUpdateScript = 5,
-    ENiagaraScriptUsage__ParticleEventScript = 6,
+    ÿﬂ÷Âı„‘Á‰ÿÛ„‹Âﬂ‘÷Áe__ParticleEventScript = 6,
     ENiagaraScriptUsage__ParticleSimulationStageScript = 7,
     ENiagaraScriptUsage__ParticleGPUComputeScript = 8,
     ENiagaraScriptUsage__EmitterSpawnScript = 9,
@@ -10464,12 +10431,7 @@ enum ENiagaraGpuComputeTickStage : uint8_t
 enum ENiagaraConditionalOperator : uint8_t
 {
     ENiagaraConditionalOperator__Equals = 0,
-    ENiagaraConditionalOperator__NotEqual = 1,
-    ENiagaraConditionalOperator__LessThan = 2,
-    ENiagaraConditionalOperator__LessThanOrEqual = 3,
-    ENiagaraConditionalOperator__GreaterThan = 4,
-    ENiagaraConditionalOperator__GreaterThanOrEqual = 5,
-    ENiagaraConditionalOperator__Max = 6
+    ENiagaraConditionalOperator__NotEqual = 1
 };
 
 enum ENCPoolMethod : uint8_t
@@ -10477,7 +10439,7 @@ enum ENCPoolMethod : uint8_t
     ENCPoolMethod__None = 0,
     ENCPoolMethod__AutoRelease = 1,
     ENCPoolMethod__ManualRelease = 2,
-    HHHHHHHHHHH„’Á„ManualRelease_OnComplete = 3,
+    ENCPoolMethod__ManualRelease_OnComplete = 3,
     ENCPoolMethod__FreeInPool = 4
 };
 
@@ -10507,7 +10469,7 @@ enum ENiagaraSortMode : uint8_t
     ENiagaraSortMode__None = 0,
     ENiagaraSortMode__ViewDepth = 1,
     ENiagaraSortMode__ViewDistance = 2,
-    ENiagaraSortMode__CustomAscending = 3,
+    HHHagaraSortMode__CustomAscending = 3,
     ENiagaraSortMode__CustomDecending = 4
 };
 
@@ -10558,7 +10520,7 @@ enum ENiagaraDistributionMode : uint8_t
     ENiagaraDistributionMode__Binding = 0,
     ENiagaraDistributionMode__UniformConstant = 1,
     ENiagaraDistributionMode__NonUniformConstant = 2,
-    Ÿ€÷Ÿ‚ﬂ⁄Û⁄Ÿ˙„‰Ÿ˚onMode__UniformRange = 3,
+    ENiagaraDistributionMode__UniformRange = 3,
     ENiagaraDistributionMode__NonUniformRange = 4,
     ENiagaraDistributionMode__UniformCurve = 5,
     ENiagaraDistributionMode__NonUniformCurve = 6
@@ -10653,7 +10615,7 @@ enum ENDISceneCapture2DOffsetMode : uint8_t
 enum ENDISocketReaderSourceMode : uint8_t
 {
     ENDISocketReaderSourceMode__Default = 0,
-    HHHHHHHHHHHHH‘‹”Á‚„„‰Ÿ˚„Â÷”Ÿı÷„‰Á„ˆ‘„›ÂŸıˇly = 1,
+    ENDISocketReaderSourceMode__ParameterBindingOnly = 1,
     ENDISocketReaderSourceMode__AttachedParentOnly = 2,
     ENDISocketReaderSourceMode__SourceOnly = 3
 };
@@ -10692,8 +10654,7 @@ enum ENiagaraCompilationState : uint8_t
     ENiagaraCompilationState__OptimizeByteCode = 4,
     ENiagaraCompilationState__ProcessResult = 5,
     ENiagaraCompilationState__PutToDDC = 6,
-    ENiagaraCompilationState__Finished = 7,
-    ENiagaraCompilationState__Aborted = 8
+    ENiagaraCompilationState__Finished = 7
 };
 
 enum ENiagaraBakerViewMode : uint8_t
@@ -10753,7 +10714,8 @@ enum ENiagaraDebugHudVAlign : uint8_t
 {
     ENiagaraDebugHudVAlign__Top = 0,
     ENiagaraDebugHudVAlign__Center = 1,
-    ENiagaraDebugHudVAlign__Bottom = 2
+    ENiagaraDebugHudVAlign__Bottom = 2,
+    HHHHHHHHHHHHHHHHHHHH€Ÿ‘‘Ÿ⁄·ﬂ‹Ú‰” = 3
 };
 
 enum ENiagaraDebugHudFont : uint8_t
@@ -10842,7 +10804,7 @@ enum EParticleAllocationMode : uint8_t
 {
     EParticleAllocationMode__AutomaticEstimate = 0,
     EParticleAllocationMode__ManualEstimate = 1,
-    ﬂ‘’‹icleAllocationMode__FixedCount = 2
+    EParticleAllocationMode__FixedCount = 2
 };
 
 enum ENiagaraEmitterMode : uint8_t
@@ -10953,7 +10915,7 @@ enum ENiagaraRibbonDrawDirection : uint8_t
 enum ENiagaraRibbonShapeMode : uint8_t
 {
     ENiagaraRibbonShapeMode__Plane = 0,
-    HNiagaraRibbonShapeMode__MultiPlane = 1,
+    ENiagaraRibbonShapeMode__MultiPlane = 1,
     ENiagaraRibbonShapeMode__Tube = 2,
     ENiagaraRibbonShapeMode__Custom = 3
 };
@@ -11058,7 +11020,7 @@ enum ENiagaraSpriteFacingMode : uint8_t
 enum ENiagaraRendererPixelCoverageMode : uint8_t
 {
     ENiagaraRendererPixelCoverageMode__Automatic = 0,
-    ﬂ‘Á€Ÿ‘”„‰Ÿ˚„·Á÷„“ŸCoverageMode__Disabled = 1,
+    ENiagaraRendererPixelCoverageMode__Disabled = 1,
     ENiagaraRendererPixelCoverageMode__Enabled = 2,
     ENiagaraRendererPixelCoverageMode__Enabled_RGBA = 3,
     ENiagaraRendererPixelCoverageMode__Enabled_RGB = 4,
@@ -11187,7 +11149,7 @@ enum EAbilityGenericReplicatedEvent : uint8_t
 {
     EAbilityGenericReplicatedEvent__GenericConfirm = 0,
     EAbilityGenericReplicatedEvent__GenericCancel = 1,
-    EAbilityGenericReplicatedEvent__InputPressed = 2,
+    „Â⁄ÁlityGenericReplicatedEvent__InputPressed = 2,
     EAbilityGenericReplicatedEvent__InputReleased = 3,
     EAbilityGenericReplicatedEvent__GenericSignalFromClient = 4,
     EAbilityGenericReplicatedEvent__GenericSignalFromServer = 5,
@@ -11250,7 +11212,7 @@ enum EWaitAttributeChangeComparison : uint8_t
 {
     EWaitAttributeChangeComparison__None = 0,
     EWaitAttributeChangeComparison__GreaterThan = 1,
-    EWaitAttributeChangeComparison__LessThan = 2,
+    Ù÷„‘Á„÷ributeChangeComparison__LessThan = 2,
     EWaitAttributeChangeComparison__GreaterThanOrEqualTo = 3,
     EWaitAttributeChangeComparison__LessThanOrEqualTo = 4,
     EWaitAttributeChangeComparison__NotEqualTo = 5,
@@ -11338,7 +11300,9 @@ enum EGameplayEffectMagnitudeCalculation : uint8_t
 enum EAttributeBasedFloatCalculationType : uint8_t
 {
     EAttributeBasedFloatCalculationType__AttributeMagnitude = 0,
-    EAttributeBasedFloatCalculationType__AttributeBaseValue = 1
+    EAttributeBasedFloatCalculationType__AttributeBaseValue = 1,
+    EAttributeBasedFloatCalculationType__AttributeBonusMagnitude = 2,
+    EAttributeBasedFloatCalculationType__AttributeMagnitudeEvaluatedUpToChannel = 3
 };
 
 enum EGameplayEffectVersion : uint8_t
@@ -11524,7 +11488,7 @@ enum ECameraNodeOriginPosition : uint8_t
     ECameraNodeOriginPosition__CameraPose = 0,
     ECameraNodeOriginPosition__ActiveContext = 1,
     ECameraNodeOriginPosition__OwningContext = 2,
-    ⁄ﬂ⁄—˘⁄Ÿﬂ‘ﬂ’Ÿ¯⁄ﬂ·ﬂ÷˘„‰Ÿn__Pivot = 3,
+    ECameraNodeOriginPosition__Pivot = 3,
     ECameraNodeOriginPosition__Pawn = 4
 };
 
@@ -11559,7 +11523,7 @@ enum ECameraVariableType : uint8_t
 enum ECameraBlendStackType : uint8_t
 {
     ECameraBlendStackType__IsolatedTransient = 0,
-    ECameraBlendStackType__AdditivePersistent = 1
+    HCameraBlendStackType__AdditivePersistent = 1
 };
 
 enum ECameraRigInitialOrientation : uint8_t
@@ -11771,7 +11735,7 @@ enum EQosCompletionResult : uint8_t
     EQosCompletionResult__Invalid = 0,
     EQosCompletionResult__Success = 1,
     EQosCompletionResult__Failure = 2,
-    H„÷”‹ﬂÁ‘‹onResult__Canceled = 3
+    EQosCompletionResult__Canceled = 3
 };
 
 enum EHotfixResult : uint8_t
@@ -11804,7 +11768,7 @@ enum EUpdateCompletionStatus : uint8_t
     EUpdateCompletionStatus__UpdateSuccess_NeedsPatch = 5,
     EUpdateCompletionStatus__UpdateFailure_PatchCheck = 6,
     EUpdateCompletionStatus__UpdateFailure_HotfixCheck = 7,
-    EUpdateCompletionStatus__UpdateFailure_NotLoggedIn = 8
+    ›Â„‡–ﬂ‚‘Ÿ = 8
 };
 
 enum EExternalAccountType : uint8_t
@@ -11868,29 +11832,12 @@ enum ELoginResult : uint8_t
     ELoginResult__RejoinCheckFailure = 31,
     ELoginResult__ConnectionFailed = 32,
     ELoginResult__NetworkConnectionUnavailable = 33,
-    ELoginResult__AlreadyLoggingIn = 34,
-    ELoginResult__ExternalAuth_AddedAuthAssociation = 35,
-    ELoginResult__ExternalAuth_ConnectionTimeout = 36,
-    ELoginResult__ExternalAuth_AuthFailure = 37,
-    ELoginResult__ExternalAuth_AssociationFailure = 38,
-    ELoginResult__ExternalAuth_MissingAuthAssociation = 39,
-    ELoginResult__ExternalAuth_Canceled = 40,
-    ELoginResult__FailedToCreateParty = 41,
-    ELoginResult__ProfileQueryFailed = 42,
-    ELoginResult__QueryKeychainFailed = 43,
-    ELoginResult__ClientSettingsDownloadFailed = 44,
-    ELoginResult__SupervisedSettingsDownloadFailed = 45,
-    ELoginResult__PinGrantFailure = 46,
-    ELoginResult__PinGrantTimeout = 47,
-    ELoginResult__PinGrantCanceled = 48,
-    ELoginResult__LoginStepTimeout = 49,
-    ELoginResult__Console_LoginCanceled = 50,
-    ELoginResult__AlreadyLoggedIn = 51
+    ELoginResult__AlreadyLoggingIn = 34
 };
 
 enum ECreateAccountResult : uint8_t
 {
-    HHHÔateAccountResult__NotStarted = 0,
+    ECreateAccountResult__NotStarted = 0,
     ECreateAccountResult__Pending = 1,
     ECreateAccountResult__Success = 2,
     ECreateAccountResult__Console_LoginFailed = 3,
@@ -11927,7 +11874,7 @@ enum EPartyType : uint8_t
 enum EPartyInviteRestriction : uint8_t
 {
     EPartyInviteRestriction__AnyMember = 0,
-    EPartyInviteRestriction__LeaderOnly = 1,
+    H÷„Ê€„˚œ⁄⁄Ÿﬂ‘Âﬂ÷‘’„ˆ__LeaderOnly = 1,
     EPartyInviteRestriction__NoInvites = 2
 };
 
@@ -12005,7 +11952,7 @@ enum EApprovalAction : uint8_t
 {
     EApprovalAction__Approve = 0,
     EApprovalAction__Enqueue = 1,
-    HHHHHHHHHÔFπeH„”„”nqueueAndStartBeacon = 2,
+    EApprovalAction__EnqueueAndStartBeacon = 2,
     EApprovalAction__Deny = 3
 };
 
@@ -12035,7 +11982,7 @@ enum ESocialPartyInviteFailureReason : uint8_t
     ESocialPartyInviteFailureReason__AlreadyInParty = 4,
     ESocialPartyInviteFailureReason__OssValidationFailed = 5,
     ESocialPartyInviteFailureReason__PlatformInviteFailed = 6,
-    ESocialPartyInviteFailureReason__PartyInviteFailed = 7,
+    ﬂÁ„‘ﬂ“⁄ˇ€÷Ÿ‚‘Á‹¯⁄Ÿ’ureReason__PartyInviteFailed = 7,
     ESocialPartyInviteFailureReason__InviteRateLimitExceeded = 8
 };
 
@@ -12119,8 +12066,7 @@ enum EEntityEndPlayReason : uint8_t
 {
     EEntityEndPlayReason__RemoveFromWorld = 0,
     EEntityEndPlayReason__RemoveFromEntity = 1,
-    EEntityEndPlayReason__Destroy = 2,
-    HHHHHHHHœ‘ﬂ‘⁄€ŸHœŸ÷‘’„⁄Ÿ’Á„ˆœÁ‹¯‰⁄œ‘ﬂ‘⁄AX = 3
+    EEntityEndPlayReason__Destroy = 2
 };
 
 enum EMVVMExecutionMode : uint8_t
@@ -12155,7 +12101,7 @@ enum EMVVMConditionOperation : uint8_t
 enum EUIFrameworkGameLayerType : uint8_t
 {
     EUIFrameworkGameLayerType__Viewport = 0,
-    EUIFrameworkGameLayerType__PlayerScreen = 1
+    HHHH‘÷Ÿÿ—orkGameLayerType__PlayerScreen = 1
 };
 
 enum EUIFrameworkInputMode : uint8_t
@@ -12246,7 +12192,7 @@ enum ESmartObjectChangeReason : uint8_t
     ESmartObjectChangeReason__OnTagAdded = 2,
     ESmartObjectChangeReason__OnTagRemoved = 3,
     ESmartObjectChangeReason__OnClaimed = 4,
-    H‰„€ﬂÁ‹⁄˘⁄Ÿ’Á„ˆ„·⁄Á‡‘Â„ﬁÊ˘‘÷pied = 5,
+    ESmartObjectChangeReason__OnOccupied = 5,
     ESmartObjectChangeReason__OnReleased = 6,
     ESmartObjectChangeReason__OnSlotEnabled = 7,
     ESmartObjectChangeReason__OnSlotDisabled = 8,
@@ -12366,7 +12312,7 @@ enum EWithinBoundsEvaluationType : uint8_t
 
 enum EPlayspaceComponentCreationType : uint8_t
 {
-    EPlayspaceComponentCreationType__Root = 0,
+    HHHHHHHHÁQ≤d(HHG¢PCâvHHHHHHType__Root = 0,
     EPlayspaceComponentCreationType__ByLocation = 1,
     EPlayspaceComponentCreationType__ByTags = 2
 };
@@ -12448,7 +12394,7 @@ enum ERigControlAxis : uint8_t
 
 enum ERigControlType : uint8_t
 {
-    ERigControlType__Bool = 0,
+    ¢PCy^HHHHHHHFHHHHHHol = 0,
     ERigControlType__Float = 1,
     ERigControlType__Integer = 2,
     ERigControlType__Vector2D = 3,
@@ -12556,9 +12502,7 @@ enum EControlRigTestDataPlaybackMode : uint8_t
 enum ECRSimConstraintType : uint8_t
 {
     ECRSimConstraintType__Distance = 0,
-    ECRSimConstraintType__DistanceFromA = 1,
-    ECRSimConstraintType__DistanceFromB = 2,
-    ECRSimConstraintType__Plane = 3
+    ECRSimConstraintType__DistanceFromA = 1
 };
 
 enum ECRSimPointForceType : uint8_t
@@ -12580,7 +12524,7 @@ enum EModularRigNotification : uint8_t
     EModularRigNotification__ModuleRemoved = 2,
     EModularRigNotification__ModuleReparented = 3,
     EModularRigNotification__ConnectionChanged = 4,
-    EModularRigNotification__ModuleConfigValueChanged = 5,
+    HHHHHHH‰„·⁄Á‡tification__ModuleConfigValueChanged = 5,
     EModularRigNotification__ModuleShortNameChanged = 6,
     EModularRigNotification__InteractionBracketOpened = 7,
     EModularRigNotification__InteractionBracketClosed = 8,
@@ -12614,7 +12558,20 @@ enum ERigMetadataType : uint8_t
     ERigMetadataType__Int32 = 4,
     ERigMetadataType__Int32Array = 5,
     ERigMetadataType__Name = 6,
-    ERigMetadataType__NameArray = 7
+    ERigMetadataType__NameArray = 7,
+    ERigMetadataType__Vector = 8,
+    ERigMetadataType__VectorArray = 9,
+    ERigMetadataType__Rotator = 10,
+    ERigMetadataType__RotatorArray = 11,
+    ERigMetadataType__Quat = 12,
+    ERigMetadataType__QuatArray = 13,
+    ERigMetadataType__Transform = 14,
+    ERigMetadataType__TransformArray = 15,
+    ERigMetadataType__LinearColor = 16,
+    ERigMetadataType__LinearColorArray = 17,
+    ERigMetadataType__RigElementKey = 18,
+    ERigMetadataType__RigElementKeyArray = 19,
+    ERigMetadataType__Invalid = 20
 };
 
 enum ERigEvent : uint8_t
@@ -12694,7 +12651,7 @@ enum EApplyTransformMode : uint8_t
 enum ERigSwitchParentMode : uint8_t
 {
     ERigSwitchParentMode__World = 0,
-    HRigSwitchParentMode__DefaultParent = 1,
+    ERigSwitchParentMode__DefaultParent = 1,
     ERigSwitchParentMode__ParentItem = 2
 };
 
@@ -12733,7 +12690,7 @@ enum ERigMetaDataNameSpace : uint8_t
 {
     ERigMetaDataNameSpace__None = 0,
     ERigMetaDataNameSpace__Self = 1,
-    ERigMetaDataNameSpace__Parent = 2,
+    ÁH‚‹„ı„ÂÁÿı„€Á˙pace__Parent = 2,
     ERigMetaDataNameSpace__Root = 3,
     ERigMetaDataNameSpace__Last = 4
 };
@@ -12944,8 +12901,7 @@ enum ESubtitleDisplayTextSize : uint8_t
 
 enum ESubtitleDisplayTextColor : uint8_t
 {
-    ESubtitleDisplayTextColor__White = 0,
-    ESubtitleDisplayTextColor__Yellow = 1
+    ESubtitleDisplayTextColor__White = 0
 };
 
 enum ESubtitleDisplayTextBorder : uint8_t
@@ -13160,7 +13116,7 @@ enum EWaterExclusionMode : uint8_t
 enum EWaterBrushBlendType : uint8_t
 {
     EWaterBrushBlendType__AlphaBlend = 0,
-    ÿ‹„ÿrushBlendType__Min = 1,
+    EWaterBrushBlendType__Min = 1,
     EWaterBrushBlendType__Max = 2,
     EWaterBrushBlendType__Additive = 3
 };
@@ -13221,7 +13177,7 @@ enum ENetworkPredictionTickingPolicy : uint8_t
 {
     ENetworkPredictionTickingPolicy__Independent = 1,
     ENetworkPredictionTickingPolicy__Fixed = 2,
-    ENetworkPredictionTickingPolicy__All = 3
+    –ﬂœÂﬂ‹Ÿ¯·⁄ﬂ›ÂﬂÙ⁄Ÿﬂ‘Âﬂ‰„÷¯icy__All = 3
 };
 
 enum ENetworkLOD : uint8_t
@@ -13291,7 +13247,8 @@ enum ESynthModEnvPatch : uint8_t
     ESynthModEnvPatch__PatchToLFO1Gain = 4,
     ESynthModEnvPatch__PatchToLFO2Gain = 5,
     ESynthModEnvPatch__PatchToLFO1Freq = 6,
-    ESynthModEnvPatch__PatchToLFO2Freq = 7
+    ESynthModEnvPatch__PatchToLFO2Freq = 7,
+    ESynthModEnvPatch__Count = 8
 };
 
 enum ESynthModEnvBiasPatch : uint8_t
@@ -13450,7 +13407,7 @@ enum ESourceEffectMotionFilterTopology : uint8_t
 {
     ESourceEffectMotionFilterTopology__SerialMode = 0,
     ESourceEffectMotionFilterTopology__ParallelMode = 1,
-    ESourceEffectMotionFilterTopology__Count = 2
+    ‹Á÷Á¯œ·Ÿ‹ŸÿŸÙ÷„‘‹ﬂ⁄Ÿﬂ‘Ÿ˚‘Â„‚‚y__Count = 2
 };
 
 enum ESourceEffectMotionFilterCircuit : uint8_t
@@ -13900,7 +13857,8 @@ enum EAmbientAudioTagActionType : uint8_t
 enum EAudioShapeComponentState : uint8_t
 {
     EAudioShapeComponentState__Inactive = 0,
-    EAudioShapeComponentState__Active = 1
+    EAudioShapeComponentState__Active = 1,
+    EAudioShapeComponentState__Count = 2
 };
 
 enum UCPTypes : uint8_t
@@ -13985,7 +13943,7 @@ enum EMotionWarpRotationMethod : uint8_t
 
 enum EWarpPointAnimProvider : uint8_t
 {
-    EWarpPointAnimProvider__None = 0,
+    Q≤d(HHG¢Y∞©lHHHHHHider__None = 0,
     EWarpPointAnimProvider__Static = 1,
     EWarpPointAnimProvider__Bone = 2
 };
@@ -14010,7 +13968,7 @@ enum EValkyrieProjectDescriptorFileVersion : uint8_t
     EValkyrieProjectDescriptorFileVersion__AddedCompatibilityLabel = 3,
     EValkyrieProjectDescriptorFileVersion__AddBindings = 4,
     EValkyrieProjectDescriptorFileVersion__AddEditorPermissions = 5,
-    ¯÷Ÿ‘ﬂ‰‰‰ojectDescriptorFileVersion__AddEpicApp = 6,
+    EValkyrieProjectDescriptorFileVersion__AddEpicApp = 6,
     EValkyrieProjectDescriptorFileVersion__AddDataSets = 7,
     EValkyrieProjectDescriptorFileVersion__AddVersionSuffix = 8,
     EValkyrieProjectDescriptorFileVersion__AddProjectKind = 9,
@@ -14103,16 +14061,6 @@ enum EVkModuleSafetyStatus : uint8_t
     EVkModuleSafetyStatus__FailedHard = 3
 };
 
-enum EVkModuleModerationSource : uint8_t
-{
-    EVkModuleModerationSource__System = 0,
-    EVkModuleModerationSource__Manual = 1,
-    EVkModuleModerationSource__Error = 2,
-    EVkModuleModerationSource__AdminAction = 3,
-    EVkModuleModerationSource__CommandletError = 4,
-    EVkModuleModerationSource__IngestionError = 5
-};
-
 enum EVkTeamMembershipStatus : uint8_t
 {
     EVkTeamMembershipStatus__Pending = 0,
@@ -14150,7 +14098,7 @@ enum EMusicalBeatType : uint8_t
 {
     EMusicalBeatType__Downbeat = 0,
     EMusicalBeatType__Strong = 1,
-    ·⁄Ÿ÷‘ı„ÿatType__Normal = 2
+    EMusicalBeatType__Normal = 2
 };
 
 enum EMusicTimeSpanOffsetUnits : uint8_t
@@ -14215,7 +14163,7 @@ enum EMidiClockSubdivisionQuantization : uint8_t
     EMidiClockSubdivisionQuantization__WholeNote = 7,
     EMidiClockSubdivisionQuantization__DottedSixteenthNote = 8,
     EMidiClockSubdivisionQuantization__DottedEighthNote = 9,
-    EMidiClockSubdivisionQuantization__DottedQuarterNote = 10,
+    H„‘Ÿ˙‡‘‡·ﬂ‰„‘‘ŸionQuantization__DottedQuarterNote = 10,
     EMidiClockSubdivisionQuantization__DottedHalfNote = 11,
     EMidiClockSubdivisionQuantization__DottedWholeNote = 12,
     EMidiClockSubdivisionQuantization__SixteenthNoteTriplet = 13,
@@ -14228,7 +14176,7 @@ enum EMidiClockSubdivisionQuantization : uint8_t
 enum EFusionPatchAudioLoadResult : uint8_t
 {
     EFusionPatchAudioLoadResult__Success = 0,
-    ÂÂ”ı‘‹”’„ˆ‰ÁŸ¸Ÿﬂ‰”Result__Fail = 1,
+    EFusionPatchAudioLoadResult__Fail = 1,
     EFusionPatchAudioLoadResult__Cancelled = 2
 };
 
@@ -14308,7 +14256,7 @@ enum EDistortionTypeV1 : uint8_t
 enum EDistortionTypeV2 : uint8_t
 {
     EDistortionTypeV2__Clean = 0,
-    Á„‹stortionTypeV2__Warm = 1,
+    EDistortionTypeV2__Warm = 1,
     EDistortionTypeV2__Clip = 2,
     EDistortionTypeV2__Soft = 3,
     EDistortionTypeV2__Asymmetric = 4,
@@ -14412,13 +14360,12 @@ enum EVocoderBandConfig : uint8_t
     EVocoderBandConfig__k64 = 4,
     EVocoderBandConfig__k128 = 5,
     EVocoderBandConfig__k256 = 6,
-    EVocoderBandConfig__Num = 7,
-    EVocoderBandConfig__None = 8
+    EVocoderBandConfig__Num = 7
 };
 
 enum EMusicTimeDiscontinuityType : uint8_t
 {
-    HHHHÔFπeÿeDiscontinuityType__Loop = 0,
+    EMusicTimeDiscontinuityType__Loop = 0,
     EMusicTimeDiscontinuityType__Seek = 1
 };
 
@@ -14481,7 +14428,7 @@ enum EStdMidiControllerID : uint8_t
     EStdMidiControllerID__LSBControl15 = 47,
     EStdMidiControllerID__LSBControl16 = 48,
     EStdMidiControllerID__LSBControl17 = 49,
-    EStdMidiControllerID__LSBControl18 = 50,
+    tdMidiControllerID__LSBControl18 = 50,
     EStdMidiControllerID__LSBControl19 = 51,
     EStdMidiControllerID__LSBControl20 = 52,
     EStdMidiControllerID__LSBControl21 = 53,
@@ -14489,7 +14436,7 @@ enum EStdMidiControllerID : uint8_t
     EStdMidiControllerID__LSBControl23 = 55,
     EStdMidiControllerID__LSBControl24 = 56,
     EStdMidiControllerID__LSBControl25 = 57,
-    ‹ŸMidiControllerID__LSBControl26 = 58,
+    EStdMidiControllerID__LSBControl26 = 58,
     EStdMidiControllerID__LSBControl27 = 59,
     EStdMidiControllerID__LSBControl28 = 60,
     EStdMidiControllerID__LSBControl29 = 61,
@@ -14552,7 +14499,7 @@ enum EConversationTaskResultType : uint8_t
     EConversationTaskResultType__AdvanceConversation = 2,
     EConversationTaskResultType__AdvanceConversationWithChoice = 3,
     EConversationTaskResultType__PauseConversationAndSendClientChoices = 4,
-    ‰⁄„ı‰⁄⁄Ÿﬂ‘Á’÷„“⁄Ÿ„’”Á¯„ÿœÙ‘‹”’„ˆ›’ÁÙ⁄Ÿﬂ‘Á’÷„“oice = 5,
+    ‰⁄„ı‰⁄⁄Ÿﬂ‘onTaskResultType__ReturnToLastClientChoice = 5,
     EConversationTaskResultType__ReturnToCurrentClientChoice = 6,
     EConversationTaskResultType__ReturnToConversationStart = 7
 };
@@ -14652,13 +14599,6 @@ enum EGameplayTaskActuationResult : uint8_t
     EGameplayTaskActuationResult__Succeeded = 3
 };
 
-enum EGameplayInteractionAbortReason : uint8_t
-{
-    EGameplayInteractionAbortReason__Unset = 0,
-    EGameplayInteractionAbortReason__ExternalAbort = 1,
-    EGameplayInteractionAbortReason__InternalAbort = 2
-};
-
 enum EGameplayInteractionModifyGameplayTagOperation : uint8_t
 {
     EGameplayInteractionModifyGameplayTagOperation__Add = 0,
@@ -14679,7 +14619,7 @@ enum EGameplayInteractionTaskTrigger : uint8_t
     EGameplayInteractionTaskTrigger__OnEnterState = 0,
     EGameplayInteractionTaskTrigger__OnExitState = 1,
     EGameplayInteractionTaskTrigger__OnExitStateFailed = 2,
-    HHH‰„‹ﬂÁ„‘Á‘ı‘ﬂ–⁄˘÷„··ﬂ÷Ù›’ÁÙ⁄Ÿﬂ‘ÂÁ÷„ateSucceeded = 3
+    EGameplayInteractionTaskTrigger__OnExitStateSucceeded = 3
 };
 
 enum EGameplayInteractionMatchSlotTagSource : uint8_t
@@ -14741,26 +14681,6 @@ enum ESpatialValueReductionMethod : uint8_t
     ESpatialValueReductionMethod__MeanValue = 1,
     ESpatialValueReductionMethod__MinValue = 2,
     ESpatialValueReductionMethod__MaxValue = 3
-};
-
-enum EIoDispatcherChunkTypeFlags : uint16_t
-{
-    EIoDispatcherChunkTypeFlags__ExportBundleData = 1,
-    EIoDispatcherChunkTypeFlags__BulkData = 2,
-    EIoDispatcherChunkTypeFlags__OptionalBulkData = 4,
-    EIoDispatcherChunkTypeFlags__MemoryMappedBulkData = 8,
-    EIoDispatcherChunkTypeFlags__ScriptObjects = 16,
-    EIoDispatcherChunkTypeFlags__ContainerHeader = 32,
-    EIoDispatcherChunkTypeFlags__ExternalFile = 64,
-    EIoDispatcherChunkTypeFlags__ShaderCodeLibrary = 128,
-    EIoDispatcherChunkTypeFlags__ShaderCode = 256,
-    EIoDispatcherChunkTypeFlags__PackageStoreEntry = 512,
-    EIoDispatcherChunkTypeFlags__DerivedData = 1024,
-    EIoDispatcherChunkTypeFlags__EditorDerivedData = 2048,
-    EIoDispatcherChunkTypeFlags__PackageResource = 4096,
-    EIoDispatcherChunkTypeFlags__None = 0,
-    EIoDispatcherChunkTypeFlags__Default = 15,
-    EIoDispatcherChunkTypeFlags__All = 8191
 };
 
 enum EResourceSizeMemoryCategory : uint8_t
@@ -14867,7 +14787,7 @@ enum EPoseSearchInterruptMode : uint8_t
     EPoseSearchInterruptMode__DoNotInterrupt = 0,
     EPoseSearchInterruptMode__InterruptOnDatabaseChange = 1,
     EPoseSearchInterruptMode__InterruptOnDatabaseChangeAndInvalidateContinuingPose = 2,
-    EPoseSearchInterruptMode__ForceInterrupt = 3,
+    ‘Á⁄˘‘ÿ”÷÷„‘⁄ˇ„‰Ÿ˚Mode__ForceInterrupt = 3,
     EPoseSearchInterruptMode__ForceInterruptAndInvalidateContinuingPose = 4
 };
 
@@ -14888,8 +14808,7 @@ enum EGameplayBehaviorInstantiationPolicy : uint8_t
 enum EChaosCacheInterpolationMode : uint8_t
 {
     EChaosCacheInterpolationMode__QuatInterp = 0,
-    EChaosCacheInterpolationMode__EulerInterp = 1,
-    EChaosCacheInterpolationMode__DualQuatInterp = 2
+    EChaosCacheInterpolationMode__EulerInterp = 1
 };
 
 enum ECacheMode : uint8_t
@@ -14937,7 +14856,39 @@ enum EChaosClothTetherMode : uint8_t
 
 enum EVehicleSimStep : uint8_t
 {
-    EVehicleSimStep__None = 0
+    EVehicleSimStep__None = 0,
+    EVehicleSimStep__Update = 1,
+    EVehicleSimStep__UpdateSleepType = 2,
+    EVehicleSimStep__UpdatePlatform = 3,
+    EVehicleSimStep__UpdateBoundarySpline = 4,
+    EVehicleSimStep__UpdateIgnoredPawnsForDamage = 5,
+    EVehicleSimStep__UpdatePredictedDestroyedBuildings = 6,
+    EVehicleSimStep__UpdateForcedDebugInput = 7,
+    EVehicleSimStep__UpdateAutoCameraTimer = 8,
+    EVehicleSimStep__UpdateCameraOffset = 9,
+    EVehicleSimStep__UpdateLocalPlayerInVehicle = 10,
+    EVehicleSimStep__UpdateOverlappingWaterBodies = 11,
+    EVehicleSimStep__UpdateIgnoredBuildingActors = 12,
+    EVehicleSimStep__UpdateFOV = 13,
+    EVehicleSimStep__UpdateAutoEject = 14,
+    EVehicleSimStep__UpdateHonk = 15,
+    EVehicleSimStep__UpdateOnFire = 16,
+    EVehicleSimStep__UpdateExplodeDelay = 17,
+    EVehicleSimStep__UpdateWaterIdle = 18,
+    EVehicleSimStep__UpdateFX = 19,
+    EVehicleSimStep__UpdateAutoRun = 20,
+    EVehicleSimStep__UpdateWorldMovementDir = 21,
+    EVehicleSimStep__UpdatePlayerGravityScales = 22,
+    EVehicleSimStep__UpdateSafeTeleport = 23,
+    EVehicleSimStep__UpdateWaterLevel = 24,
+    EVehicleSimStep__UpdateWaterTest = 25,
+    EVehicleSimStep__UpdatePontoons = 26,
+    EVehicleSimStep__UpdateOrientationCorrection = 27,
+    EVehicleSimStep__UpdateReplicatedAttributes = 28,
+    EVehicleSimStep__UpdateImpactBuckets = 29,
+    EVehicleSimStep__UpdateCameraShakeTick = 30,
+    EVehicleSimStep__UpdateForceFeedbackTick = 31,
+    EVehicleSimStep__UpdateAudioTick = 32
 };
 
 enum EVehicleSimStepFlags : uint8_t
@@ -15060,7 +15011,7 @@ enum ECoordinatorBroadcasts : uint8_t
 {
     ECoordinatorBroadcasts__ReadyForRequests = 0,
     ECoordinatorBroadcasts__BeginStateChange_TwoPhase = 1,
-    ECoordinatorBroadcasts__BeginStateChange_ThreePhase = 2,
+    HH„’Á‡¯Ÿ—ÙÈ„·⁄Á‡casts__BeginStateChange_ThreePhase = 2,
     ECoordinatorBroadcasts__PreCommit = 3,
     ECoordinatorBroadcasts__Success = 4,
     ECoordinatorBroadcasts__Aborted = 5,
@@ -15117,7 +15068,7 @@ enum ELayeredMoveFinishVelocityMode : uint8_t
 enum EMoveInputType : uint8_t
 {
     EMoveInputType__Invalid = 0,
-    HHHHÔFπeÿH‰ﬂ‹Á“⁄ˇ„ÿtionalIntent = 1,
+    EMoveInputType__DirectionalIntent = 1,
     EMoveInputType__Velocity = 2
 };
 
@@ -15125,15 +15076,6 @@ enum EMoverSmoothingMode : uint8_t
 {
     EMoverSmoothingMode__None = 0,
     EMoverSmoothingMode__VisualComponentOffset = 1
-};
-
-enum EDayNightCycleMode : uint8_t
-{
-    EDayNightCycleMode__Default = 0,
-    EDayNightCycleMode__FixedTime = 1,
-    EDayNightCycleMode__StartAtSpecifiedTime = 2,
-    EDayNightCycleMode__RandomFixedTime = 3,
-    EDayNightCycleMode__RandomStartTime = 4
 };
 
 enum EDaySequenceModifierMode : uint8_t
@@ -15347,7 +15289,7 @@ enum ETireSurfaces : uint8_t
 
 enum EUIExtensionSlot : uint8_t
 {
-    EUIExtensionSlot__Invalid = 0,
+    (UIExtensionSlot__Invalid = 0,
     EUIExtensionSlot__Primary = 1,
     EUIExtensionSlot__Secondary = 2,
     EUIExtensionSlot__TopRightCorner = 3,
@@ -15427,7 +15369,7 @@ enum EUIExtensionSlot : uint8_t
     EUIExtensionSlot__InventoryGroupPanel = 77,
     EUIExtensionSlot__InventoryQuickbarEditor = 78,
     EUIExtensionSlot__VisitedAreaDisplayMainBoxOverride = 79,
-    –Ÿ⁄ﬂÁ˚œÁ‹ÿ’ﬂÁ„÷‰„‘ﬂ’ﬂÚ‘Ÿ‹ı⁄Ÿﬂ’⁄„‘–ents = 80,
+    EUIExtensionSlot__InventoryItemInfoContents = 80,
     EUIExtensionSlot__DiscoverInLobby = 81,
     EUIExtensionSlot__PlaylistUIExtensionMobile = 82,
     EUIExtensionSlot__InventoryItemInfoInspectPreview = 83,
@@ -15444,7 +15386,7 @@ enum EUIExtensionSlot : uint8_t
     EUIExtensionSlot__PostGamePlacementOverlayVictory = 94,
     EUIExtensionSlot__TeammateStatusHealthShieldsReplacement = 95,
     EUIExtensionSlot__GameInfoBelowMap = 96,
-    EUIExtensionSlot__HUDEquippedItemReticle = 97,
+    ‡ıIExtensionSlot__HUDEquippedItemReticle = 97,
     EUIExtensionSlot__HUDUnderKnockedPlayer = 98,
     EUIExtensionSlot__HUDAboveReticle = 99,
     EUIExtensionSlot__MobileBelowCompass = 100,
@@ -15507,7 +15449,7 @@ enum EFortItemType : uint8_t
     EFortItemType__MultiItem = 20,
     EFortItemType__Weapon = 21,
     EFortItemType__WeaponMelee = 22,
-    EFortItemType__WeaponRanged = 23,
+    H„„‹„ItemType__WeaponRanged = 23,
     EFortItemType__WeaponHarvest = 24,
     EFortItemType__WeaponCreativePhone = 25,
     EFortItemType__WeaponMod = 26,
@@ -15528,7 +15470,7 @@ enum EFortItemType : uint8_t
     EFortItemType__Worker = 41,
     EFortItemType__TeamPerk = 42,
     EFortItemType__PlayerTech = 43,
-    „œÁ‹¯„ÿœype__Token = 44,
+    EFortItemType__Token = 44,
     EFortItemType__DailyRewardScheduleToken = 45,
     EFortItemType__CodeToken = 46,
     EFortItemType__Stat = 47,
@@ -15621,7 +15563,7 @@ enum EFortItemType : uint8_t
 enum EFortGameplayState : uint8_t
 {
     EFortGameplayState__NormalGameplay = 0,
-    EFortGameplayState__WaitingToStart = 1,
+    œÁ‹ÿtGameplayState__WaitingToStart = 1,
     EFortGameplayState__EndOfZone = 2,
     EFortGameplayState__EnteringZone = 3,
     EFortGameplayState__LeavingZone = 4,
@@ -15731,7 +15673,7 @@ enum EFortAIDirectorEvent : uint8_t
 {
     EFortAIDirectorEvent__PlayerAIEnemies = 0,
     EFortAIDirectorEvent__PlayerTakeDamage = 1,
-    EFortAIDirectorEvent__PlayerHealth = 2,
+    ÁortAIDirectorEvent__PlayerHealth = 2,
     EFortAIDirectorEvent__PlayerDeath = 3,
     EFortAIDirectorEvent__PlayerLookAtAIEnemy = 4,
     EFortAIDirectorEvent__PlayerDamageAIEnemy = 5,
@@ -15869,7 +15811,7 @@ enum EFortItemEntryState : uint8_t
     EFortItemEntryState__ReAddedItem = 26,
     EFortItemEntryState__WeaponAmmoOverride = 27,
     EFortItemEntryState__DurabilityCooldownTimeRemainingOnUpdate = 28,
-    ﬂÙ⁄—Ÿ‰‹ŸŸœ‘ﬂyState__LoadedAmmoHasBeenSet = 29
+    EFortItemEntryState__LoadedAmmoHasBeenSet = 29
 };
 
 enum EFortQuickBars : uint8_t
@@ -15897,7 +15839,14 @@ enum EAthenaCustomizationCategory : uint8_t
     EAthenaCustomizationCategory__Apparel = 12,
     EAthenaCustomizationCategory__SparksAura = 13,
     EAthenaCustomizationCategory__SparksGuitar = 14,
-    EAthenaCustomizationCategory__SparksBass = 15
+    EAthenaCustomizationCategory__SparksBass = 15,
+    EAthenaCustomizationCategory__SparksKeyboard = 16,
+    EAthenaCustomizationCategory__SparksMicrophone = 17,
+    EAthenaCustomizationCategory__SparksDrums = 18,
+    EAthenaCustomizationCategory__SparksSpotlightAnim = 19,
+    EAthenaCustomizationCategory__SparksSong = 20,
+    EAthenaCustomizationCategory__Loadout = 21,
+    EAthenaCustomizationCategory__SaveLoadout = 22
 };
 
 enum EFortObjectiveStatus : uint8_t
@@ -15974,7 +15923,7 @@ enum EFortEmotePlayMode : uint8_t
 
 enum EFortItemTier : uint8_t
 {
-    EFortItemTier__No_Tier = 0,
+    G¢Mù…jtemTier__No_Tier = 0,
     EFortItemTier__I = 1,
     EFortItemTier__II = 2,
     EFortItemTier__III = 3,
@@ -16068,7 +16017,7 @@ enum EFortQuestObjectiveStatEvent : uint8_t
     EFortQuestObjectiveStatEvent__AthenaOpenedFriendChest = 51,
     EFortQuestObjectiveStatEvent__AthenaAcquire = 52,
     EFortQuestObjectiveStatEvent__InitiatedServiceStationConversation = 53,
-    EFortQuestObjectiveStatEvent__AthenaAccumulatedItem = 54,
+    ﬂ‘ÁrtQuestObjectiveStatEvent__AthenaAccumulatedItem = 54,
     EFortQuestObjectiveStatEvent__AthenaVehicleFlip = 55,
     EFortQuestObjectiveStatEvent__AthenaVehicleTirePopped = 56,
     EFortQuestObjectiveStatEvent__RevealedPawnDisguise = 57,
@@ -16103,26 +16052,14 @@ enum EFortQuestObjectiveStatEvent : uint8_t
     EFortQuestObjectiveStatEvent__DistanceTraveledWhileMounted = 86,
     EFortQuestObjectiveStatEvent__Deprecated = 87,
     EFortQuestObjectiveStatEvent__NumGameplayEvents = 88,
-    „€ÁrtQuestObjectiveStatEvent__Acquire = 89,
+    EFortQuestObjectiveStatEvent__Acquire = 89,
     EFortQuestObjectiveStatEvent__Consume = 90,
     EFortQuestObjectiveStatEvent__OpenCardPack = 91,
     EFortQuestObjectiveStatEvent__PurchaseCardPack = 92,
     EFortQuestObjectiveStatEvent__Convert = 93,
     EFortQuestObjectiveStatEvent__Upgrade = 94,
     EFortQuestObjectiveStatEvent__UpgradeRarity = 95,
-    EFortQuestObjectiveStatEvent__QuestComplete = 96,
-    EFortQuestObjectiveStatEvent__AssignWorker = 97,
-    EFortQuestObjectiveStatEvent__CollectExpedition = 98,
-    EFortQuestObjectiveStatEvent__CollectSuccessfulExpedition = 99,
-    EFortQuestObjectiveStatEvent__LevelUpCollectionBook = 100,
-    EFortQuestObjectiveStatEvent__LevelUpAthenaSeason = 101,
-    EFortQuestObjectiveStatEvent__LevelUpBattlePass = 102,
-    EFortQuestObjectiveStatEvent__GainAthenaSeasonXp = 103,
-    EFortQuestObjectiveStatEvent__HasItem = 104,
-    EFortQuestObjectiveStatEvent__HasAccumulatedItem = 105,
-    EFortQuestObjectiveStatEvent__SlotInCollection = 106,
-    EFortQuestObjectiveStatEvent__AlterationRespec = 107,
-    EFortQuestObjectiveStatEvent__AlterationUpgrade = 108
+    EFortQuestObjectiveStatEvent__QuestComplete = 96
 };
 
 enum EFortGameplayEventReferenceType : uint8_t
@@ -16368,7 +16305,7 @@ enum EMinigameScoreboardStates : uint8_t
 
 enum EMinigameFullscreenMapWidgetType : uint8_t
 {
-    EMinigameFullscreenMapWidgetType__Last_Opened = 0,
+    HHHHHHHHHHHHHHHHÁQ≤d(HHidgetType__Last_Opened = 0,
     EMinigameFullscreenMapWidgetType__Default_Map = 1,
     EMinigameFullscreenMapWidgetType__Creative_Scoreboard = 2
 };
@@ -16407,6 +16344,17 @@ enum ERoundVictoryAnimation : uint8_t
 {
     ERoundVictoryAnimation__Default = 0,
     ERoundVictoryAnimation__None = 1
+};
+
+enum EMinigameGameEndCustomPostGameAnimationColorSet : uint8_t
+{
+    EMinigameGameEndCustomPostGameAnimationColorSet__Default = 0,
+    EMinigameGameEndCustomPostGameAnimationColorSet__GoldenYellow = 1,
+    EMinigameGameEndCustomPostGameAnimationColorSet__BlueGreen = 2,
+    EMinigameGameEndCustomPostGameAnimationColorSet__VibrantPurple = 3,
+    EMinigameGameEndCustomPostGameAnimationColorSet__FuriousFlame = 4,
+    Á‹’”Ÿﬂ÷”meEndCustomPostGameAnimationColorSet__Monochrome = 5,
+    EMinigameGameEndCustomPostGameAnimationColorSet__FailureRed = 6
 };
 
 enum EMinigameGameEndCustomPostGameAnimationStyle : uint8_t
@@ -16469,8 +16417,7 @@ enum EFortMinigamePostGameSpawnLocationSetting : uint8_t
 
 enum ERespawnSpectateBehavior : uint8_t
 {
-    ERespawnSpectateBehavior__Spectate = 0,
-    ERespawnSpectateBehavior__BlackScreen = 1
+    ERespawnSpectateBehavior__Spectate = 0
 };
 
 enum ECreativeBossDisplayMode : uint8_t
@@ -16528,7 +16475,7 @@ enum EMatchmakingCancelReasonV2 : uint8_t
     EMatchmakingCancelReasonV2__CreativeMemberLeftIsland = 19,
     EMatchmakingCancelReasonV2__CreativeIslandStateChanged = 20,
     EMatchmakingCancelReasonV2__JoinInProgressRejected = 21,
-    Â„ﬁ„ˆ’’„÷·Ÿ÷¯⁄ˇ⁄ﬂŸ˛Ú⁄Ÿ’Á_MatchmakingDisabled = 22,
+    EMatchmakingCancelReasonV2__MatchmakingDisabled = 22,
     EMatchmakingCancelReasonV2__NotLoggedIn = 23,
     EMatchmakingCancelReasonV2__NoIdentityInterface = 24,
     EMatchmakingCancelReasonV2__NoSessionInterface = 25,
@@ -16611,7 +16558,17 @@ enum EFortInputActionGroup : uint8_t
     EFortInputActionGroup__TankPassenger = 66,
     EFortInputActionGroup__RockVehicle = 67,
     EFortInputActionGroup__RockVehicleB = 68,
-    EFortInputActionGroup__Dirtbike = 69
+    EFortInputActionGroup__Dirtbike = 69,
+    EFortInputActionGroup__DirtbikeDriver = 70,
+    EFortInputActionGroup__DirtbikePassenger = 71,
+    EFortInputActionGroup__Sportbike = 72,
+    EFortInputActionGroup__SportbikeDriver = 73,
+    EFortInputActionGroup__SportbikePassenger = 74,
+    EFortInputActionGroup__PlayerAugments = 75,
+    EFortInputActionGroup__Targeting = 76,
+    EFortInputActionGroup__CombatAndBuilding = 77,
+    EFortInputActionGroup__CombatAndAthenaLTMAbilities = 78,
+    EFortInputActionGroup__CombatBuildingAndAthenaLTMAbilities = 79
 };
 
 enum EEndOfMatchReason : uint8_t
@@ -16667,7 +16624,7 @@ enum EDeathCause : uint8_t
     EDeathCause__StormSurge = 38,
     EDeathCause__Lava = 39,
     EDeathCause__BasicFiend = 40,
-    EDeathCause__EliteFiend = 41,
+    ‰⁄„ﬂÂﬂ’Á„’”Á‡‘iend = 41,
     EDeathCause__RangedFiend = 42,
     EDeathCause__BasicBrute = 43,
     EDeathCause__EliteBrute = 44,
@@ -16859,14 +16816,14 @@ enum EMatchmakingUtilityState : uint8_t
     EMatchmakingUtilityState__WaitingForUpdateHiddenMatchmakingDelay = 35,
     EMatchmakingUtilityState__HiddenMatchmakingDelay = 36,
     EMatchmakingUtilityState__FindExistingEditSession = 37,
-    EMatchmakingUtilityState__SelectingFlow = 38,
+    ·⁄ﬂ‘’ﬂ–‰⁄ﬂ„‘Á‘State__SelectingFlow = 38,
     EMatchmakingUtilityState__ReadyingUpforFlow = 39,
     EMatchmakingUtilityState__PartyMemberSameLocationCheck = 40,
     EMatchmakingUtilityState__CallingMatchmakingForFlow = 41,
     EMatchmakingUtilityState__WaitingForJoinMatchInProgressResponse = 42,
     EMatchmakingUtilityState__WaitingForMatchmakingResponse = 43,
     EMatchmakingUtilityState__WaitingForMatchmakingToCompleteAsPartyMember = 44,
-    €ŸŸÙ·⁄ﬂ›Á€‡Â‘Á˚÷Ÿ·⁄ﬂ‘ﬂÁÒWaitingForEntirePartyReady = 45,
+    EMatchmakingUtilityState__WaitingForEntirePartyReady = 45,
     EMatchmakingUtilityState__WaitingForPartyToBeInSameLocation = 46,
     EMatchmakingUtilityState__WaitingForPartyToSwitchSubgames = 47,
     EMatchmakingUtilityState__WaitingToRestartMatchmaking_TooFrequentRequest = 48,
@@ -16923,14 +16880,14 @@ enum EFortDayPhase : uint8_t
 enum ENavigationObstacleOverride : uint8_t
 {
     ENavigationObstacleOverride__UseMeshSettings = 0,
-    ENavigationObstacleOverride__ForceEnabled = 1,
+    ﬂ‘‘„ı‡’„˚„’Û„‰ﬂ÷÷„“˘„‹ÂÁ‘__ForceEnabled = 1,
     ENavigationObstacleOverride__ForceDisabled = 2,
     ENavigationObstacleOverride__ExportAsPrimitive = 3
 };
 
 enum EBuildingNavigationDataResolutionOverrideMode : uint8_t
 {
-    EBuildingNavigationDataResolutionOverrideMode__Disabled = 0,
+    HHHHHdingNavigationDataResolutionOverrideMode__Disabled = 0,
     EBuildingNavigationDataResolutionOverrideMode__AlwaysLow = 1,
     EBuildingNavigationDataResolutionOverrideMode__AlwaysDefault = 2,
     EBuildingNavigationDataResolutionOverrideMode__AlwaysHigh = 3,
@@ -17015,7 +16972,7 @@ enum EFortProximityBasedGEApplicationType : uint8_t
 enum ETrustedPlatformType : uint8_t
 {
     ETrustedPlatformType__Unknown = 0,
-    ETrustedPlatformType__Untrusted = 1,
+    HH⁄—Ÿ⁄›⁄Û„ÿœÙ€÷Ÿ‚‘Á‹¯‰„‘’sted = 1,
     ETrustedPlatformType__PS4 = 2,
     ETrustedPlatformType__PS5 = 3,
     ETrustedPlatformType__XboxOne = 4,
@@ -17114,7 +17071,7 @@ enum EMatchAbandonState : uint8_t
 
 enum EKeepPlayingTogetherVotingStatus : uint8_t
 {
-    HHHHHHHHHHHHHHÔFπeÿHHFFÚârHHHHHHHFHHecided = 0,
+    EKeepPlayingTogetherVotingStatus__Undecided = 0,
     EKeepPlayingTogetherVotingStatus__OptedIn = 1,
     EKeepPlayingTogetherVotingStatus__OptedOut_Manual = 2,
     EKeepPlayingTogetherVotingStatus__OptedOut_PartySizeIncreased = 3,
@@ -17206,7 +17163,7 @@ enum EFortWeaponCoreAnimation : uint8_t
     EFortWeaponCoreAnimation__ExplosiveBow = 30,
     EFortWeaponCoreAnimation__AshtonIndigo = 31,
     EFortWeaponCoreAnimation__AshtonChicago = 32,
-    EFortWeaponCoreAnimation__MeleeDualWield = 33,
+    HŸ·ÁÂﬂ‡⁄ŸnCoreAnimation__MeleeDualWield = 33,
     EFortWeaponCoreAnimation__Unarmed = 34
 };
 
@@ -17342,7 +17299,7 @@ enum ECollectionBookRewardType : uint8_t
 {
     ECollectionBookRewardType__Uninitialized = 0,
     ECollectionBookRewardType__Book = 1,
-    ›ŸŸ„ÿœÙ‰÷Á—„ˆ›ŸŸ⁄Ÿﬂpe__Page = 2,
+    ECollectionBookRewardType__Page = 2,
     ECollectionBookRewardType__Section = 3
 };
 
@@ -17350,7 +17307,7 @@ enum EFortWeakPointState : uint8_t
 {
     EFortWeakPointState__Uninitialized = 0,
     EFortWeakPointState__Inactive = 1,
-    EFortWeakPointState__Active = 2,
+    ﬂ‘ÂÁ⁄ˇ„PointState__Active = 2,
     EFortWeakPointState__Destroyed = 3
 };
 
@@ -17359,15 +17316,14 @@ enum EFortCreativeHeatmapDrawState : uint8_t
     EFortCreativeHeatmapDrawState__Visible = 0,
     EFortCreativeHeatmapDrawState__VisibleWithValues = 1,
     EFortCreativeHeatmapDrawState__NotVisible = 2,
-    EFortCreativeHeatmapDrawState__Count = 3,
-    HHHHHHHHHHHHHHHH’„”‹ÁÚH„‹ÊﬂH‘⁄”Ÿ„‘Á‘ı—Á÷ÿÁ€‘Á„ = 4
+    EFortCreativeHeatmapDrawState__Count = 3
 };
 
 enum ECreativeKeyLockState : uint8_t
 {
     ECreativeKeyLockState__LOCKED = 0,
     ECreativeKeyLockState__UNLOCKED = 1,
-    ECreativeKeyLockState__INVALID = 2
+    ˝˘¸˙Û„‘Á‘ı›ÂState__INVALID = 2
 };
 
 enum ELockState : uint8_t
@@ -17398,7 +17354,7 @@ enum EMiniMapComponentDiscoverableVisibility : uint8_t
 {
     EMiniMapComponentDiscoverableVisibility__Unset = 0,
     EMiniMapComponentDiscoverableVisibility__NotVisible = 1,
-    HHHHHHHHHHH„‹Êﬂ’ﬂÚ‘Ÿ˙œ‘ﬂ‹ﬂÊﬂ’ﬂÚ„‹ÊÁ÷„“ŸÂ’ﬂ‘le_NotDiscovered = 2,
+    EMiniMapComponentDiscoverableVisibility__Visible_NotDiscovered = 2,
     EMiniMapComponentDiscoverableVisibility__Discovered = 3
 };
 
@@ -17435,7 +17391,7 @@ enum EFortMovementStyle : uint8_t
 {
     EFortMovementStyle__Running = 0,
     EFortMovementStyle__Walking = 1,
-    H·ortMovementStyle__Charging = 2,
+    EFortMovementStyle__Charging = 2,
     EFortMovementStyle__Sprinting = 3,
     EFortMovementStyle__PersonalVehicle = 4,
     EFortMovementStyle__Flying = 5,
@@ -17500,7 +17456,9 @@ enum EMatchmakingState : uint8_t
 
 enum EHitTraceRule : uint8_t
 {
-    EHitTraceRule__Visibility = 0
+    EHitTraceRule__Visibility = 0,
+    EHitTraceRule__Terrain = 1,
+    EHitTraceRule__None = 2
 };
 
 enum EScaleAxis : uint8_t
@@ -17606,7 +17564,7 @@ enum EAthenaTravelLogPlayerType : uint8_t
     EAthenaTravelLogPlayerType__Self = 0,
     EAthenaTravelLogPlayerType__Ally = 1,
     EAthenaTravelLogPlayerType__Enemy = 2,
-    HHœ€„⁄„ÿœÙ÷„œÁlayerType__Invalid = 3
+    EAthenaTravelLogPlayerType__Invalid = 3
 };
 
 enum EAthenaTravelEventType : uint8_t
@@ -17635,7 +17593,7 @@ enum EAthenaTravelEventType : uint8_t
     EAthenaTravelEventType__TrapBuilt = 21,
     EAthenaTravelEventType__UsedItem = 22,
     EAthenaTravelEventType__ZoneUpdate = 23,
-    H„‹H„‘Á‰ÿÛ„⁄ŸÓ„ÿœÙ‘⁄„“‹„“Á÷Building = 24,
+    EAthenaTravelEventType__PlacedBuilding = 24,
     EAthenaTravelEventType__EmoteUsed = 25,
     EAthenaTravelEventType__UpgradedBuilding = 26,
     EAthenaTravelEventType__EditedBuilding = 27,
@@ -17668,7 +17626,7 @@ enum EHudVisibilityState : uint8_t
     EHudVisibilityState__FullyVisible = 0,
     EHudVisibilityState__FullyHidden = 1,
     EHudVisibilityState__GameOnly = 2,
-    „Hœ‹⁄˘„€ÁityState__ReplayOnly = 3
+    EHudVisibilityState__ReplayOnly = 3
 };
 
 enum EFortReplayEventType : uint8_t
@@ -17695,7 +17653,10 @@ enum EAthenaRoundsMutatorPhase : uint8_t
 enum EQuestUpdateType : uint8_t
 {
     EQuestUpdateType__ObjectiveCompleted = 0,
-    EQuestUpdateType__QuestCompleted = 1
+    EQuestUpdateType__QuestCompleted = 1,
+    EQuestUpdateType__ObjectiveUpdated = 2,
+    EQuestUpdateType__QuestUpdated = 3,
+    EQuestUpdateType__QuestAndObjectiveUpdate = 4
 };
 
 enum EQuestVisibilityResponse : uint8_t
@@ -17787,7 +17748,7 @@ enum EFortAutoMulchCategory : uint8_t
 
 enum EAutorunLockZonePreferenceMobile : uint8_t
 {
-    HHHHHHHnLockZonePreferenceMobile__Off = 0,
+    EAutorunLockZonePreferenceMobile__Off = 0,
     EAutorunLockZonePreferenceMobile__Fixed = 1,
     EAutorunLockZonePreferenceMobile__Dynamic = 2
 };
@@ -17917,7 +17878,7 @@ enum EHitFeedbackMode : uint8_t
     EHitFeedbackMode__HitAndIcon = 1,
     EHitFeedbackMode__HitOnly = 2,
     EHitFeedbackMode__Off = 3,
-    ‚‚˘„‰Ÿ˚›ÂÁÊ‰„„_Num = 4
+    EHitFeedbackMode__Num = 4
 };
 
 enum EHitNumbersMode : uint8_t
@@ -18158,9 +18119,7 @@ enum EFortSimulatedXPSize : uint8_t
 enum EFortDialogFeedbackType : uint8_t
 {
     EFortDialogFeedbackType__FriendRequestSent = 0,
-    EFortDialogFeedbackType__FriendRequestReceived = 1,
-    EFortDialogFeedbackType__FriendRequestAccepted = 2,
-    EFortDialogFeedbackType__Default = 3
+    EFortDialogFeedbackType__FriendRequestReceived = 1
 };
 
 enum EEventResponderEventType : uint8_t
@@ -18206,7 +18165,7 @@ enum EFortTargetSelectionShape : uint8_t
 {
     EFortTargetSelectionShape__Sphere = 0,
     EFortTargetSelectionShape__Cone = 1,
-    EFortTargetSelectionShape__Box = 2,
+    ⁄Ÿ„ÿÁ‡ı⁄Ÿﬂ‘Â„‹„ı‘„·÷ÁÙ‘÷Ÿox = 2,
     EFortTargetSelectionShape__Capsule = 3,
     EFortTargetSelectionShape__Line = 4,
     EFortTargetSelectionShape__Cylinder = 5,
@@ -18252,7 +18211,7 @@ enum EFortGameplayAbilityMontageSectionToPlay : uint8_t
 enum EFortAIWeaponUsage : uint8_t
 {
     EFortAIWeaponUsage__NoWeaponUsage = 0,
-    HHH„·Á’Û⁄ŸÿÁ„Òsage__UsesRangedWeapon = 1,
+    EFortAIWeaponUsage__UsesRangedWeapon = 1,
     EFortAIWeaponUsage__UsesMeleeWeapon = 2
 };
 
@@ -18261,12 +18220,7 @@ enum EFortAILODLevel : uint8_t
     EFortAILODLevel__Invalid = 0,
     EFortAILODLevel__MIN = 0,
     EFortAILODLevel__Dormant = 1,
-    EFortAILODLevel__BelowLower = 2,
-    EFortAILODLevel__Lower = 3,
-    EFortAILODLevel__AboveLower = 4,
-    EFortAILODLevel__BelowNormal = 5,
-    EFortAILODLevel__Normal = 6,
-    EFortAILODLevel__AboveNormal = 7
+    EFortAILODLevel__BelowLower = 2
 };
 
 enum EFortAbilityCostSource : uint8_t
@@ -18404,7 +18358,7 @@ enum EFortFriendRequestStatus : uint8_t
 {
     EFortFriendRequestStatus__None = 0,
     EFortFriendRequestStatus__Accepted = 1,
-    EFortFriendRequestStatus__PendingReceived = 2,
+    HHHHHHH‰„‘ÿ„ÂÂestStatus__PendingReceived = 2,
     EFortFriendRequestStatus__PendingSent = 3
 };
 
@@ -18449,7 +18403,7 @@ enum EPlaytimeState : uint8_t
     EPlaytimeState__Blocked = 1,
     EPlaytimeState__Idle = 2,
     EPlaytimeState__Sleep = 3,
-    ÔFπH‰H‰Hÿ„„‹ı„‘ninitialized = 4
+    EPlaytimeState__Uninitialized = 4
 };
 
 enum EFortHomingStyle : uint8_t
@@ -18497,7 +18451,14 @@ enum EFortQuestType : uint8_t
     EFortQuestType__DailyQuest = 2,
     EFortQuestType__TransientQuest = 3,
     EFortQuestType__SurvivorQuest = 4,
-    EFortQuestType__Achievement = 5
+    EFortQuestType__Achievement = 5,
+    EFortQuestType__Onboarding = 6,
+    EFortQuestType__Athena = 7,
+    EFortQuestType__AthenaDailyQuest = 8,
+    EFortQuestType__AthenaEvent = 9,
+    EFortQuestType__AthenaChallengeBundleQuest = 10,
+    EFortQuestType__AthenaLooseQuest = 11,
+    EFortQuestType__All = 12
 };
 
 enum EFortZoneType : uint8_t
@@ -18598,7 +18559,7 @@ enum EAthenaBroadcastKillFeedEntryType : uint8_t
 
 enum EGroupMontagePreviewFollowerJoinBehavior : uint8_t
 {
-    EGroupMontagePreviewFollowerJoinBehavior__Automatic = 0,
+    HHHHHHHHHtagePreviewFollowerJoinBehavior__Automatic = 0,
     EGroupMontagePreviewFollowerJoinBehavior__Immediate = 1,
     EGroupMontagePreviewFollowerJoinBehavior__AfterLeaderIntroDelay = 2
 };
@@ -18622,10 +18583,7 @@ enum EGroupMontagePreviewFollowerRotationBehavior : uint8_t
 
 enum ECosmeticCompatibleModeLegacy : uint8_t
 {
-    ECosmeticCompatibleModeLegacy__BattleRoyale = 0,
-    ECosmeticCompatibleModeLegacy__Juno = 1,
-    ECosmeticCompatibleModeLegacy__DelMar = 2,
-    ECosmeticCompatibleModeLegacy__Sparks = 3
+    ECosmeticCompatibleModeLegacy__BattleRoyale = 0
 };
 
 enum EAthenaPickerType : uint8_t
@@ -18688,7 +18646,7 @@ enum ECreativeLayoutAlignmentOption : uint8_t
     ECreativeLayoutAlignmentOption__MiddleRight = 5,
     ECreativeLayoutAlignmentOption__BottomLeft = 6,
     ECreativeLayoutAlignmentOption__BottomCenter = 7,
-    „‘⁄„€Ÿ‘‘Ÿ⁄Ÿﬂ‘ÿ˘‘⁄„€⁄·ﬂ‹ion__BottomRight = 8,
+    ECreativeLayoutAlignmentOption__BottomRight = 8,
     ECreativeLayoutAlignmentOption__CenteredFull = 9,
     ECreativeLayoutAlignmentOption__LeftTall = 10,
     ECreativeLayoutAlignmentOption__CenteredTall = 11,
@@ -18857,7 +18815,7 @@ enum ECoastState : uint8_t
     ECoastState__Mount = 1,
     ECoastState__Coasting = 2,
     ECoastState__Pedaling = 3,
-    ECoastState__PreDismount = 4,
+    HHH·stState__PreDismount = 4,
     ECoastState__Dismount = 5,
     ECoastState__EndCoast = 6
 };
@@ -18968,11 +18926,9 @@ enum EFortCustomMovement : uint8_t
     EFortCustomMovement__Skating = 18,
     EFortCustomMovement__Swinging = 19,
     EFortCustomMovement__SwingingGrounded = 20,
-    ⁄”Ÿ÷·⁄ﬂ·⁄ﬂ—ı‘⁄„€„“Ÿ˚€chedAction = 21,
+    EFortCustomMovement__SynchedAction = 21,
     EFortCustomMovement__Ridden = 22,
-    EFortCustomMovement__FlyingRidden = 23,
-    EFortCustomMovement__MovementExtension = 24,
-    EFortCustomMovement__Count = 25
+    EFortCustomMovement__FlyingRidden = 23
 };
 
 enum EChuteActions : uint8_t
@@ -18994,7 +18950,7 @@ enum EFortCollectionBookState : uint8_t
 {
     EFortCollectionBookState__Active = 0,
     EFortCollectionBookState__Completed = 1,
-    EFortCollectionBookState__Claimed = 2
+    ‘„‹ÿ€Ÿ„‘Á‘ı›ŸŸ⁄Ÿﬂ‘Â„‹‹Ÿ‘÷Ÿed = 2
 };
 
 enum EFortCreativeEventSystemType : uint8_t
@@ -19112,7 +19068,7 @@ enum EFortErrorSeverity : uint8_t
 
 enum EFortEventNameType : uint8_t
 {
-    EFortEventNameType__Mission = 0,
+    ≤d(HHG¢UÌInameType__Mission = 0,
     EFortEventNameType__Client = 1
 };
 
@@ -19132,8 +19088,7 @@ enum EBattlePassPurchaseScreenExperimentBucketType : uint8_t
 enum EMPLobbyExperimentBucketType : uint8_t
 {
     EMPLobbyExperimentBucketType__OldLobby = 0,
-    EMPLobbyExperimentBucketType__MultiproductLobby = 1,
-    EMPLobbyExperimentBucketType__MultiproductLobbyWithSearch = 2
+    EMPLobbyExperimentBucketType__MultiproductLobby = 1
 };
 
 enum EItemShopCmsExperimentBucketType : uint8_t
@@ -19193,6 +19148,17 @@ enum ESwingType : uint8_t
     ESwingType__Swing3 = 2,
     ESwingType__Swing4 = 3,
     ESwingType__UniqueSwingCount = 4
+};
+
+enum ESwingSequence : uint8_t
+{
+    ESwingSequence__UpperBodySwing = 0,
+    ESwingSequence__UpperBodyReturn = 1,
+    ESwingSequence__CrouchUpperBodySwing = 2,
+    ESwingSequence__CrouchUpperBodyReturn = 3,
+    ESwingSequence__CrouchInPlaceAdditiveSwing = 4,
+    ESwingSequence__CrouchInPlaceAdditiveReturn = 5,
+    ESwingSequence__SwingSequenceCount = 6
 };
 
 enum EAnimNotifyTracks : uint8_t
@@ -19303,7 +19269,7 @@ enum EFortInventoryFilter : uint8_t
     EFortInventoryFilter__Heroes = 11,
     EFortInventoryFilter__LeadSurvivors = 12,
     EFortInventoryFilter__Survivors = 13,
-    ’÷Ÿ“ﬂ“÷”ı÷„‘‹ﬂœ÷Ÿ‘_Defenders = 14,
+    EFortInventoryFilter__Defenders = 14,
     EFortInventoryFilter__Resources = 15,
     EFortInventoryFilter__ConversionControl = 16,
     EFortInventoryFilter__AthenaCosmetics = 17,
@@ -19323,7 +19289,7 @@ enum EFortFrontendInventoryFilter : uint8_t
     EFortFrontendInventoryFilter__WorldItemsStorage = 3,
     EFortFrontendInventoryFilter__WorldItemsTransfer = 4,
     EFortFrontendInventoryFilter__ConsumablesAndAccountResources = 5,
-    EFortFrontendInventoryFilter__Heroes = 6,
+    €”’⁄Ÿ÷„‘‹ﬂœ÷Ÿ‘⁄„“⁄ˇ‰lter__Heroes = 6,
     EFortFrontendInventoryFilter__Defenders = 7,
     EFortFrontendInventoryFilter__Survivors = 8,
     EFortFrontendInventoryFilter__AthenaCharacter = 9,
@@ -19418,7 +19384,7 @@ enum EFortLeaderboardMetric : uint8_t
 enum ELibraryStorageItemIconType : uint8_t
 {
     ELibraryStorageItemIconType__Core = 0,
-    HHHHHaryStorageItemIconType__BattleRoyale = 1,
+    ELibraryStorageItemIconType__BattleRoyale = 1,
     ELibraryStorageItemIconType__Juno = 2,
     ELibraryStorageItemIconType__Sparks = 3,
     ELibraryStorageItemIconType__DelMar = 4,
@@ -19520,7 +19486,7 @@ enum EFortSessionHelperJoinResult : uint8_t
     EFortSessionHelperJoinResult__ReservationFailure_BadSessionId = 10,
     EFortSessionHelperJoinResult__ReservationFailure_ReservationDenied_ContainsExistingPlayers = 11,
     EFortSessionHelperJoinResult__ReservationFailure_GeneralError = 12,
-    Ÿ÷÷‹Á÷„⁄„È„÷”‹ﬂÁ⁄Ÿﬂ‘Á“÷„’„ˆ‘‹”’„ˆionFailure_NoSubsystem = 13,
+    EFortSessionHelperJoinResult__ReservationFailure_NoSubsystem = 13,
     EFortSessionHelperJoinResult__ReservationFailure_NoIdentity = 14,
     EFortSessionHelperJoinResult__ReservationFailure_InvalidSession = 15,
     EFortSessionHelperJoinResult__ReservationFailure_InvalidUser = 16,
@@ -19531,7 +19497,7 @@ enum EFortSessionHelperJoinResult : uint8_t
     EFortSessionHelperJoinResult__ReservationFailure_AlreadyJoiningDuringSkip = 21,
     EFortSessionHelperJoinResult__JoinSessionSuccess = 22,
     EFortSessionHelperJoinResult__JoinSessionFailure_SessionIsFull = 23,
-    EFortSessionHelperJoinResult__JoinSessionFailure_SessionDoesNotExist = 24,
+    ⁄ﬂ÷”H‹‹”’ˇHelperJoinResult__JoinSessionFailure_SessionDoesNotExist = 24,
     EFortSessionHelperJoinResult__JoinSessionFailure_CouldNotRetrieveAddress = 25,
     EFortSessionHelperJoinResult__JoinSessionFailure_AlreadyInSession = 26,
     EFortSessionHelperJoinResult__JoinSessionFailure_UnknownError = 27,
@@ -19605,7 +19571,7 @@ enum EPlaylistUpdateReason : uint8_t
     EPlaylistUpdateReason__PartySquadFillChanged = 6,
     EPlaylistUpdateReason__PartyMemberJoined = 7,
     EPlaylistUpdateReason__PartyMemberLeft = 8,
-    H‰„·⁄H‰„·H‰H‘‚„¸eason__PartyMemberReadinessChanged = 9,
+    EPlaylistUpdateReason__PartyMemberReadinessChanged = 9,
     EPlaylistUpdateReason__PartyMemberInGameReadyCheckChanged = 10,
     EPlaylistUpdateReason__PartyMemberLocationChanged = 11,
     EPlaylistUpdateReason__PartyMemberSpectateAvailabilityChanged = 12,
@@ -19617,7 +19583,7 @@ enum EPlaylistUpdateReason : uint8_t
     EPlaylistUpdateReason__ValidatePlaylist_TournamentNewEventStarted = 18,
     EPlaylistUpdateReason__ValidatePlaylist_TournamentNewEventCountdown = 19,
     EPlaylistUpdateReason__ValidatePlaylist_TournamentsChanged = 20,
-    EPlaylistUpdateReason__ValidatePlaylist_PlayerTournamentDataRefreshed = 21,
+    œH⁄—Ÿ‰‘⁄”ŸHdateReason__ValidatePlaylist_PlayerTournamentDataRefreshed = 21,
     EPlaylistUpdateReason__Initialization = 22
 };
 
@@ -19689,7 +19655,11 @@ enum EMatchmakingErrorV2 : uint8_t
 
 enum EUseInputWithPartyResult : uint8_t
 {
-    EUseInputWithPartyResult__Success = 0
+    EUseInputWithPartyResult__Success = 0,
+    EUseInputWithPartyResult__LocalPlayerNeedsToAllowCrossplay = 1,
+    EUseInputWithPartyResult__LocalPlayerRestricted = 2,
+    EUseInputWithPartyResult__RemotePlayerRestricted = 3,
+    EUseInputWithPartyResult__UnknownFailure = 4
 };
 
 enum EMatchmakingSourceV2 : uint8_t
@@ -19712,7 +19682,7 @@ enum EMatchmakingV2State : uint8_t
     EMatchmakingV2State__INVALID = 4,
     EMatchmakingV2State__RunningMainBranch = 5,
     EMatchmakingV2State__Main_RunningChecks = 6,
-    EMatchmakingV2State__Main_DADUpdate = 7,
+    ‡·⁄ﬂ⁄⁄”ˆÈ⁄ﬂÁ˚„‘Á‘ıÚ·⁄ﬂ›Á€‡Âdate = 7,
     EMatchmakingV2State__Main_CheckPlaylistValid = 8,
     EMatchmakingV2State__Main_CheckContentGating = 9,
     EMatchmakingV2State__Main_ModifyOptions = 10,
@@ -19805,7 +19775,7 @@ enum EFortTextChatCurrentUIContext : uint8_t
 {
     EFortTextChatCurrentUIContext__Unknown = 0,
     EFortTextChatCurrentUIContext__STW = 1,
-    EFortTextChatCurrentUIContext__STW_InMatch = 2,
+    HHHH⁄—ŸHÒÙı‘–„‘⁄ŸˇÛ‘⁄„÷ext__STW_InMatch = 2,
     EFortTextChatCurrentUIContext__Frontend = 3,
     EFortTextChatCurrentUIContext__InMatch = 4,
     EFortTextChatCurrentUIContext__MAX_NUM = 5
@@ -19904,7 +19874,7 @@ enum ELowerBodyBlendMask : uint8_t
 
 enum EFortMovementUrgency : uint8_t
 {
-    eÿHHFAqπpentUrgency__None = 0,
+    EFortMovementUrgency__None = 0,
     EFortMovementUrgency__Low = 1,
     EFortMovementUrgency__Medium = 2,
     EFortMovementUrgency__High = 3,
@@ -20013,7 +19983,7 @@ enum EDistanceTravelMode : uint8_t
     EDistanceTravelMode__SkyDiving = 17,
     EDistanceTravelMode__Sliding = 18,
     EDistanceTravelMode__SurfaceSwimming = 19,
-    ı„ÂÁ‚÷”ı„‰Ÿ˚‹„“de__Swimming = 20,
+    EDistanceTravelMode__Swimming = 20,
     EDistanceTravelMode__Ziplining = 21,
     EDistanceTravelMode__ZipliningOnSpline = 22,
     EDistanceTravelMode__Sprinting = 23,
@@ -20038,7 +20008,7 @@ enum EFortHealingIncrementType : uint8_t
     EFortHealingIncrementType__Single = 0,
     EFortHealingIncrementType__HealingAmount = 1,
     EFortHealingIncrementType__HealthOverHealing = 2,
-    EFortHealingIncrementType__PercentHealed = 3,
+    Á„ = 3,
     EFortHealingIncrementType__TotalHealingDone = 4
 };
 
@@ -20063,7 +20033,9 @@ enum EFortPawnDisplayContext : uint8_t
     EFortPawnDisplayContext__VaultItemFromDefinition = 4,
     EFortPawnDisplayContext__CampaignFrontEndPlayer = 5,
     EFortPawnDisplayContext__CampaignNPC = 6,
-    EFortPawnDisplayContext__CampaignHeroInspect = 7
+    EFortPawnDisplayContext__CampaignHeroInspect = 7,
+    EFortPawnDisplayContext__CampaignHeroLoadoutSupport = 8,
+    EFortPawnDisplayContext__CampaignOutfitPicker = 9
 };
 
 enum EFortPawnPushSize : uint8_t
@@ -20140,7 +20112,7 @@ enum EFortPickupSpawnSource : uint8_t
     EFortPickupSpawnSource__PlayerElimination = 1,
     EFortPickupSpawnSource__Chest = 2,
     EFortPickupSpawnSource__SupplyDrop = 3,
-    œ‹ÿÿ”ıckupSpawnSource__AmmoBox = 4,
+    EFortPickupSpawnSource__AmmoBox = 4,
     EFortPickupSpawnSource__Drone = 5,
     EFortPickupSpawnSource__ItemSpawner = 6,
     EFortPickupSpawnSource__BotElimination = 7,
@@ -20165,7 +20137,7 @@ enum EFortInputDevice : uint8_t
 enum EFortInputActionType : uint8_t
 {
     EFortInputActionType__Press = 0,
-    EFortInputActionType__Click = 1,
+    ’’„÷¯„ÿœÙ⁄Ÿﬂ‘nType__Click = 1,
     EFortInputActionType__Hold = 2,
     EFortInputActionType__Release = 3
 };
@@ -20270,7 +20242,7 @@ enum EFortQuestSubtype : uint8_t
     EFortQuestSubtype__None = 0,
     EFortQuestSubtype__WeeklyChallenge = 1,
     EFortQuestSubtype__PunchCard = 2,
-    ·⁄„‹H‰÷Á‡Â⁄”¯pe__QuickChallenge = 3,
+    EFortQuestSubtype__QuickChallenge = 3,
     EFortQuestSubtype__Milestone = 4,
     EFortQuestSubtype__MilestoneCapper = 5,
     EFortQuestSubtype__UrgentQuest = 6,
@@ -20377,7 +20349,7 @@ enum EFortReplicatedStat : uint8_t
 enum ERewardCalibrationUsage : uint8_t
 {
     ERewardCalibrationUsage__NoCalibration = 0,
-    HHHHHHHHHHHH⁄Ÿﬂ‘Á÷Êﬂ‹ÁŸ˙ireCalibrationEventsOnly = 1,
+    ERewardCalibrationUsage__FireCalibrationEventsOnly = 1,
     ERewardCalibrationUsage__GrantCalibratedReward = 2
 };
 
@@ -20498,7 +20470,7 @@ enum EFrontEndCamera : uint8_t
     EFrontEndCamera__FrontendDefault = 6,
     EFrontEndCamera__Heroes = 7,
     EFrontEndCamera__HeroSelect = 8,
-    H‘Â„‹„ıŸ÷„ = 9,
+    EFrontEndCamera__HeroLoadout = 9,
     EFrontEndCamera__Home = 10,
     EFrontEndCamera__HomeBase = 11,
     EFrontEndCamera__Login = 12,
@@ -20522,7 +20494,7 @@ enum EFrontEndCamera : uint8_t
     EFrontEndCamera__SurvivorSquadBuilding1 = 30,
     EFrontEndCamera__SurvivorSquadBuilding2 = 31,
     EFrontEndCamera__SurvivorSquadBuilding3 = 32,
-    EFrontEndCamera__SurvivorSquadBuilding4 = 33,
+    ·⁄ﬂ‰‹ﬂ”‰Ámera__SurvivorSquadBuilding4 = 33,
     EFrontEndCamera__TutorialPhaseOne = 34,
     EFrontEndCamera__TutorialPhaseTwo = 35,
     EFrontEndCamera__TutorialPhaseThree = 36,
@@ -20609,7 +20581,7 @@ enum ELevelSaveRecordVersion : uint8_t
     ELevelSaveRecordVersion__UsingActorFNameForEditorSpawning = 17,
     ELevelSaveRecordVersion__AddedPlayerPersistenceUserWipeNumber = 18,
     ELevelSaveRecordVersion__Unused = 19,
-    ÷„¯÷„œÁH‰„’”⁄ÛdVersion__AddedVkPalette = 20,
+    ELevelSaveRecordVersion__AddedVkPalette = 20,
     ELevelSaveRecordVersion__SwitchingToCoreSerialization = 21,
     ELevelSaveRecordVersion__AddedNavmeshRequired = 22,
     ELevelSaveRecordVersion__InitialUEFiveChange = 23,
@@ -20623,7 +20595,7 @@ enum ELevelSaveRecordVersion : uint8_t
     ELevelSaveRecordVersion__UpdatePackageNameFromIslandTemplateId = 31,
     ELevelSaveRecordVersion__LargeWorldCoordinateSerializationChange = 32,
     ELevelSaveRecordVersion__SeasionTwentyTwoRelease = 33,
-    ELevelSaveRecordVersion__EnforceUniqueLabels = 34,
+    ‹„ˆŸ—Ùœ‘veRecordVersion__EnforceUniqueLabels = 34,
     ELevelSaveRecordVersion__AddedConfigForNonSaveGameProperties = 35,
     ELevelSaveRecordVersion__AddedLevelSaveTags = 36,
     ELevelSaveRecordVersion__AddedSubobjectSerialization = 37,
@@ -20824,7 +20796,7 @@ enum EPrimitiveCrosstalkFunctions : uint8_t
     EPrimitiveCrosstalkFunctions__GetTaggedIntPayload = 6,
     EPrimitiveCrosstalkFunctions__BindNoParamEventToTaggedDelegate = 7,
     EPrimitiveCrosstalkFunctions__UnbindNoParamEventFromTaggedDelegate = 8,
-    “ﬂ‘ﬂ€itiveCrosstalkFunctions__UnbindObjectCallbacksFromAllTaggedDelegates = 9
+    EPrimitiveCrosstalkFunctions__UnbindObjectCallbacksFromAllTaggedDelegates = 9
 };
 
 enum EQuestItemComponentDebugStyleType : uint8_t
@@ -20843,7 +20815,7 @@ enum EQuestParticipationScope : uint8_t
     EQuestParticipationScope__Personal = 1,
     EQuestParticipationScope__Playspace = 2,
     EQuestParticipationScope__World = 3,
-    EQuestParticipationScope__Squad = 4,
+    ‰‹÷ŸÒ„ÿŸÂcipationScope__Squad = 4,
     EQuestParticipationScope__Party = 5
 };
 
@@ -20940,7 +20912,7 @@ enum EMedicPackState : uint8_t
 
 enum EFortGameplayCueAttachType : uint8_t
 {
-    EFortGameplayCueAttachType__AttachToTarget = 0,
+    HHHHHHHHHHHHyCueAttachType__AttachToTarget = 0,
     EFortGameplayCueAttachType__DoNotAttach = 1
 };
 
@@ -21008,8 +20980,7 @@ enum EIDScannerResult : uint8_t
     EIDScannerResult__Success_DownedGuard = 2,
     EIDScannerResult__Success_PlayerIsDisguised = 3,
     EIDScannerResult__Failure_NotFromFaction = 4,
-    EIDScannerResult__Other = 5,
-    ﬂ‘ÂÁ€Ÿ÷‘Ÿ˙È„H÷„‡‘˘‘‹”’„ˆ÷„⁄⁄ÁÂıAX = 6
+    EIDScannerResult__Other = 5
 };
 
 enum ECreativeCreatorAnalyticsType : uint8_t
@@ -21035,7 +21006,7 @@ enum EAlphaFromDeltaTypes : uint8_t
 
 enum ESkydivingDirection : uint8_t
 {
-    ESkydivingDirection__Center = 0,
+    ≤d(HHG°FTfHHHHHHHFHHCenter = 0,
     ESkydivingDirection__Right = 1,
     ESkydivingDirection__Left = 2,
     ESkydivingDirection__Forward = 3,
@@ -21128,7 +21099,7 @@ enum EDeimosAnimState : uint8_t
     EDeimosAnimState__Frozen = 10,
     EDeimosAnimState__RangedAttack = 11,
     EDeimosAnimState__Walking = 12,
-    ‘H·⁄ﬂ›‹ÁÒ„‘Á‘ı€ﬂ⁄’inting = 13
+    EDeimosAnimState__Sprinting = 13
 };
 
 enum EFortFacialAnimTypes : uint8_t
@@ -21162,7 +21133,7 @@ enum EPlaneDirection : uint8_t
 
 enum EFortCardinalDirection : uint8_t
 {
-    EFortCardinalDirection__North = 0,
+    ÁQ≤d(HHG°FTalDirection__North = 0,
     EFortCardinalDirection__East = 1,
     EFortCardinalDirection__South = 2,
     EFortCardinalDirection__West = 3
@@ -21207,7 +21178,12 @@ enum EFortHuskAnimType : uint8_t
     EFortHuskAnimType__Basic = 0,
     EFortHuskAnimType__Dwarf = 1,
     EFortHuskAnimType__BlasterBig = 2,
-    EFortHuskAnimType__Weak = 3
+    EFortHuskAnimType__Weak = 3,
+    EFortHuskAnimType__TinyHead = 4,
+    EFortHuskAnimType__Beehive = 5,
+    EFortHuskAnimType__Husky = 6,
+    EFortHuskAnimType__Sploder = 7,
+    EFortHuskAnimType__Zapper = 8
 };
 
 enum EFortValetVehicleType : uint8_t
@@ -21257,6 +21233,18 @@ enum EAthenaPIEStartupMode : uint8_t
     EAthenaPIEStartupMode__Aircraft = 3,
     EAthenaPIEStartupMode__AircraftPaused = 4,
     EAthenaPIEStartupMode__Gameplay = 5
+};
+
+enum EAthenaQuickChatFilteringType : uint8_t
+{
+    EAthenaQuickChatFilteringType__AlwaysVisible = 0,
+    EAthenaQuickChatFilteringType__ActiveMaterial = 1,
+    EAthenaQuickChatFilteringType__FacingPickup = 2,
+    EAthenaQuickChatFilteringType__ActiveHotbarItem = 3,
+    EAthenaQuickChatFilteringType__ActiveHotbarItemAmmo = 4,
+    EAthenaQuickChatFilteringType__FacingPickupOrActiveHotbarItem = 5,
+    EAthenaQuickChatFilteringType__NoWeaponEquippedRequiringAmmo = 6,
+    EAthenaQuickChatFilteringType__WeaponEquippedOfAmmoType = 7
 };
 
 enum EAthenaRewardItemType : uint8_t
@@ -21498,7 +21486,7 @@ enum EGameModePauseWarmupMaskId : uint8_t
 
 enum EPlayerIndicatorFlags : uint8_t
 {
-    πeÿayerIndicatorFlags__None = 0,
+    EPlayerIndicatorFlags__None = 0,
     EPlayerIndicatorFlags__Minimap = 1,
     EPlayerIndicatorFlags__WorldArrow = 2,
     EPlayerIndicatorFlags__WorldName = 4,
@@ -21522,7 +21510,7 @@ enum EFortMapDisplayType : uint8_t
     EFortMapDisplayType__None = 0,
     EFortMapDisplayType__Capture = 1,
     EFortMapDisplayType__CustomMaterial = 2,
-    EFortMapDisplayType__CustomTexture = 3,
+    ÁﬂortMapDisplayType__CustomTexture = 3,
     EFortMapDisplayType__Count = 4
 };
 
@@ -21633,6 +21621,18 @@ enum EAthenaRespawnLocation : uint8_t
     EAthenaRespawnLocation__CreativePlayerStart = 1
 };
 
+enum EAthenaWinCondition : uint8_t
+{
+    EAthenaWinCondition__LastManStanding = 0,
+    EAthenaWinCondition__LastManStandingIncludingAllies = 1,
+    EAthenaWinCondition__TimedTeamFinalFight = 2,
+    EAthenaWinCondition__FirstToGoalScore = 3,
+    EAthenaWinCondition__TimedLastMenStanding = 4,
+    EAthenaWinCondition__MutatorControlled = 5,
+    EAthenaWinCondition__MutatorControlledGoalScore = 6,
+    EAthenaWinCondition__MutatorControlledChinaSupported = 7
+};
+
 enum ERewardTimePlayedType : uint8_t
 {
     ERewardTimePlayedType__Default = 0,
@@ -21644,7 +21644,7 @@ enum ERewardPlacementBonusType : uint8_t
 {
     ERewardPlacementBonusType__Solo = 0,
     ERewardPlacementBonusType__Duo = 1,
-    ERewardPlacementBonusType__Squad = 2,
+    HHŸ”„ÿœÙ’”⁄Ÿ‘⁄„€„ÂÁ‹¯‰÷Á—„ad = 2,
     ERewardPlacementBonusType__LargeTeam = 3,
     ERewardPlacementBonusType__None = 4,
     ERewardPlacementBonusType__TwoTeam = 5,
@@ -21735,7 +21735,7 @@ enum EFortWeaponUpgradeCosts : uint8_t
     EFortWeaponUpgradeCosts__HorizontalMetalRare = 20,
     EFortWeaponUpgradeCosts__HorizontalMetalVeryRare = 21,
     EFortWeaponUpgradeCosts__HorizontalMetalSuperRare = 22,
-    ˆ÷„ÿ”ı‹Á‘„˚‹Á‘⁄ŸŒﬂ÷Ÿsts__HorizontalBrickCommon = 23,
+    EFortWeaponUpgradeCosts__HorizontalBrickCommon = 23,
     EFortWeaponUpgradeCosts__HorizontalBrickUncommon = 24,
     EFortWeaponUpgradeCosts__HorizontalBrickRare = 25,
     EFortWeaponUpgradeCosts__HorizontalBrickVeryRare = 26,
@@ -21753,7 +21753,7 @@ enum EFortWeaponUpgradeInteractionResult : uint8_t
 {
     EFortWeaponUpgradeInteractionResult__Upgradable = 0,
     EFortWeaponUpgradeInteractionResult__NotEnoughResources = 1,
-    EFortWeaponUpgradeInteractionResult__CannotUpgrade = 2,
+    Ÿ’„ˆ‡·eaponUpgradeInteractionResult__CannotUpgrade = 2,
     EFortWeaponUpgradeInteractionResult__CannotInteract = 3
 };
 
@@ -21988,7 +21988,7 @@ enum EFortCrucibleStatId : uint8_t
     EFortCrucibleStatId__KBM_CourseSegment1 = 7,
     EFortCrucibleStatId__KBM_CourseSegment2 = 8,
     EFortCrucibleStatId__KBM_CourseSegment3 = 9,
-    ‘⁄„€·„ı„’÷”ŸÈ˚˝‰ˇ‘Á‘ı„‹ÊseSegment4 = 10,
+    EFortCrucibleStatId__KBM_CourseSegment4 = 10,
     EFortCrucibleStatId__KBM_CourseSegment5 = 11,
     EFortCrucibleStatId__Touch_CourseOverall = 12,
     EFortCrucibleStatId__Touch_CourseSegment1 = 13,
@@ -22009,7 +22009,7 @@ enum EFortCrucibleStatSource : uint8_t
 enum EFortCrucibleLeaderboardId : uint8_t
 {
     EFortCrucibleLeaderboardId__GlobalGamepad = 0,
-    EFortCrucibleLeaderboardId__GlobalKBM = 1,
+    €Á‹ÁÊŸ‹‰ˇ‰÷ÁŸÊ÷„‰Á„dId__GlobalKBM = 1,
     EFortCrucibleLeaderboardId__GlobalTouch = 2,
     EFortCrucibleLeaderboardId__GlobalAll = 3,
     EFortCrucibleLeaderboardId__FriendsGamepad = 4,
@@ -22108,7 +22108,7 @@ enum EFortReticleVisibiltyOption : uint8_t
     EFortReticleVisibiltyOption__DoNotOverride = 0,
     EFortReticleVisibiltyOption__ShowAlways = 1,
     EFortReticleVisibiltyOption__ShowPickaxeOnly = 2,
-    HHHœ‹⁄˘„–Á›Âﬂ¯—Ÿ‡ı⁄Ÿﬂ‘ÿ˘œ‘‹ﬂÊﬂ’ﬂÚ„‹Âﬂ‘„ˆ‘Only = 3,
+    EFortReticleVisibiltyOption__ShowNonPickaxeOnly = 3,
     EFortReticleVisibiltyOption__HideAlways = 4
 };
 
@@ -22127,7 +22127,7 @@ enum EFortHUDElementVisibiltyPriority : uint8_t
 enum EHiddenSoundIndicatorTypes : uint8_t
 {
     EHiddenSoundIndicatorTypes__None = 0,
-    EHiddenSoundIndicatorTypes__GunfireAndExplosions = 2,
+    HHHHHHHHHHHHHHHH„⁄Ÿ˙’„ÿœÙ÷Ÿ‘ÁÂﬂ‰⁄ˇ‰⁄Explosions = 2,
     EHiddenSoundIndicatorTypes__Loot = 4,
     EHiddenSoundIndicatorTypes__Movement = 8,
     EHiddenSoundIndicatorTypes__VehicleMovement = 16,
@@ -22236,7 +22236,7 @@ enum EMultiInteractionMutatorType : uint8_t
 
 enum EIndicatorDisplayMode : uint8_t
 {
-    HÔFπeÿHHorDisplayMode__Default = 0,
+    EIndicatorDisplayMode__Default = 0,
     EIndicatorDisplayMode__Always = 1,
     EIndicatorDisplayMode__Never = 2,
     EIndicatorDisplayMode__MiniMap = 3,
@@ -22261,7 +22261,7 @@ enum EOmahaTeam : uint8_t
 enum EOperationsTeamFaction : uint8_t
 {
     EOperationsTeamFaction__Alter = 0,
-    EOperationsTeamFaction__Ego = 1,
+    ‘‹⁄Ÿﬂ‘ÂÁ€Á„Ù’⁄Ÿﬂ‘Á÷„ÿgo = 1,
     EOperationsTeamFaction__NumFactions = 2
 };
 
@@ -22353,7 +22353,7 @@ enum ERepGraphMutatorSpatializationZoneType : uint8_t
     ERepGraphMutatorSpatializationZoneType__AI = 0,
     ERepGraphMutatorSpatializationZoneType__AINonFast = 1,
     ERepGraphMutatorSpatializationZoneType__NonAI = 2,
-    HHH‘’ÁHˇ⁄Ÿ˙„ÿœÙ„⁄ŸÓ⁄Ÿﬂ‘ÁŒﬂ‹Áﬂ‘Áÿıpe__NonAINonFast = 3,
+    ERepGraphMutatorSpatializationZoneType__NonAINonFast = 3,
     ERepGraphMutatorSpatializationZoneType__COUNT = 4
 };
 
@@ -22461,7 +22461,7 @@ enum EAthenaLightIntensityOverride : uint8_t
 enum EAthenaFogDensityOverride : uint8_t
 {
     EAthenaFogDensityOverride__NoOverride = 0,
-    “AthenaFogDensityOverride__Fog0 = 1,
+    EAthenaFogDensityOverride__Fog0 = 1,
     EAthenaFogDensityOverride__Fog1 = 2,
     EAthenaFogDensityOverride__Fog2 = 3,
     EAthenaFogDensityOverride__Fog3 = 4,
@@ -22479,20 +22479,7 @@ enum EAthenaTODColor : uint8_t
     EAthenaTODColor__NoOverride = 0,
     EAthenaTODColor__Black = 1,
     EAthenaTODColor__White = 2,
-    EAthenaTODColor__Red = 3,
-    EAthenaTODColor__Green = 4,
-    EAthenaTODColor__Blue = 5,
-    EAthenaTODColor__Yellow = 6,
-    EAthenaTODColor__Magenta = 7,
-    EAthenaTODColor__Cyan = 8
-};
-
-enum EUraniumGameEndedReason : uint8_t
-{
-    EUraniumGameEndedReason__GameIsStillInProgress = 0,
-    EUraniumGameEndedReason__AllRoundsPlayed = 1,
-    EUraniumGameEndedReason__EarlyGameEnd_BlowOut = 2,
-    EUraniumGameEndedReason__EarlyGameEnd_OutNumbered = 3
+    EAthenaTODColor__Red = 3
 };
 
 enum EWaxMinimapDrawMode : uint8_t
@@ -22570,7 +22557,7 @@ enum EPlateHawkInputEvents : uint8_t
 enum EFortFuelGadgetVisualType : uint8_t
 {
     EFortFuelGadgetVisualType__FuelMeter = 0,
-    H÷„rtFuelGadgetVisualType__ChargeText = 1,
+    EFortFuelGadgetVisualType__ChargeText = 1,
     EFortFuelGadgetVisualType__Invalid = 2
 };
 
@@ -22593,7 +22580,7 @@ enum EBuildingTickReason : uint8_t
     EBuildingTickReason__Editing = 7,
     EBuildingTickReason__BuildingAnimation = 8,
     EBuildingTickReason__DynamicLODAnim = 9,
-    EBuildingTickReason__DynamicShrinkAnim = 10,
+    ⁄ŸH€ﬂ⁄˘¸Âﬂ€Á⁄œ⁄Ÿ’Á„amicShrinkAnim = 10,
     EBuildingTickReason__AutoBuild = 11,
     EBuildingTickReason__FullHealthEffect = 12,
     EBuildingTickReason__BounceAnimation = 13,
@@ -22689,6 +22676,12 @@ enum ELayoutRequirementStatus : uint8_t
     ELayoutRequirementStatus__Active_Visible = 2
 };
 
+enum EMusicTrackPlayback : uint8_t
+{
+    EMusicTrackPlayback__Disabled = 0,
+    EMusicTrackPlayback__Enabled = 1
+};
+
 enum EPlayerCaptureKnobOptions : uint8_t
 {
     EPlayerCaptureKnobOptions__Off = 0,
@@ -22707,7 +22700,7 @@ enum ECaptureAreaItemFilters : uint8_t
 
 enum ECreativeVendingMachineState : uint8_t
 {
-    ECreativeVendingMachineState__DisplayingItem = 0,
+    HHHHHHHHHHHHHHHÁQ≤d(HHeState__DisplayingItem = 0,
     ECreativeVendingMachineState__AcceptingItem = 1,
     ECreativeVendingMachineState__AcceptedItem = 2,
     ECreativeVendingMachineState__RejectedItem = 3
@@ -22763,7 +22756,9 @@ enum EBuildingAttachmentSlot : uint8_t
 
 enum EBuildingAttachmentSide : uint8_t
 {
-    EBuildingAttachmentSide__Front = 0
+    EBuildingAttachmentSide__Front = 0,
+    EBuildingAttachmentSide__Back = 1,
+    EBuildingAttachmentSide__Any = 2
 };
 
 enum EPlacementType : uint8_t
@@ -22830,7 +22825,7 @@ enum EFortTextureDataType : uint8_t
     EFortTextureDataType__Any = 0,
     EFortTextureDataType__OuterWall = 1,
     EFortTextureDataType__InnerWall = 2,
-    Ò÷„⁄⁄ˇ„ÿœÙDataType__Corner = 3,
+    EFortTextureDataType__Corner = 3,
     EFortTextureDataType__Floor = 4,
     EFortTextureDataType__Ceiling = 5,
     EFortTextureDataType__Trim = 6,
@@ -22856,21 +22851,6 @@ enum EFortBuildingState : uint8_t
     EFortBuildingState__None = 2
 };
 
-enum EFortStructuralGridQueryResults : uint8_t
-{
-    EFortStructuralGridQueryResults__CanAdd = 0,
-    EFortStructuralGridQueryResults__ExistingActor = 1,
-    EFortStructuralGridQueryResults__Obstructed = 2,
-    EFortStructuralGridQueryResults__NoStructuralSupport = 3,
-    EFortStructuralGridQueryResults__InvalidActor = 4,
-    EFortStructuralGridQueryResults__ReachedLimit = 5,
-    EFortStructuralGridQueryResults__NoEditPermission = 6,
-    EFortStructuralGridQueryResults__PatternNotPermittedByLayoutRequirement = 7,
-    EFortStructuralGridQueryResults__ResourceTypeNotPermittedByLayoutRequirement = 8,
-    EFortStructuralGridQueryResults__BuildingAtRequirementsDisabled = 9,
-    EFortStructuralGridQueryResults__BuildingOtherThanRequirementsDisabled = 10
-};
-
 enum EFortDecoPlacementQueryResults : uint8_t
 {
     EFortDecoPlacementQueryResults__CanAdd = 0,
@@ -22892,11 +22872,7 @@ enum EFortDecoPlacementQueryResults : uint8_t
 enum EFortConnectivityCubeFace : uint8_t
 {
     EFortConnectivityCubeFace__Front = 0,
-    EFortConnectivityCubeFace__Left = 1,
-    EFortConnectivityCubeFace__Back = 2,
-    EFortConnectivityCubeFace__Right = 3,
-    EFortConnectivityCubeFace__Upper = 4,
-    EFortConnectivityCubeFace__Lower = 5
+    EFortConnectivityCubeFace__Left = 1
 };
 
 enum EFortBounceType : uint8_t
@@ -22947,7 +22923,7 @@ enum EDeployableBaseBuildingState : uint8_t
 
 enum EDeployableBaseConstructionStatus : uint8_t
 {
-    HHHHHHHHHHHHHHHHHHÔFπeÿHHFStatus__Constructing = 0,
+    EDeployableBaseConstructionStatus__Constructing = 0,
     EDeployableBaseConstructionStatus__Destroying = 1,
     EDeployableBaseConstructionStatus__Finished = 2
 };
@@ -23217,7 +23193,7 @@ enum EInteractProgressDecay : uint8_t
 
 enum ECollectionsComponentValidityResult : uint8_t
 {
-    HHHHHHHHionsComponentValidityResult__IsValid = 0,
+    ECollectionsComponentValidityResult__IsValid = 0,
     ECollectionsComponentValidityResult__IsNotValid = 1
 };
 
@@ -23242,7 +23218,7 @@ enum EContextualEvent : uint8_t
 enum EIndicatorStateImage : uint8_t
 {
     EIndicatorStateImage__FIRST_FRIENDLY_STATE = 0,
-    EIndicatorStateImage__Default = 0,
+    ÈÙıˆˇ„·Á€ˇ„‘Á‘ı÷Ÿ_Default = 0,
     EIndicatorStateImage__InCombat = 1,
     EIndicatorStateImage__DBNO = 2,
     EIndicatorStateImage__BeingRevived = 3,
@@ -23290,9 +23266,7 @@ enum EIndicatorStateImage : uint8_t
 
 enum EShareActorWith : uint8_t
 {
-    EShareActorWith__None = 0,
-    EShareActorWith__SquadOnTeam = 1,
-    EShareActorWith__AllTeam = 2
+    EShareActorWith__None = 0
 };
 
 enum EShareActorWithMask : uint8_t
@@ -23365,7 +23339,7 @@ enum EFortFootstepStanceType : uint8_t
 
 enum EFortFootstepVerticalPosition : uint8_t
 {
-    EFortFootstepVerticalPosition__Parallel = 0,
+    HHHHHHHHHHÁepVerticalPosition__Parallel = 0,
     EFortFootstepVerticalPosition__Above = 1,
     EFortFootstepVerticalPosition__Below = 2,
     EFortFootstepVerticalPosition__Max_None = 3
@@ -23459,7 +23433,7 @@ enum ESpatialSceneQueryShape : uint8_t
 
 enum EConversationEventQueryMethod : uint8_t
 {
-    Á’÷„“⁄Ÿ˙‘⁄ÁÿHHHHHHHHHHHHHHHHHHHHHHHHHHHHÔFπeÿHHonversationParticipant = 0,
+    EConversationEventQueryMethod__CheckAgainstCurrentConversationParticipant = 0,
     EConversationEventQueryMethod__CheckAgainstConversationEntryTag = 1
 };
 
@@ -23478,7 +23452,7 @@ enum EFortSentenceAudioPreference : uint8_t
 
 enum EContextRequirementMatchPolicy : uint8_t
 {
-    EContextRequirementMatchPolicy__RequireAll = 0,
+    HHHHHHxtRequirementMatchPolicy__RequireAll = 0,
     EContextRequirementMatchPolicy__RequireAny = 1
 };
 
@@ -23568,6 +23542,13 @@ enum EFortContentEncryptionCollectionGrouping : uint8_t
     EFortContentEncryptionCollectionGrouping__Individual = 0,
     EFortContentEncryptionCollectionGrouping__Combined = 1,
     EFortContentEncryptionCollectionGrouping__ByCosmeticSet = 2
+};
+
+enum EFortContentEncryptionAllowedReferences : uint8_t
+{
+    EFortContentEncryptionAllowedReferences__None = 0,
+    EFortContentEncryptionAllowedReferences__SoftOnly = 1,
+    EFortContentEncryptionAllowedReferences__Any = 2
 };
 
 enum EFortContentEncryptionGroupType : uint8_t
@@ -23712,7 +23693,12 @@ enum EItemWrapSectionNames : uint8_t
     EItemWrapSectionNames__Section = 7,
     EItemWrapSectionNames__Section = 8,
     EItemWrapSectionNames__Section = 9,
-    EItemWrapSectionNames__Section = 10
+    EItemWrapSectionNames__Section = 10,
+    EItemWrapSectionNames__Section = 11,
+    EItemWrapSectionNames__Section = 12,
+    EItemWrapSectionNames__Section = 13,
+    EItemWrapSectionNames__Section = 14,
+    EItemWrapSectionNames__Section = 15
 };
 
 enum EAthenaPetAttachRule : uint8_t
@@ -23811,7 +23797,7 @@ enum ECreativeQuestStat : uint8_t
     ECreativeQuestStat__LlamaOpened = 5,
     ECreativeQuestStat__PlayerRevived = 6,
     ECreativeQuestStat__PlayerInterrogated = 7,
-    ECreativeQuestStat__RaceCheckpointActivated = 8,
+    HHHHH‰„veQuestStat__RaceCheckpointActivated = 8,
     ECreativeQuestStat__FishFished = 9,
     ECreativeQuestStat__WeaponFished = 10,
     ECreativeQuestStat__PropDestroyed = 11,
@@ -23932,9 +23918,7 @@ enum EFortCreativeDiscoveryPanelOrdering : uint8_t
 enum EFortCreativeDiscoveryPlayHistoryType : uint8_t
 {
     EFortCreativeDiscoveryPlayHistoryType__RecentlyPlayed = 0,
-    EFortCreativeDiscoveryPlayHistoryType__Favorites = 1,
-    EFortCreativeDiscoveryPlayHistoryType__RecentlyPlayedAndFavorites = 2,
-    EFortCreativeDiscoveryPlayHistoryType__Queued = 3
+    EFortCreativeDiscoveryPlayHistoryType__Favorites = 1
 };
 
 enum EFortCreativeDiscoverySkippedEntries : uint8_t
@@ -23954,7 +23938,10 @@ enum EFortLockDeviceVisibilityDuringGames : uint8_t
 enum ETimerDeviceState : uint8_t
 {
     ETimerDeviceState__Enabled = 0,
-    ETimerDeviceState__Activated = 1
+    ETimerDeviceState__Activated = 1,
+    ETimerDeviceState__Paused = 2,
+    ETimerDeviceState__Completed = 3,
+    ETimerDeviceState__Disabled = 4
 };
 
 enum ECreativeClassType : uint8_t
@@ -24025,7 +24012,7 @@ enum EFortCreativeTeleporterGroup : uint8_t
     EFortCreativeTeleporterGroup__Group_L = 11,
     EFortCreativeTeleporterGroup__Group_M = 12,
     EFortCreativeTeleporterGroup__Group_N = 13,
-    ˙Èÿ”Ÿ÷ÿ”Ÿ÷÷„‘÷Ÿÿ„erGroup__Group_O = 14,
+    EFortCreativeTeleporterGroup__Group_O = 14,
     EFortCreativeTeleporterGroup__Group_P = 15,
     EFortCreativeTeleporterGroup__Group_Q = 16,
     EFortCreativeTeleporterGroup__Group_R = 17,
@@ -24045,7 +24032,7 @@ enum EFortCreativeTeleporterEvent : uint8_t
     EFortCreativeTeleporterEvent__Entered = 0,
     EFortCreativeTeleporterEvent__Exited = 1,
     EFortCreativeTeleporterEvent__Enabled = 2,
-    EFortCreativeTeleporterEvent__Disabled = 3,
+    H‰„‹ÊÁ⁄‘⁄„“÷„‘÷Ÿÿ„‹„Ù„“ﬂ‘ÁDisabled = 3,
     EFortCreativeTeleporterEvent__None = 4
 };
 
@@ -24145,7 +24132,7 @@ enum EAccessoryColorName : uint8_t
 {
     EAccessoryColorName_AccessoryColor1 = 0,
     EAccessoryColorName_AccessoryColor2 = 1,
-    ÷Ÿ‹Ÿœ÷Ÿ’’„ÂÂÈ„€Á˙÷Ÿ‹ŸsoryColor3 = 2,
+    EAccessoryColorName_AccessoryColor3 = 2,
     EAccessoryColorName_NumTypes = 3
 };
 
@@ -24166,13 +24153,6 @@ enum EClothingColorName : uint8_t
     EClothingColorName_AccessoryColor1 = 0,
     EClothingColorName_AccessoryColor2 = 1,
     EClothingColorName_NumTypes = 2
-};
-
-enum EVehicleEnteredCosmeticReaction : uint8_t
-{
-    EVehicleEnteredCosmeticReaction__Driver = 0,
-    EVehicleEnteredCosmeticReaction__Passenger = 1,
-    EVehicleEnteredCosmeticReaction__Both = 2
 };
 
 enum ECosmeticModifierOutExec : uint8_t
@@ -24260,7 +24240,7 @@ enum ETimespanAsTextFormat : uint8_t
 {
     ETimespanAsTextFormat__DaysHoursMinutesSeconds = 0,
     ETimespanAsTextFormat__Colons = 1,
-    ‰⁄ŸÂ„ı’„‘”⁄ﬂ˚’÷H’⁄Ÿ‹Ÿ‘lonsWithMilliseconds = 2,
+    ETimespanAsTextFormat__ColonsWithMilliseconds = 2,
     ETimespanAsTextFormat__Approximate = 3,
     ETimespanAsTextFormat__ApproximateWithWeeks = 4,
     ETimespanAsTextFormat__ApproximateWithMonths = 5,
@@ -24280,10 +24260,10 @@ enum EDynamicDestructionResourceType : uint8_t
     EDynamicDestructionResourceType__Stone = 2,
     EDynamicDestructionResourceType__Metal = 3,
     EDynamicDestructionResourceType__Foliage = 4,
-    EDynamicDestructionResourceType__Unused = 5,
-    EDynamicDestructionResourceType__Unused = 6,
-    EDynamicDestructionResourceType__Unused = 7,
-    EDynamicDestructionResourceType__Unused = 8
+    ·Áﬂ‹Ÿ„ÿœÙ„Â÷tionResourceType__Unused = 5,
+    ‰„’”⁄Û„ÿœÙ„Â÷tionResourceType__Unused = 6,
+    ‰„’”⁄Û„ÿœÙ„Â÷tionResourceType__Unused = 7,
+    ‰„’”⁄Û„ÿœÙ„Â÷tionResourceType__Unused = 8
 };
 
 enum EFXType : uint8_t
@@ -24401,7 +24381,7 @@ enum EFortWeaponSoundChannel : uint8_t
 
 enum EFortTargetingFXState : uint8_t
 {
-    HHHHHHHHÔFπeÿHHF<YpHHTargetingStart = 0,
+    EFortTargetingFXState__TargetingStart = 0,
     EFortTargetingFXState__TargetingEnd = 1,
     EFortTargetingFXState__Max_None = 2
 };
@@ -24629,7 +24609,7 @@ enum EFortActivityLinkCategory : uint8_t
 enum ESubGameAccessReason : uint8_t
 {
     ESubGameAccessReason__NoAccess = 0,
-    HH’’„ÂÂŸ˙⁄ŸReason__OpenAccess = 1,
+    ESubGameAccessReason__OpenAccess = 1,
     ESubGameAccessReason__TokenItemAccess = 2,
     ESubGameAccessReason__XboxHomeSharingAccess = 3,
     ESubGameAccessReason__XboxServiceOutageAccess = 4,
@@ -24654,7 +24634,7 @@ enum EFortInputFilterLevel : uint8_t
     EFortInputFilterLevel__None = 0,
     EFortInputFilterLevel__Touch = 1,
     EFortInputFilterLevel__Gamepad = 2,
-    EFortInputFilterLevel__Mouse = 3
+    ÿ„€Á‹„“FilterLevel__Mouse = 3
 };
 
 enum ETeamChatRoomState : uint8_t
@@ -24688,7 +24668,10 @@ enum EFortMobileFPSMode : uint8_t
 enum EFortContentQualityLevel : uint8_t
 {
     EFortContentQualityLevel__Unset = 0,
-    EFortContentQualityLevel__Quality_Base = 1
+    EFortContentQualityLevel__Quality_Base = 1,
+    EFortContentQualityLevel__Quality_Medium = 2,
+    EFortContentQualityLevel__Quality_High = 3,
+    EFortContentQualityLevel__Num = 4
 };
 
 enum EParsleyIdleTime : uint8_t
@@ -24909,7 +24892,7 @@ enum EActionStatus : uint8_t
 
 enum EFortRewardType : uint8_t
 {
-    EFortRewardType__Default = 0,
+    HHG°E'fHHHHHHe__Default = 0,
     EFortRewardType__Missed = 1,
     EFortRewardType__Max_None = 2
 };
@@ -25025,7 +25008,7 @@ enum EFortSoundIndicatorTypes : uint8_t
 {
     EFortSoundIndicatorTypes__Generic = 0,
     EFortSoundIndicatorTypes__FootStep = 1,
-    EFortSoundIndicatorTypes__Gunshot = 2,
+    „‘ı‘ŸŸ’„ÿœÙ÷Ÿ‘ÁÂﬂ‰⁄ˇ‰⁄_Gunshot = 2,
     EFortSoundIndicatorTypes__Chest = 3,
     EFortSoundIndicatorTypes__Glider = 4,
     EFortSoundIndicatorTypes__Vehicle = 5,
@@ -25147,7 +25130,7 @@ enum EFortCraftFailCause : uint8_t
 
 enum ECraftingUpgradeDataFlags : uint16_t
 {
-    HHÔFπeÿHHF<€˘pHHHHHHlags__None = 0,
+    ECraftingUpgradeDataFlags__None = 0,
     ECraftingUpgradeDataFlags__OverrideWrap = 1,
     ECraftingUpgradeDataFlags__Durability = 2,
     ECraftingUpgradeDataFlags__PhantomAmmo = 4,
@@ -25171,7 +25154,7 @@ enum EFortBangType : uint8_t
     EFortBangType__VaultLeadSurvivors = 10,
     EFortBangType__VaultSurvivors = 11,
     EFortBangType__VaultHeroes = 12,
-    EFortBangType__VaultDefenders = 13,
+    ’÷H’„Ÿ÷„ = 13,
     EFortBangType__VaultResources = 14,
     EFortBangType__VaultMelee = 15,
     EFortBangType__VaultRanged = 16,
@@ -25236,8 +25219,7 @@ enum EFortClientAnnouncementQueueType : uint8_t
 enum EStormShieldDefense : uint8_t
 {
     EStormShieldDefense__NotSSD = 0,
-    EStormShieldDefense__StormShieldExpansion = 1,
-    EStormShieldDefense__WargameSimulation = 2
+    EStormShieldDefense__StormShieldExpansion = 1
 };
 
 enum EItemListViewDisplayType : uint8_t
@@ -25415,7 +25397,7 @@ enum EFortUserCloudRequestResult : uint8_t
 enum EUserOptionDefinitionGenerationFlags : uint8_t
 {
     EUserOptionDefinitionGenerationFlags__None = 0,
-    HHHHH„⁄Ÿ˙’·Á‹⁄Ÿﬂ‘Á÷„⁄„⁄Ÿﬂ‘ﬂ⁄ﬂ‚„⁄_AutoAdded = 1,
+    EUserOptionDefinitionGenerationFlags__AutoAdded = 1,
     EUserOptionDefinitionGenerationFlags__Inherited = 2
 };
 
@@ -25558,13 +25540,6 @@ enum EInterfaceWithGameInstanceSubsystemStage : uint8_t
     EInterfaceWithGameInstanceSubsystemStage__OnGameFeatureRegistration = 1
 };
 
-enum EFrontendRequirement : uint8_t
-{
-    EFrontendRequirement__None = 0,
-    EFrontendRequirement__RequireFrontend = 1,
-    EFrontendRequirement__RequireNotFrontend = 2
-};
-
 enum EFortGameplayDataTrackerEventContributionType : uint8_t
 {
     EFortGameplayDataTrackerEventContributionType__Accumulate = 0,
@@ -25690,7 +25665,7 @@ enum EFriendChestTimePeriod : uint8_t
 
 enum EFortGiftWrapType : uint8_t
 {
-    EFortGiftWrapType__System = 0,
+    (HHG°E'πdHHHHHHHFHHSystem = 0,
     EFortGiftWrapType__UserFree = 1,
     EFortGiftWrapType__UserUnlock = 2,
     EFortGiftWrapType__UserConsumable = 3,
@@ -25752,14 +25727,7 @@ enum ELootQuotaLevel : uint8_t
     ELootQuotaLevel__Level8 = 8,
     ELootQuotaLevel__Level9 = 9,
     ELootQuotaLevel__Level10 = 10,
-    ELootQuotaLevel__Level11 = 11,
-    ELootQuotaLevel__Level12 = 12,
-    ELootQuotaLevel__Level13 = 13,
-    ELootQuotaLevel__Level14 = 14,
-    ELootQuotaLevel__Level15 = 15,
-    ELootQuotaLevel__Level16 = 16,
-    ELootQuotaLevel__Level17 = 17,
-    ELootQuotaLevel__NumLevels = 18
+    ELootQuotaLevel__Level11 = 11
 };
 
 enum EFortPickupTossState : uint8_t
@@ -25950,7 +25918,7 @@ enum EFortEncounterPacingMode : uint8_t
 
 enum EFortEncounterSpawnLocationManagementMode : uint8_t
 {
-    EFortEncounterSpawnLocationManagementMode__Spawn = 0,
+    HHHHHHHHHHHHHHHHHHHÁQ≤d(HHG°E'ôxHHHHHHHFHHHHHHwn = 0,
     EFortEncounterSpawnLocationManagementMode__Search = 1
 };
 
@@ -26057,7 +26025,7 @@ enum EServerContentReadinessV2 : uint8_t
 enum EContentBeaconMetadataChangeType : uint8_t
 {
     EContentBeaconMetadataChangeType__Add = 0,
-    HHH‰‰„ÿœÙ„·⁄Á‡Á‘Á‰Á‘„˚geType__Remove = 1
+    EContentBeaconMetadataChangeType__Remove = 1
 };
 
 enum EContentBeaconHostGlobalState : uint8_t
@@ -26076,7 +26044,7 @@ enum EContentRequestInstallState : uint8_t
     EContentRequestInstallState__ManifestsBuilt = 2,
     EContentRequestInstallState__Retrying = 3,
     EContentRequestInstallState__Installed = 4,
-    EContentRequestInstallState__HostLoadedClientsInstalled = 5,
+    HHHHHHHHHHHH‘‹ﬂ”H‰„‹‹Á‘’⁄ˇ„‘Á‘ı‹‹Á‘’⁄ˇ‘’„”◊„ˆ‘⁄„‘⁄Ÿed = 5,
     EContentRequestInstallState__HostRootActiveClientsInstalled = 6,
     EContentRequestInstallState__HostActiveClientsInstalled = 7,
     EContentRequestInstallState__Loaded = 8,
@@ -26177,7 +26145,7 @@ enum EFortServerStatus : uint8_t
 {
     EFortServerStatus__Launching = 0,
     EFortServerStatus__Idle = 1,
-    EFortServerStatus__StartingMode = 2,
+    HHHrtServerStatus__StartingMode = 2,
     EFortServerStatus__Running = 3,
     EFortServerStatus__ServerTravel = 4,
     EFortServerStatus__ShuttingDown = 5,
@@ -26284,7 +26252,7 @@ enum EFortMatchmakingPool : uint8_t
     EFortMatchmakingPool__Any = 0,
     EFortMatchmakingPool__Desktop = 1,
     EFortMatchmakingPool__PS4 = 2,
-    EFortMatchmakingPool__XboxOne = 3,
+    ÿŸ‘rtMatchmakingPool__XboxOne = 3,
     EFortMatchmakingPool__Mobile = 4,
     EFortMatchmakingPool__Test = 5,
     EFortMatchmakingPool__Switch = 6,
@@ -26427,7 +26395,7 @@ enum EFortDynamicNodeType : uint8_t
 
 enum ENewsExternalURLMode : uint8_t
 {
-    ENewsExternalURLMode__PatchNotes = 0,
+    HHHÁQ≤d(HHG°E'YfHHHHHHHFHHhNotes = 0,
     ENewsExternalURLMode__UpdateNotes = 1,
     ENewsExternalURLMode__MoreInformation = 2
 };
@@ -26481,7 +26449,8 @@ enum EJoinPartySource : uint8_t
     EJoinPartySource__RequestToJoin = 4,
     EJoinPartySource__RichPresence = 5,
     EJoinPartySource__RiftPortal = 6,
-    EJoinPartySource__CommandLine = 7
+    EJoinPartySource__CommandLine = 7,
+    EJoinPartySource__MAX_NUM = 8
 };
 
 enum EInGameReadyCheckStatus : uint8_t
@@ -26520,7 +26489,7 @@ enum ESendFriendInviteFailureReason : uint8_t
 {
     ESendFriendInviteFailureReason__NotFound = 0,
     ESendFriendInviteFailureReason__AlreadyFriends = 1,
-    ‰⁄„ﬂ÷œ‰Á„÷‹teFailureReason__InvitePending = 2,
+    ESendFriendInviteFailureReason__InvitePending = 2,
     ESendFriendInviteFailureReason__AddingSelfFail = 3,
     ESendFriendInviteFailureReason__AddingBlockedFail = 4,
     ESendFriendInviteFailureReason__AutoDeclined = 5,
@@ -26536,7 +26505,7 @@ enum ESendFriendInviteFailureReason : uint8_t
 enum EAcceptFriendInviteFailureReason : uint8_t
 {
     EAcceptFriendInviteFailureReason__InviterTooManyFriends = 0,
-    EAcceptFriendInviteFailureReason__SelfTooManyFriends = 1,
+    „ﬂ÷œ⁄Á˚ŸŸÙ÷„‘nviteFailureReason__SelfTooManyFriends = 1,
     EAcceptFriendInviteFailureReason__MissingPin = 2,
     EAcceptFriendInviteFailureReason__InvalidPin = 3,
     EAcceptFriendInviteFailureReason__PinAttemptsExceeded = 4,
@@ -26632,7 +26601,7 @@ enum EPayoutRewardType : uint8_t
 {
     EPayoutRewardType__Invalid = 0,
     EPayoutRewardType__Commerce = 1,
-    HÔH„Â÷„€€Ÿ„ÿœÙ‰÷Á—„eRelated = 2,
+    EPayoutRewardType__GameRelated = 2,
     EPayoutRewardType__Token = 3,
     EPayoutRewardType__Score = 4
 };
@@ -26658,7 +26627,7 @@ enum EFortressAIType : uint8_t
 
 enum EFortAILevelRatingDisplayType : uint8_t
 {
-    EFortAILevelRatingDisplayType__DisplayRatingBasedOnDifficulty = 0,
+    „FortAILevelRatingDisplayType__DisplayRatingBasedOnDifficulty = 0,
     EFortAILevelRatingDisplayType__DisplayAIDifficultyAsRating = 1,
     EFortAILevelRatingDisplayType__DontDisplayRating = 2
 };
@@ -26768,7 +26737,7 @@ enum EFortPhysicsObjectAwakeState : uint8_t
 enum EFortPhysicsObjectImpactDamageType : uint8_t
 {
     EFortPhysicsObjectImpactDamageType__Environment = 0,
-    ﬂ“⁄„ÿœÙ„·Á€Á‘ÂÁÿ€ˇ‘Â„ﬁÊ˘geType__Pawn = 1,
+    EFortPhysicsObjectImpactDamageType__Pawn = 1,
     EFortPhysicsObjectImpactDamageType__Vehicle = 2,
     EFortPhysicsObjectImpactDamageType__Wildlife = 3
 };
@@ -26786,7 +26755,7 @@ enum EFortPhysicsObjectActivationType : uint8_t
 {
     EFortPhysicsObjectActivationType__Unset = 0,
     EFortPhysicsObjectActivationType__Normal = 1,
-    EFortPhysicsObjectActivationType__Lazy = 2,
+    €÷Ÿ˙„ÿœÙ⁄ŸObjectActivationType__Lazy = 2,
     EFortPhysicsObjectActivationType__AlwaysInstant = 3
 };
 
@@ -26894,7 +26863,7 @@ enum EVehicleTrickType : uint8_t
     EVehicleTrickType__PitchIncrement = 5,
     EVehicleTrickType__ReversePitchIncrement = 6,
     EVehicleTrickType__HeightIncrement = 7,
-    „HehicleTrickType__DistanceIncrement = 8,
+    EVehicleTrickType__DistanceIncrement = 8,
     EVehicleTrickType__AirTimeIncrement = 9,
     EVehicleTrickType__ShoppingCart_Flying = 10,
     EVehicleTrickType__ShoppingCart_Stooping = 11,
@@ -26917,7 +26886,7 @@ enum ESceneQueryShape : uint8_t
 {
     ESceneQueryShape__Sphere = 0,
     ESceneQueryShape__Box = 1,
-    ESceneQueryShape__Capsule = 2,
+    H„÷H–Ÿ„ÿÁ‡ıœ÷„”˜apsule = 2,
     ESceneQueryShape__VolumeBounds = 3
 };
 
@@ -27009,7 +26978,7 @@ enum EFortShieldGainIncrementType : uint8_t
 
 enum EFinalBlowAllowance : uint8_t
 {
-    HHHHHHHHHÔFπeÿHHF<⁄	bHHHHHHHFHHHHHHer = 0,
+    EFinalBlowAllowance__WhenPassingFilter = 0,
     EFinalBlowAllowance__Always = 1,
     EFinalBlowAllowance__Never = 2
 };
@@ -27032,7 +27001,7 @@ enum ELevelUpIncrementType : uint8_t
 
 enum ETimeElapsedFilterIncrementType : uint8_t
 {
-    ETimeElapsedFilterIncrementType__Single = 0,
+    HHHHHHHHHsedFilterIncrementType__Single = 0,
     ETimeElapsedFilterIncrementType__TimeElapsed = 1
 };
 
@@ -27175,7 +27144,7 @@ enum EHighlightFeatures : uint8_t
     EHighlightFeatures__PlacementScore = 10,
     EHighlightFeatures__FollowingPlayerKillDBNO = 11,
     EHighlightFeatures__FollowingPlayerDBNOFinished = 12,
-    EHighlightFeatures__MaxLongKillDistance = 13,
+    ˘˙÷„œÁ‹¯·⁄ﬂ—Ÿ‹‹Ÿ’„÷”‘Á„‘‡·ﬂ‹‡·ﬂce = 13,
     EHighlightFeatures__VehicleMultikill = 14,
     EHighlightFeatures__VehiclePlayerLaunchDistance = 15,
     EHighlightFeatures__VehicleKills = 16,
@@ -27286,7 +27255,7 @@ enum EFortFeedbackContext : uint8_t
 {
     FFC_Instigator = 0,
     FFC_Recipient = 1,
-    HH‘⁄„ﬂÿﬂÂ„ˆÈss = 2,
+    FFC_TeamWitness = 2,
     FFC_EnemyWitness = 3,
     FFC_AllPawns = 4,
     FFC_Announcer = 5,
@@ -27330,7 +27299,7 @@ enum EFortFootstepAudioType : uint8_t
     EFortFootstepAudioType__Sprint = 3,
     EFortFootstepAudioType__Jump = 4,
     EFortFootstepAudioType__Land = 5,
-    EFortFootstepAudioType__LandHard = 6,
+    ÿH‘H‰⁄Á¸tstepAudioType__LandHard = 6,
     EFortFootstepAudioType__Max_None = 7
 };
 
@@ -27430,7 +27399,7 @@ enum EFortHitNotifyAudioPerspective : uint8_t
 
 enum ESplineWaterAudioWindingOrder : uint8_t
 {
-    HHHHHHHHHHHÔFπeÿHHF<⁄ŸxHHder__Clockwise = 0,
+    ESplineWaterAudioWindingOrder__Clockwise = 0,
     ESplineWaterAudioWindingOrder__Counterclockwise = 1
 };
 
@@ -27450,7 +27419,7 @@ enum EFortSwimmingAudioType : uint8_t
     EFortSwimmingAudioType__NormalDBNO = 4,
     EFortSwimmingAudioType__SprintBoostStart = 5,
     EFortSwimmingAudioType__SwimStart = 6,
-    EFortSwimmingAudioType__SwimEnd = 7,
+    Á‘ı€ﬂ—ı„ÿœÙŸﬂ‰”·⁄ﬂ€€ﬂ—ı‘mEnd = 7,
     EFortSwimmingAudioType__Max_None = 8
 };
 
@@ -27560,7 +27529,7 @@ enum EHordeWaveStingerType : uint8_t
 
 enum EDefenderSpawnFailureReason : uint8_t
 {
-    HHHHÔFπeÿHHF<⁄…tHHHHReason__None = 0,
+    EDefenderSpawnFailureReason__None = 0,
     EDefenderSpawnFailureReason__AllPlayerSlotsFull = 1,
     EDefenderSpawnFailureReason__DefendersNotUnlocked = 2,
     EDefenderSpawnFailureReason__CurrentlySimulatingDefender = 3,
@@ -27580,7 +27549,7 @@ enum ECollectionSelectionMethod : uint8_t
     ECollectionSelectionMethod__TierAsIndex = 0,
     ECollectionSelectionMethod__TierAsIndexOverflowToLastValid = 1,
     ECollectionSelectionMethod__Modulo = 2,
-    ECollectionSelectionMethod__Random = 3,
+    Ÿ‹”‰Ÿ˚ionSelectionMethod__Random = 3,
     ECollectionSelectionMethod__None = 4
 };
 
@@ -27619,9 +27588,7 @@ enum ESquadSlotType : uint8_t
 {
     ESquadSlotType__HeroSquadMissionDefender = 0,
     ESquadSlotType__SurvivorSquadLeadSurvivor = 1,
-    ESquadSlotType__SurvivorSquadSurvivor = 2,
-    ESquadSlotType__DefenderSquadMember = 3,
-    ESquadSlotType__ExpeditionSquadMember = 4
+    ESquadSlotType__SurvivorSquadSurvivor = 2
 };
 
 enum EFortDefenderSubtype : uint8_t
@@ -27696,7 +27663,7 @@ enum EFortTheaterMapTileType : uint8_t
 
 enum EFortMissionQuestValidityResult : uint8_t
 {
-    HHHHHHHHHHHÔFπestValidityResult__Invalid = 0,
+    EFortMissionQuestValidityResult__Invalid = 0,
     EFortMissionQuestValidityResult__InvalidNotPlayable = 1,
     EFortMissionQuestValidityResult__ValidLinked = 2,
     EFortMissionQuestValidityResult__ValidObjectiveCondition = 3,
@@ -27832,6 +27799,15 @@ enum EPinModalValidityState : uint8_t
     EPinModalValidityState__Invalid = 3
 };
 
+enum EFortTipDisplayPlatformGroup : uint8_t
+{
+    EFortTipDisplayPlatformGroup__None = 0,
+    EFortTipDisplayPlatformGroup__Desktop = 1,
+    EFortTipDisplayPlatformGroup__Console = 2,
+    EFortTipDisplayPlatformGroup__Switch = 4,
+    EFortTipDisplayPlatformGroup__Mobile = 8
+};
+
 enum EFortUIFriendNotificationType : uint8_t
 {
     EFortUIFriendNotificationType__Default = 0,
@@ -27842,7 +27818,7 @@ enum EFortUIFriendNotificationType : uint8_t
     EFortUIFriendNotificationType__PartyRequest = 5,
     EFortUIFriendNotificationType__AutoImportFriendSuggestion = 6,
     EFortUIFriendNotificationType__PartyMemberCreated = 7,
-    EFortUIFriendNotificationType__PartyMemberLeft = 8
+    Á„÷÷„Ê€„˚œ‘÷Á¯„ÿœÙ⁄Ÿﬂ‘ÁÂﬂ‚ﬂ_PartyMemberLeft = 8
 };
 
 enum EFortUIManagerFeatureRequest : uint8_t
@@ -27965,7 +27941,7 @@ enum EHighlightReelIds : uint8_t
     EHighlightReelIds__MediumHighlightReel = 6,
     EHighlightReelIds__MediumExtendedHighlightReel = 7,
     EHighlightReelIds__ShorterHighlightReel = 8,
-    „„ˆ‘‡·ﬂ‹‡·ﬂ = 9,
+    EHighlightReelIds__PlayerSpotlightReel = 9,
     EHighlightReelIds__PlayerSpotlightNoDeathsReel = 10,
     EHighlightReelIds__VATReel = 11,
     EHighlightReelIds__COUNT = 12
@@ -28131,7 +28107,7 @@ enum EAIVisibilityOptions : uint8_t
     EAIVisibilityOptions__AlwaysVisible = 2,
     EAIVisibilityOptions__HiddenWhenIdle = 4,
     EAIVisibilityOptions__HiddenWhenCrouched = 8,
-    EAIVisibilityOptions__HiddenWhenIdleAndCrouched = 12,
+    HHHHHHH‰„‡Â”Ÿ÷⁄„‡Ò⁄„‰‰ﬂ = 12,
     EAIVisibilityOptions__VisibleWhenOverlappingPerceivedActor = 16,
     EAIVisibilityOptions__CheckPriorVisibility = 32
 };
@@ -28249,7 +28225,7 @@ enum EFortEncounterPacingState : uint8_t
 enum EFortEncounterState : uint8_t
 {
     EFortEncounterState__Uninitialized = 0,
-    HHHHHHHHH‰„Œﬂ‹Áﬂ‘ﬂ⁄ﬂ⁄Û„‘Á‘ı÷„‘⁄”ŸÂ⁄erties = 1,
+    EFortEncounterState__InitializingProperties = 1,
     EFortEncounterState__InitializingRiftManager = 2,
     EFortEncounterState__AwaitingActivation = 3,
     EFortEncounterState__Active = 4,
@@ -28395,7 +28371,7 @@ enum EObstacleType : uint8_t
 {
     EObstacleType__IncomingSmashable = 0,
     EObstacleType__BlockingSmashable = 1,
-    HHH„‹ÊÁ‡’Á€ı·⁄ﬂ›ÂŸ‹ngDetectedTrap = 2,
+    EObstacleType__BlockingDetectedTrap = 2,
     EObstacleType__Unknown = 3,
     EObstacleType__Count = 3
 };
@@ -28543,7 +28519,7 @@ enum EFortThreatDeactivationType : uint8_t
 
 enum ETokenState : uint8_t
 {
-    YZHHHHHHHFHHHHHHed = 0,
+    ETokenState__Owned = 0,
     ETokenState__Awaiting = 1,
     ETokenState__Invalid = 2
 };
@@ -28634,36 +28610,7 @@ enum EFortCreativePatrolPathGroup : uint8_t
     EFortCreativePatrolPathGroup__Group = 68,
     EFortCreativePatrolPathGroup__Group = 69,
     EFortCreativePatrolPathGroup__Group = 70,
-    EFortCreativePatrolPathGroup__Group = 71,
-    EFortCreativePatrolPathGroup__Group = 72,
-    EFortCreativePatrolPathGroup__Group = 73,
-    EFortCreativePatrolPathGroup__Group = 74,
-    EFortCreativePatrolPathGroup__Group = 75,
-    EFortCreativePatrolPathGroup__Group = 76,
-    EFortCreativePatrolPathGroup__Group = 77,
-    EFortCreativePatrolPathGroup__Group = 78,
-    EFortCreativePatrolPathGroup__Group = 79,
-    EFortCreativePatrolPathGroup__Group = 80,
-    EFortCreativePatrolPathGroup__Group = 81,
-    EFortCreativePatrolPathGroup__Group = 82,
-    EFortCreativePatrolPathGroup__Group = 83,
-    EFortCreativePatrolPathGroup__Group = 84,
-    EFortCreativePatrolPathGroup__Group = 85,
-    EFortCreativePatrolPathGroup__Group = 86,
-    EFortCreativePatrolPathGroup__Group = 87,
-    EFortCreativePatrolPathGroup__Group = 88,
-    EFortCreativePatrolPathGroup__Group = 89,
-    EFortCreativePatrolPathGroup__Group = 90,
-    EFortCreativePatrolPathGroup__Group = 91,
-    EFortCreativePatrolPathGroup__Group = 92,
-    EFortCreativePatrolPathGroup__Group = 93,
-    EFortCreativePatrolPathGroup__Group = 94,
-    EFortCreativePatrolPathGroup__Group = 95,
-    EFortCreativePatrolPathGroup__Group = 96,
-    EFortCreativePatrolPathGroup__Group = 97,
-    EFortCreativePatrolPathGroup__Group = 98,
-    EFortCreativePatrolPathGroup__Group = 99,
-    EFortCreativePatrolPathGroup__Group = 100
+    EFortCreativePatrolPathGroup__Group = 71
 };
 
 enum EAIBotBuildingTemplate : uint8_t
@@ -28853,7 +28800,7 @@ enum EPerceptionState : uint8_t
     EPerceptionState__Threat_LKP = 1,
     EPerceptionState__Threat_Alerted = 2,
     EPerceptionState__ObstacleIncoming = 3,
-    H·⁄ﬂ€eptionState__ObstacleBlockedBy = 4,
+    EPerceptionState__ObstacleBlockedBy = 4,
     EPerceptionState__ObstacleDetectedTrap = 5,
     EPerceptionState__Unknown = 6,
     EPerceptionState__Count = 6,
@@ -28883,7 +28830,7 @@ enum ELookAtType : uint8_t
 {
     ELookAtType__ScanAround = 0,
     ELookAtType__Investigate = 1,
-    ELookAtType__HeardSound = 2,
+    ‘Á·ﬂ‘AtType__HeardSound = 2,
     ELookAtType__Ambush = 3
 };
 
@@ -28998,7 +28945,9 @@ enum SwitchSeatType : uint8_t
 
 enum EFortAthenaStateTreeTaskFeatureExecutionMode : uint8_t
 {
-    EFortAthenaStateTreeTaskFeatureExecutionMode__DoNotExecute = 0
+    EFortAthenaStateTreeTaskFeatureExecutionMode__DoNotExecute = 0,
+    EFortAthenaStateTreeTaskFeatureExecutionMode__ExecuteOnEnter = 1,
+    EFortAthenaStateTreeTaskFeatureExecutionMode__ExecuteOnExit = 2
 };
 
 enum SeatStatusType : uint8_t
@@ -29107,7 +29056,9 @@ enum ECannotMeleeAttackReason : uint8_t
 {
     ECannotMeleeAttackReason__None = 0,
     ECannotMeleeAttackReason__CooldownActive = 1,
-    ECannotMeleeAttackReason__Other = 2
+    ECannotMeleeAttackReason__Other = 2,
+    ECannotMeleeAttackReason__AttackDestinationNotValid = 3,
+    ECannotMeleeAttackReason__TargetOutsideLeash = 4
 };
 
 enum EPathTestQueryType : uint8_t
@@ -29119,7 +29070,7 @@ enum EPathTestQueryType : uint8_t
 
 enum ECooldownType : uint8_t
 {
-    dHHHHHHnTriggered = 0,
+    OnActionTriggered = 0,
     OnActionFinished = 1,
     OnActionSucceeded = 2
 };
@@ -29147,7 +29098,7 @@ enum EGlideBehavior : uint8_t
 enum EGlideMovementType : uint8_t
 {
     EGlideMovementType__GlideMovementLinear = 0,
-    EGlideMovementType__GlideMovementSpiral = 1,
+    ÷Á„⁄ﬂ¸‘⁄„€„“ŸtType__GlideMovementSpiral = 1,
     EGlideMovementType__GlideMovementSerpentine = 2,
     EGlideMovementType__GlideAroundThreat = 3,
     EGlideMovementType__GlideBackAndForth = 4
@@ -29247,7 +29198,7 @@ enum ETweenBuiltInEasing : uint8_t
     ETweenBuiltInEasing__QuadIn = 4,
     ETweenBuiltInEasing__QuadOut = 5,
     ETweenBuiltInEasing__QuadInOut = 6,
-    ˘⁄weenBuiltInEasing__CubicIn = 7,
+    ETweenBuiltInEasing__CubicIn = 7,
     ETweenBuiltInEasing__CubicOut = 8,
     ETweenBuiltInEasing__CubicInOut = 9,
     ETweenBuiltInEasing__QuartIn = 10,
@@ -29411,7 +29362,7 @@ enum EFortUIFeature : uint8_t
     EFortUIFeature__ShowSpecialEvent = 41,
     EFortUIFeature__ShowSpecialEventTeaser = 42,
     EFortUIFeature__ShowSparksSpecialEvent = 43,
-    „“‹ÁﬂÂ„ÿı’›÷Áÿı—Ÿ‡ı„÷”‘Á„ˇlEvent = 44,
+    EFortUIFeature__ShowJunoSpecialEvent = 44,
     EFortUIFeature__ShowDelMarSpecialEvent = 45,
     EFortUIFeature__ShowWinterfest = 46,
     EFortUIFeature__SpecialEventsEnd = 47,
@@ -29430,7 +29381,7 @@ enum EFortUIFeature : uint8_t
     EFortUIFeature__EnableMatchmakingRegionSetting = 60,
     EFortUIFeature__EnableLanguageSetting = 61,
     EFortUIFeature__EnableFriendCodeSetting = 62,
-    EFortUIFeature__EnableEarlyAccessLoadingScreenBanner = 63,
+    HHHHHH·⁄eature__EnableEarlyAccessLoadingScreenBanner = 63,
     EFortUIFeature__EnableAlterationModifications = 64,
     EFortUIFeature__EnableSchematicRarityUpgrade = 65,
     EFortUIFeature__EnableMissionActivationVote = 66,
@@ -29505,7 +29456,7 @@ enum EFortContentBrowserQuickbarState : uint8_t
 enum EFortBuildingInteraction : uint8_t
 {
     EFortBuildingInteraction__None = 0,
-    H„⁄Ÿ˙⁄Ÿﬂ‘ÂÁ÷„‘⁄ˇ·ction__Build = 1,
+    EFortBuildingInteraction__Build = 1,
     EFortBuildingInteraction__Repair = 2,
     EFortBuildingInteraction__Upgrade = 3,
     EFortBuildingInteraction__Edit = 4,
@@ -29602,13 +29553,6 @@ enum EInputPriority : uint8_t
     EInputPriority__HUD = 6
 };
 
-enum ECollabDialogExitResult : uint8_t
-{
-    ECollabDialogExitResult__None = 0,
-    ECollabDialogExitResult__Close = 1,
-    ECollabDialogExitResult__Continue = 2
-};
-
 enum EFortPrioritizedWidgetContestedBehavior : uint8_t
 {
     EFortPrioritizedWidgetContestedBehavior__QueueBehind = 0,
@@ -29682,7 +29626,7 @@ enum EItemShopTileSize : uint8_t
 
 enum EFortItemShopOfferType : uint8_t
 {
-    HHHHHHÔFπeÿHHF<≠9pHHe__LevelBundle = 0,
+    EFortItemShopOfferType__LevelBundle = 0,
     EFortItemShopOfferType__BattlePass = 1,
     EFortItemShopOfferType__ProgressiveCosmetic = 2,
     EFortItemShopOfferType__Crew = 3,
@@ -29753,7 +29697,7 @@ enum EActivityImageLoadingState : uint8_t
 enum EFortPlayerPowerRatingType : uint8_t
 {
     EFortPlayerPowerRatingType__Auto = 0,
-    EFortPlayerPowerRatingType__Campaign = 1,
+    HHHHŸ‘”rPowerRatingType__Campaign = 1,
     EFortPlayerPowerRatingType__Phoenix = 2,
     EFortPlayerPowerRatingType__Max_None = 3
 };
@@ -29816,7 +29760,7 @@ enum EBattlePassInputs : uint8_t
     EBattlePassInputs__PreviewAction = 2,
     EBattlePassInputs__ReplayTrailer = 3,
     EBattlePassInputs__ShowAbout = 4,
-    H÷„ttlePassInputs__BulkBuyRewards = 5,
+    EBattlePassInputs__BulkBuyRewards = 5,
     EBattlePassInputs__PageComplete = 6,
     EBattlePassInputs__ShowAboutCustomization = 7,
     EBattlePassInputs__GiftBattlePass = 8,
@@ -29850,7 +29794,7 @@ enum EFortActivityDetailsModalExitPath : uint8_t
 {
     EFortActivityDetailsModalExitPath__Undefined = 0,
     EFortActivityDetailsModalExitPath__Discover = 1,
-    EFortActivityDetailsModalExitPath__Lobby = 2,
+    ŸÂ’ﬂ‡‘Á¯‘ﬂ–‹Á‰Ÿ˚’‹ﬂÁ‘„œ‘ﬂath__Lobby = 2,
     EFortActivityDetailsModalExitPath__Creator = 3,
     EFortActivityDetailsModalExitPath__Attributions = 4,
     EFortActivityDetailsModalExitPath__MAX_NUM = 5
@@ -29976,7 +29920,7 @@ enum EFortMtxStoreOfferType : uint8_t
 
 enum EPresenceIndicatorState : uint8_t
 {
-    EPresenceIndicatorState__Online = 0,
+    HHÁQ≤d(HHG°EÌ˘hHHHHHHHFHHHHline = 0,
     EPresenceIndicatorState__Away = 1,
     EPresenceIndicatorState__Offline = 2,
     EPresenceIndicatorState__Blocked = 3
@@ -30117,7 +30061,7 @@ enum EFortSettingGameVisibility : uint8_t
 enum EFortSidebarSpecialNavType : uint8_t
 {
     EFortSidebarSpecialNavType__None = 0,
-    HHHHtSidebarSpecialNavType__GoPrevious = 1,
+    EFortSidebarSpecialNavType__GoPrevious = 1,
     EFortSidebarSpecialNavType__GoRebootRally = 2,
     EFortSidebarSpecialNavType__GoPartyUp = 3,
     EFortSidebarSpecialNavType__GoFocusCilantro = 4,
@@ -30242,7 +30186,7 @@ enum EFortUIState : uint8_t
 {
     EFortUIState__Invalid = 0,
     EFortUIState__Login = 1,
-    HHH‰H⁄ﬂ·Ÿ¸„‘Á‘inServer = 2,
+    EFortUIState__JoinServer = 2,
     EFortUIState__SubgameSelect = 3,
     EFortUIState__FrontEnd = 4,
     EFortUIState__InGame_Custom = 5,
@@ -30272,7 +30216,7 @@ enum ENotificationResult : uint8_t
 
 enum ENotificationType : uint8_t
 {
-    ENotificationType__Basic = 0,
+    HHG°EÌ…`HHHHHHHFHHHHHHic = 0,
     ENotificationType__Friends = 1
 };
 
@@ -30422,7 +30366,7 @@ enum EButtonAction : uint8_t
 enum EMotdInteractionType : uint8_t
 {
     EMotdInteractionType__SeenTeaser = 0,
-    EMotdInteractionType__SeenFullScreen = 1,
+    HHHH÷„’Á„Ù⁄„„ı„ÿœÙ⁄Ÿﬂ‘enFullScreen = 1,
     EMotdInteractionType__ButtonPressed = 2,
     EMotdInteractionType__Unknown = 3
 };
@@ -30507,6 +30451,14 @@ enum EAvailableSquadSlotsListEntryState : uint8_t
     EAvailableSquadSlotsListEntryState__Simplified = 1
 };
 
+enum EAthenaConfirmationResult : uint8_t
+{
+    EAthenaConfirmationResult__Confirmed = 0,
+    EAthenaConfirmationResult__Declined = 1,
+    EAthenaConfirmationResult__Canceled = 2,
+    EAthenaConfirmationResult__Max_NONE = 3
+};
+
 enum EEquippedWeaponDisplay : uint8_t
 {
     EEquippedWeaponDisplay__None = 0,
@@ -30522,7 +30474,7 @@ enum EAthenaPlayerActionAlert : uint8_t
     EAthenaPlayerActionAlert__PlayerKill = 1,
     EAthenaPlayerActionAlert__EnteredStorm = 2,
     EAthenaPlayerActionAlert__NewZebulonDrone = 3,
-    EAthenaPlayerActionAlert__NewZebulonDroneYou = 4
+    HHH„⁄Ÿ÷layerActionAlert__NewZebulonDroneYou = 4
 };
 
 enum EFortAthenaPlaylist : uint8_t
@@ -30629,7 +30581,7 @@ enum EMinigameActivityWidgetStatFormat : uint8_t
     EMinigameActivityWidgetStatFormat__Time = 1,
     EMinigameActivityWidgetStatFormat__AddTime = 2,
     EMinigameActivityWidgetStatFormat__Distance = 3,
-    ‘’ﬂ‘Á€ActivityWidgetStatFormat__Laps = 4
+    EMinigameActivityWidgetStatFormat__Laps = 4
 };
 
 enum EFlowRiderElement : uint8_t
@@ -30649,7 +30601,7 @@ enum EHabaneroProgressError : uint8_t
     EHabaneroProgressError__HabaneroComponentUnableToQueryProgress = 3,
     EHabaneroProgressError__EmptyRankType = 4,
     EHabaneroProgressError__InitialProgressMapInvalid = 5,
-    EHabaneroProgressError__CurrentProgressMapInvalid = 6,
+    ‰ﬂ‹Á“⁄ˇÿÁ˚’’„÷·Ÿ÷¯‹Áﬂ‘ﬂ⁄ˇ÷ŸntProgressMapInvalid = 6,
     EHabaneroProgressError__InvalidCurrentTrack = 7,
     EHabaneroProgressError__InitialProgressEntryNotFound = 8,
     EHabaneroProgressError__CurrentProgressEntryNotFound = 9,
@@ -30755,8 +30707,7 @@ enum EDiscoScoreProgressTypes : uint8_t
     EDiscoScoreProgressTypes__ProgressSoundMedium = 2,
     EDiscoScoreProgressTypes__ProgressSoundStrong = 3,
     EDiscoScoreProgressTypes__CountdownSoundNormal = 4,
-    EDiscoScoreProgressTypes__CountdownSoundStrong = 5,
-    HHHHHHHH·⁄Ÿ÷‘ı‰⁄”Ÿı⁄—Ÿ‰‘⁄”Ÿ’„ÿœÙ’’„÷·Ÿ÷¯„÷ŸÂıŸÂ’ﬂAX = 6
+    EDiscoScoreProgressTypes__CountdownSoundStrong = 5
 };
 
 enum EHeistExitCraftUIState : uint8_t
@@ -30887,7 +30838,7 @@ enum ESpectatorBuildCountType : uint8_t
 {
     ESpectatorBuildCountType__BuildCount = 0,
     ESpectatorBuildCountType__Wood = 1,
-    H‰ŸŸÒ„ÿœÙ‘⁄”Ÿ‰‹ﬂ”ype__Stone = 2,
+    ESpectatorBuildCountType__Stone = 2,
     ESpectatorBuildCountType__Metal = 3,
     ESpectatorBuildCountType__Gold = 4
 };
@@ -30905,16 +30856,6 @@ enum ESpectatorMapPlayerListState : uint8_t
     ESpectatorMapPlayerListState__Default = 0,
     ESpectatorMapPlayerListState__Irrelevant = 1,
     ESpectatorMapPlayerListState__Eliminated = 2
-};
-
-enum ESpectatorPlayerListSortMethod : uint8_t
-{
-    ESpectatorPlayerListSortMethod__SquadId = 0,
-    ESpectatorPlayerListSortMethod__PlayerName = 1,
-    ESpectatorPlayerListSortMethod__Eliminations = 2,
-    ESpectatorPlayerListSortMethod__EventScore = 3,
-    ESpectatorPlayerListSortMethod__State = 4,
-    ESpectatorPlayerListSortMethod__Count = 5
 };
 
 enum EOptionalFlowSteps : uint8_t
@@ -31019,7 +30960,7 @@ enum EFortMaterialProgressBarSection : uint8_t
 enum EFortMaterialProgressBarSectionColorNumber : uint8_t
 {
     EFortMaterialProgressBarSectionColorNumber__Color1 = 0,
-    EFortMaterialProgressBarSectionColorNumber__Color2 = 1
+    ÷Ÿ‹Ÿ÷„Ê€”˙÷Ÿ‹Ÿ⁄Ÿﬂ‘Â„ı÷Á’nColorNumber__Color2 = 1
 };
 
 enum EFortMaterialProgressBarSectionOverflowBehavior : uint8_t
@@ -31118,9 +31059,7 @@ enum EBuildingFocusType : uint8_t
 enum EVaultItemLimitStatus : uint8_t
 {
     EVaultItemLimitStatus__WellBelowCapacity = 0,
-    ÿÁ—Ÿ‹„temLimitStatus__NearCapacity = 1,
-    EVaultItemLimitStatus__AtCapacity = 2,
-    EVaultItemLimitStatus__OverCapacity = 3
+    EVaultItemLimitStatus__NearCapacity = 1
 };
 
 enum EItemRecyclingRestrictionReason : uint8_t
@@ -31137,7 +31076,7 @@ enum EItemRecyclingRestrictionReason : uint8_t
 enum EItemRecyclingWarning : uint8_t
 {
     EItemRecyclingWarning__HighLevel = 0,
-    EItemRecyclingWarning__HighRarity = 1,
+    H‹„“„¸‡·ﬂ = 1,
     EItemRecyclingWarning__CanSlotInCollectionBook = 2
 };
 
@@ -31290,15 +31229,7 @@ enum EChatMessageOrigin : uint8_t
 enum ECollabIPGatingContext : uint8_t
 {
     ECollabIPGatingContext__Edit = 0,
-    ECollabIPGatingContext__CreateButton = 1,
-    ECollabIPGatingContext__JoinProgramButton = 2,
-    ECollabIPGatingContext__ReviewTermsButton = 3,
-    ECollabIPGatingContext__ProgramDetailsButton = 4,
-    ECollabIPGatingContext__NameIslandDialog = 5,
-    ECollabIPGatingContext__Disclaimer = 6,
-    ECollabIPGatingContext__Icon = 7,
-    ECollabIPGatingContext__BrandAndICPDialog = 8,
-    ECollabIPGatingContext__BrandOnlyDialog = 9
+    ECollabIPGatingContext__CreateButton = 1
 };
 
 enum ECollabIPGatingStatus : uint8_t
@@ -31386,7 +31317,7 @@ enum EFortRewardItemType : uint8_t
 
 enum EFortTouchControlRegion : uint8_t
 {
-    HHHHHHÔFπeÿHHF_LRegion__MovePlayer = 0,
+    EFortTouchControlRegion__MovePlayer = 0,
     EFortTouchControlRegion__RotateCamera = 1,
     EFortTouchControlRegion__NoRegion = 2,
     EFortTouchControlRegion__COUNT = 3
@@ -31636,7 +31567,7 @@ enum EFortLoginInteraction : uint8_t
     EFortLoginInteraction__NamePassword = 3,
     EFortLoginInteraction__AccountNotFound = 4,
     EFortLoginInteraction__CreateDisplayName = 5,
-    Á˙œÁ‹ÿ’ﬂ„‘Á„÷⁄Ÿﬂn__MultiFactorAuth = 6,
+    EFortLoginInteraction__MultiFactorAuth = 6,
     EFortLoginInteraction__EULA = 7,
     EFortLoginInteraction__AccountLink = 8,
     EFortLoginInteraction__AccountPinLink = 9,
@@ -31656,7 +31587,7 @@ enum EParentalControlsViewState : uint8_t
     EParentalControlsViewState__SetupPin = 5,
     EParentalControlsViewState__DisplaySettings = 6,
     EParentalControlsViewState__DisableParentalControls = 7,
-    EParentalControlsViewState__AskToReEnable = 8,
+    ‘⁄„÷ÁntalControlsViewState__AskToReEnable = 8,
     EParentalControlsViewState__ReEnabling = 9,
     EParentalControlsViewState__CabinModeEmailChange = 10
 };
@@ -31760,7 +31691,7 @@ enum EMatchmakingInputSource : uint8_t
 enum UFortActivatableVideoEvents : uint8_t
 {
     UFortActivatableVideoEvents__Finished = 0,
-    „‡’ﬂ⁄ﬂctivatableVideoEvents__Skipped = 1
+    UFortActivatableVideoEvents__Skipped = 1
 };
 
 enum UFortActivatablePrePostRollStates : uint8_t
@@ -31779,7 +31710,7 @@ enum UFortActivatablePrePostRollStates : uint8_t
 enum UFortActivatableVideoPanelEvents : uint8_t
 {
     UFortActivatableVideoPanelEvents__Finished = 0,
-    UFortActivatableVideoPanelEvents__Skipped = 1
+    „‡’ﬂ⁄ﬂ’‘⁄„“‹„⁄Á¯Ÿ„‰ﬂÚ„‹vents__Skipped = 1
 };
 
 enum EFortMissionActivationWidgetState : uint8_t
@@ -31865,7 +31796,7 @@ enum ECardinalPoint : uint8_t
     ECardinalPoint__NW = 6,
     ECardinalPoint__WNW = 7,
     ECardinalPoint__W = 8,
-    ÒHÒrdinalPoint__WSW = 9,
+    ECardinalPoint__WSW = 9,
     ECardinalPoint__SW = 10,
     ECardinalPoint__SSW = 11,
     ECardinalPoint__S = 12,
@@ -31893,7 +31824,7 @@ enum EBattlePassPurchaseButtonLayout : uint8_t
 enum EBattlePassView : uint8_t
 {
     EBattlePassView__None = 0,
-    EBattlePassView__LandingPage = 1,
+    Q≤d(HHH„⁄Ÿ˙—w__LandingPage = 1,
     EBattlePassView__RewardOverview = 2,
     EBattlePassView__ItemDetails = 3,
     EBattlePassView__BulkBuyRewards = 4,
@@ -32000,7 +31931,7 @@ enum EFortShowdownPinState : uint8_t
 {
     EFortShowdownPinState__None = 0,
     EFortShowdownPinState__Locked = 1,
-    HH‰„›ÂŸ¸„‘ÁPinState__Unlocked = 2
+    EFortShowdownPinState__Unlocked = 2
 };
 
 enum EFortAlterationWidgetState : uint8_t
@@ -32094,25 +32025,7 @@ enum EFortAthenaTutorialSubstep : uint8_t
     EFortAthenaTutorialSubstep__ScreenDestroyEnemies = 18,
     EFortAthenaTutorialSubstep__ScreenCollectLoot = 19,
     EFortAthenaTutorialSubstep__ScreenUseMedkit = 20,
-    EFortAthenaTutorialSubstep__ScreenUseShield = 21,
-    EFortAthenaTutorialSubstep__ScreenShieldInfo = 22,
-    EFortAthenaTutorialSubstep__ScreenLookForChest = 23,
-    EFortAthenaTutorialSubstep__ScreenChestFound = 24,
-    EFortAthenaTutorialSubstep__ScreenSelectBuildMode = 25,
-    EFortAthenaTutorialSubstep__ScreenShowMaterials = 26,
-    EFortAthenaTutorialSubstep__ScreenShowBuildPieces = 27,
-    EFortAthenaTutorialSubstep__ScreenSelectStairs = 28,
-    EFortAthenaTutorialSubstep__ScreenPlaceStairs = 29,
-    EFortAthenaTutorialSubstep__ScreenReachChest = 30,
-    EFortAthenaTutorialSubstep__ScreenExitBuildMode = 31,
-    EFortAthenaTutorialSubstep__ScreenLootChest = 32,
-    EFortAthenaTutorialSubstep__ScreenCollectLootChest = 33,
-    EFortAthenaTutorialSubstep__ScreenEquipRifle = 34,
-    EFortAthenaTutorialSubstep__ScreenUseScope = 35,
-    EFortAthenaTutorialSubstep__ScreenShootTargetsScoping = 36,
-    EFortAthenaTutorialSubstep__ScreenCompleted = 37,
-    ’‘H‰„‘„‹ÿ€Ÿ⁄„„÷ÂılSubstep__HealingInterrupted = 38,
-    EFortAthenaTutorialSubstep__Count = 39
+    EFortAthenaTutorialSubstep__ScreenUseShield = 21
 };
 
 enum EFortAthenaTutorialScreenExtraWidget : uint8_t
@@ -32134,7 +32047,7 @@ enum EYieldReason : uint8_t
 {
     EYieldReason__PlayerLoggedIn = 0,
     EYieldReason__PlayerLoggedOut = 1,
-    EYieldReason__PlayerCanceledLogin = 2,
+    HHHH‘”˘‰„··Ÿ¸_PlayerCanceledLogin = 2,
     EYieldReason__PlayerYielded = 3,
     EYieldReason__ControllerDisconnect = 4
 };
@@ -32255,7 +32168,7 @@ enum EScriptPropertyOverridesVersion : uint8_t
 {
     EScriptPropertyOverridesVersion__Initial = 0,
     EScriptPropertyOverridesVersion__UsingSoftObjectPathSerialization = 1,
-    EScriptPropertyOverridesVersion__ObjectClassSerialization = 2,
+    Áﬂ÷„ı‡‘Á¯‘Â„ﬁÊ˘‘‚Ÿı·⁄ﬂ’Û⁄Ÿﬂ’÷„Ú’„‰ﬂ÷÷„“assSerialization = 2,
     EScriptPropertyOverridesVersion__LatestPlusOne = 3,
     EScriptPropertyOverridesVersion__Latest = 2
 };
@@ -32498,7 +32411,7 @@ enum ELivingWorldCalendarEventConditionRatioBehavior : uint8_t
     ELivingWorldCalendarEventConditionRatioBehavior__LessOrEqual = 1,
     ELivingWorldCalendarEventConditionRatioBehavior__Greater = 2,
     ELivingWorldCalendarEventConditionRatioBehavior__GreaterOrEqual = 3,
-    ÷˘÷„‘ÁgWorldCalendarEventConditionRatioBehavior__InBetween = 4
+    ELivingWorldCalendarEventConditionRatioBehavior__InBetween = 4
 };
 
 enum EAudioGameplayBehaviorPlayState : uint8_t
@@ -32511,7 +32424,7 @@ enum EAudioGameplayBehaviorPlayState : uint8_t
 enum EVehicleCosmeticsFailureReason : uint8_t
 {
     EVehicleCosmeticsFailureReason__BodyTypeMismatch = 0,
-    EVehicleCosmeticsFailureReason__NoBodyEquipped = 1,
+    ‘Á€’ﬂ˚„ÿœÙœ‰ŸicsFailureReason__NoBodyEquipped = 1,
     EVehicleCosmeticsFailureReason__ActiveArchetypeNoBodyEquipped = 2,
     EVehicleCosmeticsFailureReason__NoOwningVehicle = 3,
     EVehicleCosmeticsFailureReason__NoLoadoutComponent = 4,
@@ -32576,7 +32489,7 @@ enum EVehicleWheelAndTireNiagaraParams : uint32_t
     Dust_Wheel_ML = 1024,
     Dust_Wheel_MR = 2048,
     Dust_Wheel_RL = 4096,
-    Dust_Wheel_RR = 8192,
+    ¸ˆÈ‹„„‡eel_RR = 8192,
     UNUSED = 16384,
     UNUSED = 32768,
     TireIntactFL = 65536,
@@ -32752,7 +32665,7 @@ enum EComputeKernelFlags : uint8_t
 
 enum EShaderFundamentalType : uint16_t
 {
-    FπhaderFundamentalType__Bool = 0,
+    EShaderFundamentalType__Bool = 0,
     EShaderFundamentalType__Int = 1,
     EShaderFundamentalType__Uint = 2,
     EShaderFundamentalType__Float = 3,
@@ -32892,7 +32805,7 @@ enum EPCGChangeType : uint8_t
     EPCGChangeType__ShaderSource = 128
 };
 
-enum EPCGDataType : uint32_t
+enum EPCGDataType : uint8_t
 {
     EPCGDataType__None = 0,
     EPCGDataType__Point = 2,
@@ -32901,20 +32814,7 @@ enum EPCGDataType : uint32_t
     EPCGDataType__PolyLine = 12,
     EPCGDataType__Landscape = 16,
     EPCGDataType__Texture = 32,
-    EPCGDataType__RenderTarget = 64,
-    EPCGDataType__BaseTexture = 96,
-    EPCGDataType__Surface = 112,
-    EPCGDataType__Volume = 128,
-    EPCGDataType__Primitive = 256,
-    EPCGDataType__DynamicMesh = 1024,
-    EPCGDataType__Concrete = 1534,
-    EPCGDataType__Composite = 512,
-    EPCGDataType__Spatial = 2046,
-    EPCGDataType__Param = 134217728,
-    EPCGDataType__PointOrParam = 134217730,
-    EPCGDataType__Settings = 268435456,
-    EPCGDataType__Other = 536870912,
-    EPCGDataType__Any = 1073741823
+    EPCGDataType__RenderTarget = 64
 };
 
 enum EPCGExclusiveDataType : uint8_t
@@ -32988,7 +32888,10 @@ enum EPCGHiGenGrid : uint32_t
 enum EPCGAttachOptions : uint8_t
 {
     EPCGAttachOptions__NotAttached = 0,
-    EPCGAttachOptions__Attached = 1
+    EPCGAttachOptions__Attached = 1,
+    EPCGAttachOptions__InFolder = 2,
+    EPCGAttachOptions__InGraphFolder = 3,
+    EPCGAttachOptions__InGeneratedFolder = 4
 };
 
 enum EPCGEditorDirtyMode : uint8_t
@@ -33041,12 +32944,6 @@ enum EPCGLocalGridPivot : uint8_t
     EPCGLocalGridPivot__Global = 0,
     EPCGLocalGridPivot__OriginalComponent = 1,
     EPCGLocalGridPivot__LocalComponent = 2
-};
-
-enum EPCGPointPosition : uint8_t
-{
-    EPCGPointPosition__CellCenter = 0,
-    EPCGPointPosition__CellCorners = 1
 };
 
 enum EPCGGridPivot : uint8_t
@@ -33161,7 +33058,7 @@ enum EPCGMetadataMakeRotatorOp : uint8_t
     EPCGMetadataMakeRotatorOp__MakeRotFromYX = 4,
     EPCGMetadataMakeRotatorOp__MakeRotFromXZ = 5,
     EPCGMetadataMakeRotatorOp__MakeRotFromZX = 6,
-    Ó€Ÿ÷‘Ÿˆ„›Á˚ÿ˘÷Ÿ‘torOp__MakeRotFromYZ = 7,
+    EPCGMetadataMakeRotatorOp__MakeRotFromYZ = 7,
     EPCGMetadataMakeRotatorOp__MakeRotFromZY = 8,
     EPCGMetadataMakeRotatorOp__MakeRotFromAxes = 9,
     EPCGMetadataMakeRotatorOp__MakeRotFromAngles = 10
@@ -33180,7 +33077,7 @@ enum PCGNormalToDensityMode : uint8_t
     PCGNormalToDensityMode__Minimum = 1,
     PCGNormalToDensityMode__Maximum = 2,
     PCGNormalToDensityMode__Add = 3,
-    PCGNormalToDensityMode__Subtract = 4,
+    H€”€ormalToDensityMode__Subtract = 4,
     PCGNormalToDensityMode__Multiply = 5,
     PCGNormalToDensityMode__Divide = 6
 };
@@ -33311,7 +33208,7 @@ enum EPCGDataCountMode : uint8_t
 
 enum EPCGElementCountMode : uint8_t
 {
-    EPCGElementCountMode__FromInputData = 0,
+    HHHHHHÁQ≤d(HHG°CÓ)pe__FromInputData = 0,
     EPCGElementCountMode__Fixed = 1
 };
 
@@ -33418,7 +33315,7 @@ enum EPCGWorldQuerySelectLandscapeHits : uint8_t
 enum EPCGMetadataBitwiseOperation : uint8_t
 {
     EPCGMetadataBitwiseOperation__And = 0,
-    ‰⁄⁄Ÿﬂ‘Á÷„ÿ˘„’ﬂ—‘ﬂeration__Not = 1,
+    EPCGMetadataBitwiseOperation__Not = 1,
     EPCGMetadataBitwiseOperation__Or = 2,
     EPCGMetadataBitwiseOperation__Xor = 3
 };
@@ -33542,7 +33439,7 @@ enum EPCGMetadataTrigOperation : uint8_t
     EPCGMetadataTrigOperation__Sin = 5,
     EPCGMetadataTrigOperation__Tan = 6,
     EPCGMetadataTrigOperation__DegToRad = 7,
-    ‰ÁˆŸÙ·„⁄Ÿﬂ‘Á÷„ÿ˘·ﬂ÷ÙÁ‘Á‰RadToDeg = 8
+    EPCGMetadataTrigOperation__RadToDeg = 8
 };
 
 enum EPCGMetadataVectorOperation : uint8_t
@@ -33563,7 +33460,7 @@ enum EPCGMetadataVectorOperation : uint8_t
 
 enum EPCGActorSelection : uint8_t
 {
-    EPCGActorSelection__ByTag = 0,
+    (HHG°CÓ	jHHHHction__ByTag = 0,
     EPCGActorSelection__ByName = 1,
     EPCGActorSelection__ByClass = 2,
     EPCGActorSelection__ByPath = 3,
@@ -33639,7 +33536,9 @@ enum EPCGCopyPointsInheritanceMode : uint8_t
 
 enum EPCGCopyPointsTagInheritanceMode : uint8_t
 {
-    EPCGCopyPointsTagInheritanceMode__Both = 0
+    EPCGCopyPointsTagInheritanceMode__Both = 0,
+    EPCGCopyPointsTagInheritanceMode__Source = 1,
+    EPCGCopyPointsTagInheritanceMode__Target = 2
 };
 
 enum EPCGCopyPointsMetadataInheritanceMode : uint8_t
@@ -33691,7 +33590,7 @@ enum EPCGGetDataFromActorMode : uint8_t
 
 enum EPCGFilterByTagOperation : uint8_t
 {
-    EPCGFilterByTagOperation__KeepTagged = 0,
+    HHHHHHHÁQ≤d(HHG°peration__KeepTagged = 0,
     EPCGFilterByTagOperation__RemoveTagged = 1
 };
 
@@ -33790,7 +33689,7 @@ enum EPCGSplineSamplingFill : uint8_t
 enum EPCGSplineSamplingInteriorOrientation : uint8_t
 {
     EPCGSplineSamplingInteriorOrientation__Uniform = 0,
-    HHHHHHHH€÷Ÿ‚ﬂ⁄Û⁄ŸﬂteriorOrientation__FollowCurvature = 1
+    EPCGSplineSamplingInteriorOrientation__FollowCurvature = 1
 };
 
 enum EPCGSplineSamplingSeedingMode : uint8_t
@@ -33915,7 +33814,7 @@ enum EPCGPointProperties : uint8_t
 
 enum EPCGSettingsExecutionMode : uint8_t
 {
-    HHHHHÔFπeÿHHF_KŸvionMode__Enabled = 0,
+    EPCGSettingsExecutionMode__Enabled = 0,
     EPCGSettingsExecutionMode__Debug = 1,
     EPCGSettingsExecutionMode__Isolated = 2,
     EPCGSettingsExecutionMode__Disabled = 3
@@ -33941,7 +33840,7 @@ enum EPCGSettingsType : uint8_t
     EPCGSettingsType__GraphParameters = 15,
     EPCGSettingsType__Reroute = 16,
     EPCGSettingsType__GPU = 17,
-    EPCGSettingsType__DynamicMesh = 18
+    „€ÁH„‘”HÛ¯„ÿœÙ_DynamicMesh = 18
 };
 
 enum EDeterminismLevel : uint8_t
@@ -34116,9 +34015,7 @@ enum EToolShutdownType : uint8_t
 
 enum EToolSide : uint8_t
 {
-    EToolSide__Left = 1,
-    EToolSide__Mouse = 1,
-    EToolSide__Right = 2
+    EToolSide__Left = 1
 };
 
 enum EToolChangeTrackingMode : uint8_t
@@ -34462,7 +34359,12 @@ enum EAtomPrimitiveImportWarningFlags : uint8_t
     EAtomPrimitiveImportWarningFlags__None = 0,
     EAtomPrimitiveImportWarningFlags__UnableToFindUnwrappedMeshUVSet = 1,
     EAtomPrimitiveImportWarningFlags__BrokenPrincipalUVSet = 2,
-    EAtomPrimitiveImportWarningFlags__InvalidFBXFile = 4
+    EAtomPrimitiveImportWarningFlags__InvalidFBXFile = 4,
+    EAtomPrimitiveImportWarningFlags__InvalidMeshInFBXScene = 8,
+    EAtomPrimitiveImportWarningFlags__CommonPartMeshNotFound = 16,
+    EAtomPrimitiveImportWarningFlags__FullyTriangulated = 32,
+    EAtomPrimitiveImportWarningFlags__TransformedMeshes = 64,
+    EAtomPrimitiveImportWarningFlags__CommonPartRotationsInconsistent = 128
 };
 
 enum EAtomPrimitiveGeoOptimization : uint8_t
@@ -34520,7 +34422,7 @@ enum EFieldConnectResult : uint8_t
 {
     EFieldConnectResult__NoConnection = 0,
     EFieldConnectResult__Rejection = 1,
-    EFieldConnectResult__FixedConnection = 2,
+    HHH⁄ŸH⁄Ÿﬂ‘Â„ﬁ„ˆ‘‹”’„ˆ‘Â„⁄⁄Ÿ‰‹„ﬂon = 2,
     EFieldConnectResult__FreeConnection = 3,
     EFieldConnectResult__HingeConnection = 4,
     EFieldConnectResult__CardanConnection = 5,
@@ -34605,7 +34507,7 @@ enum EConnectionPointType : uint8_t
     EConnectionPointType__DuploAntiKnob = 32,
     EConnectionPointType__DuploTube = 33,
     EConnectionPointType__DuploFixedTube = 34,
-    ”Ù‰„–ﬂŸ‹ÿ”„ÿœÙ‘⁄ﬂŸ¯⁄Ÿﬂ‘Â„⁄eGap = 35,
+    EConnectionPointType__DuploTubeGap = 35,
     EConnectionPointType__DuploAnimalKnob = 36,
     EConnectionPointType__DuploAnimalTube = 37,
     EConnectionPointType__SecondaryPinReceptor = 38,
@@ -34626,7 +34528,7 @@ enum EConnectionPointFlags : uint32_t
     EConnectionPointFlags__KnobWithHole = 4,
     EConnectionPointFlags__KnobWithMiniFigHandHole = 8,
     EConnectionPointFlags__KnobWithSingleCollision = 16,
-    EConnectionPointFlags__SingleFeature = 32,
+    ‹·⁄ﬂı‡‘ﬂÒÊŸ⁄˝’·Á‹‘⁄ﬂŸ¯⁄Ÿﬂ‘Â„⁄⁄Ÿre = 32,
     EConnectionPointFlags__ReceptorDontRemoveKnobCollision = 64,
     EConnectionPointFlags__KnobWithoutCollision = 128,
     EConnectionPointFlags__CreationValidFlags = 255,
@@ -34739,13 +34641,6 @@ enum EUVLayoutType : uint8_t
     EUVLayoutType__Stack = 1,
     EUVLayoutType__Repack = 2,
     EUVLayoutType__Normalize = 3
-};
-
-enum ENormalCalculationMethod : uint8_t
-{
-    ENormalCalculationMethod__AreaWeighted = 0,
-    ENormalCalculationMethod__AngleWeighted = 1,
-    ENormalCalculationMethod__AreaAngleWeighting = 2
 };
 
 enum ESplitNormalMethod : uint8_t
@@ -34876,7 +34771,8 @@ enum EBaseCreateFromSelectedTargetType : uint8_t
 {
     EBaseCreateFromSelectedTargetType__NewObject = 0,
     EBaseCreateFromSelectedTargetType__FirstInputObject = 1,
-    EBaseCreateFromSelectedTargetType__LastInputObject = 2
+    EBaseCreateFromSelectedTargetType__LastInputObject = 2,
+    „÷„’Á˚È„H˚ÈHHHHHH‘Â„ﬁÊ˘‘”ÿ⁄ˇ‘’Á¸„ÿœÙ‘„·÷ÁÙ‰„‘Â„‹„ı€Ÿ÷„‘Á„÷„’ÁAX = 3
 };
 
 enum EUVLayoutPreviewSide : uint8_t
@@ -35069,7 +34965,7 @@ enum EGeometryScriptMeshSelectionConversionType : uint8_t
 
 enum EGeometryScriptCombineSelectionMode : uint8_t
 {
-    HHHHHHHHHHHÔFπeÿHHF8ï9tHHHHHHHFHHHH_Add = 0,
+    EGeometryScriptCombineSelectionMode__Add = 0,
     EGeometryScriptCombineSelectionMode__Subtract = 1,
     EGeometryScriptCombineSelectionMode__Intersection = 2
 };
@@ -35086,7 +34982,7 @@ enum EGeometryScriptBakeResolution : uint8_t
     EGeometryScriptBakeResolution__Resolution32 = 1,
     EGeometryScriptBakeResolution__Resolution64 = 2,
     EGeometryScriptBakeResolution__Resolution128 = 3,
-    EGeometryScriptBakeResolution__Resolution256 = 4,
+    ⁄ŸﬂtryScriptBakeResolution__Resolution256 = 4,
     EGeometryScriptBakeResolution__Resolution512 = 5,
     EGeometryScriptBakeResolution__Resolution1024 = 6,
     EGeometryScriptBakeResolution__Resolution2048 = 7,
@@ -35171,7 +35067,7 @@ enum EGeometryScriptCombineAttributesMode : uint8_t
 {
     EGeometryScriptCombineAttributesMode__EnableAllMatching = 0,
     EGeometryScriptCombineAttributesMode__UseTarget = 1,
-    ‘„·÷ÁÙ„’Û„‰Ÿ˚’„mbineAttributesMode__UseSource = 2
+    EGeometryScriptCombineAttributesMode__UseSource = 2
 };
 
 enum EGeometryScriptPruneBoneWeightsAssignmentType : uint8_t
@@ -35188,7 +35084,7 @@ enum EGeometryScriptSmoothBoneWeightsType : uint8_t
 
 enum ETransferBoneWeightsMethod : uint8_t
 {
-    ETransferBoneWeightsMethod__ClosestPointOnSurface = 0,
+    HHHHHHHHHHHHHHHHHHHHÁQ≤d(HHG°B)vstPointOnSurface = 0,
     ETransferBoneWeightsMethod__InpaintWeights = 1
 };
 
@@ -35268,6 +35164,14 @@ enum EGeometryScriptOffsetFacesType : uint8_t
     EGeometryScriptOffsetFacesType__VertexNormal = 0,
     EGeometryScriptOffsetFacesType__FaceNormal = 1,
     EGeometryScriptOffsetFacesType__ParallelFaceOffset = 2
+};
+
+enum EGeometryScriptMeshBevelSelectionMode : uint8_t
+{
+    EGeometryScriptMeshBevelSelectionMode__TriangleArea = 0,
+    EGeometryScriptMeshBevelSelectionMode__AllPolygroupEdges = 1,
+    EGeometryScriptMeshBevelSelectionMode__SharedPolygroupEdges = 2,
+    EGeometryScriptMeshBevelSelectionMode__SelectedEdges = 3
 };
 
 enum EGeometryScriptTangentTypes : uint8_t
@@ -35358,7 +35262,7 @@ enum EGeometryScriptSamplingWeightMode : uint8_t
 enum EGeometryScriptSamplingDistributionMode : uint8_t
 {
     EGeometryScriptSamplingDistributionMode__Uniform = 0,
-    €÷Ÿ‚ﬂ⁄Û„‰Ÿ˚⁄Ÿﬂ‘”Êﬂ÷‘’ﬂ·⁄ﬂ‹ÿ€Áı‘ÿﬂ÷Âıœ_Smaller = 1,
+    EGeometryScriptSamplingDistributionMode__Smaller = 1,
     EGeometryScriptSamplingDistributionMode__Larger = 2
 };
 
@@ -35459,7 +35363,7 @@ enum EGeometryScriptPathOffsetEndType : uint8_t
 enum EGeometryScriptSampleSpacing : uint8_t
 {
     EGeometryScriptSampleSpacing__UniformDistance = 0,
-    ‘’ﬂ€÷Ÿ‚ﬂScriptSampleSpacing__UniformTime = 1,
+    EGeometryScriptSampleSpacing__UniformTime = 1,
     EGeometryScriptSampleSpacing__ErrorTolerance = 2
 };
 
@@ -35475,12 +35379,6 @@ enum EGeometryScriptPixelSamplingMethod : uint8_t
 {
     EGeometryScriptPixelSamplingMethod__Bilinear = 0,
     EGeometryScriptPixelSamplingMethod__Nearest = 1
-};
-
-enum EDistanceFieldComputeMode : uint8_t
-{
-    EDistanceFieldComputeMode__NarrowBand = 0,
-    EDistanceFieldComputeMode__FullGrid = 1
 };
 
 enum EDistanceFieldUnits : uint8_t
@@ -35530,7 +35428,7 @@ enum EGraphIslandOperations : uint8_t
 enum EGraphIslandConnectivityChange : uint8_t
 {
     EGraphIslandConnectivityChange__VertexAdd = 0,
-    ‰‰–„‘÷„Ú„·⁄ÁnectivityChange__SplitFrom = 1,
+    EGraphIslandConnectivityChange__SplitFrom = 1,
     EGraphIslandConnectivityChange__SplitTo = 2,
     EGraphIslandConnectivityChange__Other = 3
 };
@@ -35584,7 +35482,7 @@ enum EFortMantisTechniqueRootMotionType : uint8_t
     EFortMantisTechniqueRootMotionType__None = 0,
     EFortMantisTechniqueRootMotionType__ExtractFromMontageAndWarp = 1,
     EFortMantisTechniqueRootMotionType__HoldPosition = 2,
-    H⁄Ÿﬂ‘ﬂ’Ÿ¯isTechniqueRootMotionType__RootMotionMME = 3
+    EFortMantisTechniqueRootMotionType__RootMotionMME = 3
 };
 
 enum EFortMantisNotifyEvent : uint8_t
@@ -35607,7 +35505,7 @@ enum EFortMantisNotifyWindow : uint8_t
 enum EFortMantisNotifyTranslationWarpLimitRule : uint8_t
 {
     EFortMantisNotifyTranslationWarpLimitRule__None = 0,
-    EFortMantisNotifyTranslationWarpLimitRule__Window = 1,
+    HH„⁄Ÿ˙„‹”ˆ‘ﬂ€ﬂ¸ÿ÷ÁÒ⁄ŸationWarpLimitRule__Window = 1,
     EFortMantisNotifyTranslationWarpLimitRule__Animation = 2,
     EFortMantisNotifyTranslationWarpLimitRule__Custom = 3
 };
@@ -35683,7 +35581,7 @@ enum EJunoBiomeHabitat : uint8_t
     EJunoBiomeHabitat__Grass = 8,
     EJunoBiomeHabitat__Flowers = 9,
     EJunoBiomeHabitat__Heather = 10,
-    EJunoBiomeHabitat__Moss = 11,
+    ‘Á„ = 11,
     EJunoBiomeHabitat__Ocean = 12,
     EJunoBiomeHabitat__Lake = 13,
     EJunoBiomeHabitat__River = 14,
@@ -35693,16 +35591,7 @@ enum EJunoBiomeHabitat : uint8_t
 enum EJunoBiome : uint8_t
 {
     EJunoBiome__Unknown = 0,
-    EJunoBiome__Grasslands = 1,
-    EJunoBiome__DarkForest = 2,
-    EJunoBiome__Desert = 3,
-    EJunoBiome__Tropical = 4,
-    EJunoBiome__Alpine = 5,
-    EJunoBiome__Water = 6,
-    EJunoBiome__Jungle = 7,
-    EJunoBiome__Mountain = 8,
-    EJunoBiome__Reserved = 9,
-    EJunoBiome__Max = 10
+    EJunoBiome__Grasslands = 1
 };
 
 enum EJunoAwesomePointModificationContext : uint8_t
@@ -35842,6 +35731,13 @@ enum EJunoContactDirection : uint8_t
     EJunoContactDirection__NegZ = 5
 };
 
+enum EJunoDumpWorldPersistentContentsVerbosity : uint8_t
+{
+    EJunoDumpWorldPersistentContentsVerbosity__Compact = 0,
+    EJunoDumpWorldPersistentContentsVerbosity__Default = 1,
+    EJunoDumpWorldPersistentContentsVerbosity__Verbose = 2
+};
+
 enum EJunoGeneratePersistenceAssetsReportCommandletAction : uint8_t
 {
     EJunoGeneratePersistenceAssetsReportCommandletAction__None = 0,
@@ -35946,7 +35842,7 @@ enum EJunoPersistenceReportOptions : uint16_t
     EJunoPersistenceReportOptions__ShowTablesHeaders = 256,
     EJunoPersistenceReportOptions__ShowIndividualItemsStats = 512,
     EJunoPersistenceReportOptions__ShowAggregatedStats = 1024,
-    EJunoPersistenceReportOptions__ShowDefaultFlags = 1504
+    ‘ı‰„‘Á·rsistenceReportOptions__ShowDefaultFlags = 1504
 };
 
 enum EJunoTrackRecipeUpdateType : uint8_t
@@ -36126,7 +36022,10 @@ enum EWorldDataAvailable : uint8_t
 enum EJunoItemChangeType : uint8_t
 {
     EJunoItemChangeType__Added = 0,
-    EJunoItemChangeType__Removed = 1
+    EJunoItemChangeType__Removed = 1,
+    EJunoItemChangeType__ItemChanged = 2,
+    EJunoItemChangeType__SlotChanged = 3,
+    EJunoItemChangeType__Swapped = 4
 };
 
 enum EJunoInventoryAcquisitionResult : uint8_t
@@ -36142,7 +36041,7 @@ enum EJunoBuildingSnapEntryState : uint8_t
     EJunoBuildingSnapEntryState__Incompatible = 0,
     EJunoBuildingSnapEntryState__Compatible = 1,
     EJunoBuildingSnapEntryState__InRangeRejected = 2,
-    EJunoBuildingSnapEntryState__InRangeValid = 3,
+    Â„ﬁ„ˆ„·⁄Áˆ⁄ˇ„‘ÁEntryState__InRangeValid = 3,
     EJunoBuildingSnapEntryState__Connected = 4
 };
 
@@ -36232,7 +36131,7 @@ enum EJunoActionExecutionConfig : uint8_t
 
 enum EMeshAuditFailureReason : uint16_t
 {
-    HHHHHÔFπitFailureReason__MAFR_None = 0,
+    EMeshAuditFailureReason__MAFR_None = 0,
     EMeshAuditFailureReason__MAFR_NeverStream = 1,
     EMeshAuditFailureReason__MAFR_HighTriRatioInLODs = 2,
     EMeshAuditFailureReason__MAFR_SimplestLODTooComplex = 4,
@@ -36250,7 +36149,7 @@ enum EBattlePassStatusBarTypeS32 : uint8_t
     EBattlePassStatusBarTypeS32__Hidden = 0,
     EBattlePassStatusBarTypeS32__Prerequisite = 1,
     EBattlePassStatusBarTypeS32__Delayed = 2,
-    EBattlePassStatusBarTypeS32__Unclaimable = 3,
+    ‘ﬂ’H‰„ePassStatusBarTypeS32__Unclaimable = 3,
     EBattlePassStatusBarTypeS32__Claimable = 4,
     EBattlePassStatusBarTypeS32__Special = 5,
     EBattlePassStatusBarTypeS32__Owned = 6
@@ -36341,7 +36240,7 @@ enum EStateDrivenStateID : uint8_t
     EStateDrivenStateID__State_A = 3,
     EStateDrivenStateID__State_B = 4,
     EStateDrivenStateID__State_C = 5,
-    È„‘Á‘ıˇ„‘Á‘ı⁄„“ﬂ÷„‘Á‘_D = 6,
+    EStateDrivenStateID__State_D = 6,
     EStateDrivenStateID__State_E = 7,
     EStateDrivenStateID__State_F = 8,
     EStateDrivenStateID__State_G = 9,
@@ -36477,7 +36376,7 @@ enum EGemHitMethod : uint8_t
 
 enum EPilgrimGemType : uint8_t
 {
-    HF8î9bHHHHHHHFHHNormal = 0,
+    EPilgrimGemType__Normal = 0,
     EPilgrimGemType__PullOff = 1,
     EPilgrimGemType__HOPO = 2
 };
@@ -36504,7 +36403,7 @@ enum EPilgrimTrackLane : uint8_t
     EPilgrimTrackLane__TrackLane2 = 4,
     EPilgrimTrackLane__TrackLane3 = 8,
     EPilgrimTrackLane__TrackLane4 = 16,
-    EPilgrimTrackLane__TrackLane5 = 32,
+    „⁄lgrimTrackLane__TrackLane5 = 32,
     EPilgrimTrackLane__NumTrackLanes = 6
 };
 
@@ -36605,7 +36504,7 @@ enum EDrumMidiNoteEvent : uint8_t
     EDrumMidiNoteEvent__Crash1SoftHit_RightHand = 11,
     EDrumMidiNoteEvent__Crash2HardHit_RightHand = 12,
     EDrumMidiNoteEvent__Crash2SoftHit_RightHand = 13,
-     = 14,
+    EDrumMidiNoteEvent__Crash1Choke = 14,
     EDrumMidiNoteEvent__Crash2Choke = 15,
     EDrumMidiNoteEvent__RideCymbalHit_RightHand = 16,
     EDrumMidiNoteEvent__RideCymbalHit_LeftHand = 17,
@@ -36627,7 +36526,7 @@ enum EDrumMidiTextEvent : uint8_t
     EDrumMidiTextEvent__None = 0,
     EDrumMidiTextEvent__PlayingMellow = 1,
     EDrumMidiTextEvent__PlayingStandard = 2,
-    EDrumMidiTextEvent__PlayingIntense = 3,
+    ÷Á‰⁄Á‘ı·⁄ﬂœÁ‹¯‘⁄„“PlayingIntense = 3,
     EDrumMidiTextEvent__IdleRhythmMellow = 4,
     EDrumMidiTextEvent__IdleRhythmStandard = 5,
     EDrumMidiTextEvent__IdleRhythmIntense = 6,
@@ -36705,7 +36604,7 @@ enum EMidiEventListenerInitBroadcast : uint8_t
 
 enum EDatasmithLightShape : uint8_t
 {
-    HHÔFπeÿHHF8îhtShape__Rectangle = 0,
+    EDatasmithLightShape__Rectangle = 0,
     EDatasmithLightShape__Disc = 1,
     EDatasmithLightShape__Sphere = 2,
     EDatasmithLightShape__Cylinder = 3,
@@ -36747,7 +36646,9 @@ enum EDatasmithTextureFormat : uint8_t
 
 enum EDatasmithColorSpace : uint8_t
 {
-    EDatasmithColorSpace__Default = 0
+    EDatasmithColorSpace__Default = 0,
+    EDatasmithColorSpace__sRGB = 1,
+    EDatasmithColorSpace__Linear = 2
 };
 
 enum EDatasmithKeyValuePropertyType : uint8_t
@@ -36899,7 +36800,9 @@ enum ACLVisualFidelityChangeResult : uint8_t
 enum ESyncAnimBeatTo : uint8_t
 {
     ESyncAnimBeatTo__None = 0,
-    ESyncAnimBeatTo__Now = 1
+    ESyncAnimBeatTo__Now = 1,
+    ESyncAnimBeatTo__PrevBeat = 2,
+    ESyncAnimBeatTo__Num = 3
 };
 
 enum EBeatSyncAnimNodeLogging : uint8_t
@@ -36912,9 +36815,7 @@ enum EBeatSyncAnimNodeLogging : uint8_t
 enum EGotBeatAndTimeFrom : uint8_t
 {
     EGotBeatAndTimeFrom__Invalid = 0,
-    EGotBeatAndTimeFrom__None = 1,
-    EGotBeatAndTimeFrom__PreviewBPM = 2,
-    EGotBeatAndTimeFrom__MusicClock = 3
+    EGotBeatAndTimeFrom__None = 1
 };
 
 enum EUserEmoteBeatSyncingPermission : uint8_t
@@ -36959,7 +36860,7 @@ enum ESparksCameraShotSource : uint8_t
 {
     ESparksCameraShotSource__Dynamic = 0,
     ESparksCameraShotSource__Scripted = 1,
-    HHHH‰„‘ÿﬂ÷Âı„Â÷”Ÿurce__Intermission = 2,
+    ESparksCameraShotSource__Intermission = 2,
     ESparksCameraShotSource__Unknown = 3
 };
 
@@ -37073,7 +36974,7 @@ enum EEditMeshPolygonsToolActions : uint8_t
 {
     EEditMeshPolygonsToolActions__NoAction = 0,
     EEditMeshPolygonsToolActions__AcceptCurrent = 1,
-    EEditMeshPolygonsToolActions__CancelCurrent = 2,
+    ‘⁄„÷÷”‘ÿ„ÂlygonsToolActions__CancelCurrent = 2,
     EEditMeshPolygonsToolActions__Extrude = 3,
     EEditMeshPolygonsToolActions__PushPull = 4,
     EEditMeshPolygonsToolActions__Offset = 5,
@@ -37178,7 +37079,7 @@ enum EPolyEditExtrudeDirection : uint8_t
     EPolyEditExtrudeDirection__WorldZ = 3,
     EPolyEditExtrudeDirection__LocalX = 4,
     EPolyEditExtrudeDirection__LocalY = 5,
-    EPolyEditExtrudeDirection__LocalZ = 6
+    Ô‹ÁÂŸ¸⁄Ÿﬂ‘Â„÷ﬂ„‰”÷tion__LocalZ = 6
 };
 
 enum EPolyEditExtrudeDistanceMode : uint8_t
@@ -37275,7 +37176,7 @@ enum EBakeCurvatureClampMode : uint8_t
 enum EExtrudeMeshSelectionInteractionMode : uint8_t
 {
     EExtrudeMeshSelectionInteractionMode__Interactive = 0,
-    ÷„‘⁄ˇudeMeshSelectionInteractionMode__Fixed = 1
+    EExtrudeMeshSelectionInteractionMode__Fixed = 1
 };
 
 enum EExtrudeMeshSelectionRegionModifierMode : uint8_t
@@ -37296,7 +37197,7 @@ enum EVertexColorPaintBrushOpBlendMode : uint8_t
 {
     EVertexColorPaintBrushOpBlendMode__Lerp = 0,
     EVertexColorPaintBrushOpBlendMode__Mix = 1,
-    EVertexColorPaintBrushOpBlendMode__Multiply = 2
+    HHHHH–ﬂ˚„‰Ÿ˚‰⁄„‹ÿ˘‡’”÷‘⁄ﬂÁ¯÷Ÿ‹Ÿ–„‘iply = 2
 };
 
 enum EOffsetMeshSelectionInteractionMode : uint8_t
@@ -37400,7 +37301,7 @@ enum EBakeMapType : uint16_t
     EBakeMapType__None = 0,
     EBakeMapType__TangentSpaceNormal = 1,
     EBakeMapType__ObjectSpaceNormal = 2,
-    ÂÁÿı‘Â„ﬁÊ˘„ÿœÙceNormal = 4,
+    EBakeMapType__FaceNormal = 4,
     EBakeMapType__BentNormal = 8,
     EBakeMapType__Position = 16,
     EBakeMapType__Curvature = 32,
@@ -37424,16 +37325,12 @@ enum EBakeVertexOutput : uint8_t
 
 enum EBakeVertexChannel : uint8_t
 {
-    EBakeVertexChannel__R = 0,
-    EBakeVertexChannel__G = 1,
-    EBakeVertexChannel__B = 2,
-    EBakeVertexChannel__A = 3,
-    EBakeVertexChannel__RGBA = 4
+    EBakeVertexChannel__R = 0
 };
 
 enum EBakeScaleMethod : uint8_t
 {
-    EBakeScaleMethod__BakeFullScale = 0,
+    HHÁQ≤d(HHeMethod__BakeFullScale = 0,
     EBakeScaleMethod__BakeNonuniformScale = 1,
     EBakeScaleMethod__DoNotBakeScale = 2
 };
@@ -37443,7 +37340,10 @@ enum EConvertToPolygonsMode : uint8_t
     EConvertToPolygonsMode__FaceNormalDeviation = 0,
     EConvertToPolygonsMode__FindPolygons = 1,
     EConvertToPolygonsMode__FromUVIslands = 2,
-    EConvertToPolygonsMode__FromNormalSeams = 3
+    EConvertToPolygonsMode__FromNormalSeams = 3,
+    EConvertToPolygonsMode__FromConnectedTris = 4,
+    EConvertToPolygonsMode__FromFurthestPointSampling = 5,
+    EConvertToPolygonsMode__CopyFromLayer = 6
 };
 
 enum ECubeGridToolFaceSelectionMode : uint8_t
@@ -37549,7 +37449,7 @@ enum EDrawPolyPathExtrudeDirection : uint8_t
     EDrawPolyPathExtrudeDirection__WorldY = 2,
     EDrawPolyPathExtrudeDirection__WorldZ = 3,
     EDrawPolyPathExtrudeDirection__LocalX = 4,
-    EDrawPolyPathExtrudeDirection__LocalY = 5,
+    ‹ÁÂŸ¸⁄Ÿﬂ‘Â„÷ﬂ„‰”÷‘–‡‘Á¯œ‹Ÿ¯—Á÷lY = 5,
     EDrawPolyPathExtrudeDirection__LocalZ = 6
 };
 
@@ -37859,6 +37759,13 @@ enum EMeshVertexSculptBrushType : uint8_t
     EMeshVertexSculptBrushType__LastValue = 16
 };
 
+enum EMeshVertexSculptBrushFilterType : uint8_t
+{
+    EMeshVertexSculptBrushFilterType__None = 0,
+    EMeshVertexSculptBrushFilterType__Component = 1,
+    EMeshVertexSculptBrushFilterType__PolyGroup = 2
+};
+
 enum EMirrorSaveMode : uint8_t
 {
     EMirrorSaveMode__InputObjects = 0,
@@ -37880,7 +37787,7 @@ enum EMirrorToolAction : uint8_t
     EMirrorToolAction__Up = 4,
     EMirrorToolAction__Down = 5,
     EMirrorToolAction__Forward = 6,
-    EMirrorToolAction__Backward = 7
+    H‰÷Á—÷Ÿ⁄Ÿﬂ‘Â‹ŸŸBackward = 7
 };
 
 enum EOffsetMeshToolOffsetType : uint8_t
@@ -38118,7 +38025,7 @@ enum EPilgrimScoreEventMessageIncrementType : uint8_t
 enum EComboType : uint8_t
 {
     EComboType__None = 0,
-    EComboType__Full = 1,
+    „⁄Ÿ˙boType__Full = 1,
     EComboType__Perfect = 2
 };
 
@@ -38169,7 +38076,8 @@ enum EFortProgressiveContentType : uint8_t
 enum EBattlePassPurchaseButtonCurrencyType : uint8_t
 {
     EBattlePassPurchaseButtonCurrencyType__None = 0,
-    EBattlePassPurchaseButtonCurrencyType__Mtx = 1
+    EBattlePassPurchaseButtonCurrencyType__Mtx = 1,
+    EBattlePassPurchaseButtonCurrencyType__RealMoney = 2
 };
 
 enum EBattlePassPurchaseState : uint8_t
@@ -38260,7 +38168,7 @@ enum EJunoUserGeneratedTextErrorType : uint8_t
     EJunoUserGeneratedTextErrorType__None = 0,
     EJunoUserGeneratedTextErrorType__NameAlreadyUsed = 1,
     EJunoUserGeneratedTextErrorType__NameNotSupported = 2,
-    ‰„‘÷Ÿÿÿ”ı‘Ÿ˙„€Á˙„ÿœÙ÷Ÿ÷÷‘–„Ù‰„‘ÁecialCharacter = 3,
+    EJunoUserGeneratedTextErrorType__SpecialCharacter = 3,
     EJunoUserGeneratedTextErrorType__CharacterLimit = 4,
     EJunoUserGeneratedTextErrorType__NameViolation = 5,
     EJunoUserGeneratedTextErrorType__NameChanged_CabinedAccount = 6,
@@ -38280,7 +38188,7 @@ enum ESanctionType : uint8_t
 enum EMatchmakingErrorType : uint8_t
 {
     EMatchmakingErrorType__NotEnoughWorldSpotsForParty = 0,
-    EMatchmakingErrorType__NotAllPartyMembersHaveWorldAccess = 1,
+    HHHHHHœ‘÷Á¯÷ErrorType__NotAllPartyMembersHaveWorldAccess = 1,
     EMatchmakingErrorType__LookingForPartyIsEnabled = 2,
     EMatchmakingErrorType__None = 3
 };
@@ -38386,7 +38294,7 @@ enum EKoalaMockClipMode : uint8_t
     EKoalaMockClipMode__ShortFailure = 2,
     EKoalaMockClipMode__LongSuccess = 3,
     EKoalaMockClipMode__LongFailure = 4,
-    ·⁄Ÿ¸„‰Ÿ˚ÿﬂ‹›ÂŸ˚Á‹OUNT = 5
+    EKoalaMockClipMode__COUNT = 5
 };
 
 enum EOptionalLabel : uint8_t
@@ -38414,7 +38322,7 @@ enum EFortMotorcycleWheelTraceMode : uint8_t
 enum EFortSawBladeSpinningDirection : uint8_t
 {
     EFortSawBladeSpinningDirection__Clockwise = 0,
-    HHHHHHH„’ﬂ—›ÂŸ‹ingDirection__Counterclockwise = 1,
+    EFortSawBladeSpinningDirection__Counterclockwise = 1,
     EFortSawBladeSpinningDirection__SnapToCustomDirections = 2
 };
 
@@ -38439,7 +38347,7 @@ enum EHoagieState : uint8_t
     EHoagieState__STARTUP_LIFT = 1,
     EHoagieState__FLIGHT = 2,
     EHoagieState__AUTO_LANDING = 3,
-    EHoagieState__SPIN_CRASHING = 4,
+    H˙ˇ˙State__SPIN_CRASHING = 4,
     EHoagieState__CRASHING_NO_SPIN = 5,
     EHoagieState__CRASH_LANDED = 6,
     EHoagieState__LANDED = 7,
@@ -38545,7 +38453,7 @@ enum EFortCustomTickComponentCondition : uint8_t
     EFortCustomTickComponentCondition__WasRecentlyRendered = 0,
     EFortCustomTickComponentCondition__CameraDistance = 1,
     EFortCustomTickComponentCondition__LocalPlayerDistance = 2,
-    ‹ÁÂŸ¸ustomTickComponentCondition__Count = 3
+    EFortCustomTickComponentCondition__Count = 3
 };
 
 enum ESpecialEventGameUserSettingsResult : uint8_t
@@ -38566,7 +38474,7 @@ enum ESpecialEventPhaseComponentNetModeType : uint8_t
 {
     ESpecialEventPhaseComponentNetModeType__ClientControlled = 0,
     ESpecialEventPhaseComponentNetModeType__Client = 1,
-    ESpecialEventPhaseComponentNetModeType__DedicatedServer = 2
+    „‹‹Ÿ÷‘⁄ŸH‘⁄„ﬂ‹„ÿœÙ„‰Ÿ˚‘„˙‘⁄„⁄Ÿÿ€Ÿ„’Á‡edicatedServer = 2
 };
 
 enum ESpecialEventMannequinLoadoutType : uint8_t
@@ -38657,7 +38565,7 @@ enum EBeanCharTurnSpeedOverrideType : uint8_t
 
 enum EBeanCharServerNetLocationToleranceType : uint8_t
 {
-    HHeanCharServerNetLocationToleranceType__Minimum = 0,
+    EBeanCharServerNetLocationToleranceType__Minimum = 0,
     EBeanCharServerNetLocationToleranceType__Jostling = 1,
     EBeanCharServerNetLocationToleranceType__Grabbing = 2,
     EBeanCharServerNetLocationToleranceType__BeingGrabbed = 3,
@@ -38676,7 +38584,7 @@ enum EBeanCharRemoteRagdollSimMode : uint8_t
     EBeanCharRemoteRagdollSimMode__Disabled = 0,
     EBeanCharRemoteRagdollSimMode__PendingEnable = 1,
     EBeanCharRemoteRagdollSimMode__Enabled = 2,
-    EBeanCharRemoteRagdollSimMode__KeepEnabled = 3
+    ÊÁ⁄H‰„‹ÊrRemoteRagdollSimMode__KeepEnabled = 3
 };
 
 enum EBeanCharStateID : uint8_t
@@ -38783,7 +38691,7 @@ enum EVolumeEnableOverlapBehavior : uint8_t
 
 enum EAIPatrolPathVersion : uint8_t
 {
-    HHHHHHHÔFπathVersion__InitialVersion = 0,
+    EAIPatrolPathVersion__InitialVersion = 0,
     EAIPatrolPathVersion__TemplateFromQuickBarVersion = 1,
     EAIPatrolPathVersion__PatrolPointMovedToUserSettingsVersion = 2,
     EAIPatrolPathVersion__VersionPlusOne = 3,
@@ -38806,16 +38714,6 @@ enum EAbandonedCampsiteSpawnType : uint8_t
     EAbandonedCampsiteSpawnType__EnvironmentalQuery = 2,
     EAbandonedCampsiteSpawnType__FromPlayerProfile = 3,
     EAbandonedCampsiteSpawnType__Max = 4
-};
-
-enum ECampsiteActionType : uint8_t
-{
-    ECampsiteActionType__None = 0,
-    ECampsiteActionType__Stash = 1,
-    ECampsiteActionType__Unstash = 2,
-    ECampsiteActionType__Swap = 3,
-    ECampsiteActionType__Clear = 4,
-    ECampsiteActionType__Max = 5
 };
 
 enum EResetToCachedTargetBehavior : uint8_t
@@ -38907,8 +38805,7 @@ enum EPlaceFireMissed : uint8_t
     EPlaceFireMissed__Down = 4,
     EPlaceFireMissed__UpLeft = 5,
     EPlaceFireMissed__UpRight = 6,
-    EPlaceFireMissed__DownLeft = 7,
-    EPlaceFireMissed__DownRight = 8
+    EPlaceFireMissed__DownLeft = 7
 };
 
 enum ECustomControlsFacingMode : uint8_t
@@ -38954,6 +38851,15 @@ enum ETargetingPresetType : uint8_t
     ETargetingPresetType__Retention = 1,
     ETargetingPresetType__Aiming = 2,
     ETargetingPresetType__Melee = 3
+};
+
+enum ECustomControlsLockOnMode : uint8_t
+{
+    ECustomControlsLockOnMode__Never = 0,
+    ECustomControlsLockOnMode__Always = 1,
+    ECustomControlsLockOnMode__Shooting = 2,
+    ECustomControlsLockOnMode__Aiming = 3,
+    ECustomControlsLockOnMode__ShootingOrAiming = 4
 };
 
 enum EHijackingStatus : uint8_t
@@ -39114,7 +39020,7 @@ enum EDelMarGlobalLeaderboardType : uint8_t
 
 enum EDelMarNetModel : uint8_t
 {
-    HHHHHHHÔFπeÿHHF7dôfHHHHHHhoritative = 0,
+    EDelMarNetModel__ClientAuthoritative = 0,
     EDelMarNetModel__ChaosRollback = 1
 };
 
@@ -39136,7 +39042,7 @@ enum EDelMarPositionChangeInfo : uint8_t
 {
     EDelMarPositionChangeInfo__None = 0,
     EDelMarPositionChangeInfo__PassPlayer = 1,
-    EDelMarPositionChangeInfo__PassedByPlayer = 2
+    HHHH÷„œÁ‹¯’’Á¯Ÿ‚⁄ˇ„·⁄Á‡⁄Ÿﬂ‘ﬂ’Ÿ¯÷Player = 2
 };
 
 enum EDelMarPlaylistTypeInfo : uint8_t
@@ -39164,7 +39070,8 @@ enum EDelMarRaceMode : uint8_t
     EDelMarRaceMode__ChallengeMode = 0,
     EDelMarRaceMode__CompetitiveMode = 1,
     EDelMarRaceMode__DeathRaceMode = 2,
-    EDelMarRaceMode__TutorialRaceMode = 3
+    EDelMarRaceMode__TutorialRaceMode = 3,
+    EDelMarRaceMode__Invalid = 4
 };
 
 enum EDelMarInvertSteerMethod : uint8_t
@@ -39327,7 +39234,7 @@ enum EDelMarRankedProgressError : uint8_t
     EDelMarRankedProgressError__EmptyRankType = 4,
     EDelMarRankedProgressError__InitialProgressMapInvalid = 5,
     EDelMarRankedProgressError__CurrentProgressMapInvalid = 6,
-    ˇÿÁ˚’’„÷·Ÿ÷¯‘⁄„÷÷”ssError__InvalidCurrentTrack = 7,
+    EDelMarRankedProgressError__InvalidCurrentTrack = 7,
     EDelMarRankedProgressError__InitialProgressEntryNotFound = 8,
     EDelMarRankedProgressError__CurrentProgressEntryNotFound = 9,
     EDelMarRankedProgressError__GameModeNotFound = 10,
@@ -39345,7 +39252,7 @@ enum EDelMarTouchActionButtonState : uint8_t
     EDelMarTouchActionButtonState__Disabled = 2,
     EDelMarTouchActionButtonState__Enabled = 3,
     EDelMarTouchActionButtonState__Ready = 4,
-    EDelMarTouchActionButtonState__Pressed = 5,
+    ‰Hœ‰Á„ˆ„‘Á‘ı⁄Ÿ‘‘”⁄Ÿﬂ‘Âate__Pressed = 5,
     EDelMarTouchActionButtonState__Supercharged = 6
 };
 
@@ -39471,7 +39378,7 @@ enum EHomerClipEventType : uint8_t
 
 enum EItemizedPropSpawnerTargetingFailedReason : uint8_t
 {
-    EItemizedPropSpawnerTargetingFailedReason__None = 0,
+    HHHHHHHHHPropSpawnerTargetingFailedReason__None = 0,
     EItemizedPropSpawnerTargetingFailedReason__TooHigh = 1,
     EItemizedPropSpawnerTargetingFailedReason__TooClose = 2,
     EItemizedPropSpawnerTargetingFailedReason__Obstructed = 3,
@@ -39685,7 +39592,7 @@ enum ENNEAttributeDataType : uint8_t
     ENNEAttributeDataType__FloatArray = 2,
     ENNEAttributeDataType__Int32 = 3,
     ENNEAttributeDataType__Int32Array = 4,
-    ‘⁄ˇ„ÿœÙÁ‘Á„‘”Êﬂ÷‘String = 5,
+    ENNEAttributeDataType__String = 5,
     ENNEAttributeDataType__StringArray = 6,
     ENNEAttributeDataType__Tensor = 7,
     ENNEAttributeDataType__TensorArray = 8
@@ -39713,7 +39620,7 @@ enum ENNEInferenceFormat : uint8_t
 enum ENNETensorDataType : uint8_t
 {
     ENNETensorDataType__None = 0,
-    ENNETensorDataType__Char = 1,
+    „⁄Ÿ˙„ÿorDataType__Char = 1,
     ENNETensorDataType__Boolean = 2,
     ENNETensorDataType__Half = 3,
     ENNETensorDataType__Float = 4,
@@ -39981,7 +39888,7 @@ enum ECreativeModalDialogAlignmentOption : uint8_t
 enum ECreativeModalDialogViewmodelResponse : uint8_t
 {
     ECreativeModalDialogViewmodelResponse__None = 0,
-    HHH„⁄Ÿ˙„’⁄Ÿÿ’„ˆ‹„‰Ÿ€ewmodelResponse__Button1 = 1,
+    ECreativeModalDialogViewmodelResponse__Button1 = 1,
     ECreativeModalDialogViewmodelResponse__Button2 = 2,
     ECreativeModalDialogViewmodelResponse__Button3 = 3,
     ECreativeModalDialogViewmodelResponse__Button4 = 4,
@@ -40155,7 +40062,8 @@ enum EFabricMetasoundPlayPriority : uint8_t
 {
     EFabricMetasoundPlayPriority__Normal = 0,
     EFabricMetasoundPlayPriority__High = 1,
-    EFabricMetasoundPlayPriority__Highest = 2
+    EFabricMetasoundPlayPriority__Highest = 2,
+    ˚Èœ·HHHHHHHHHHHHHHHHHHH‘’„‡·ﬂ = 3
 };
 
 enum EJamFabricSyncType : uint8_t
@@ -40250,7 +40158,7 @@ enum EDeviceCablePortFlowType : uint8_t
 {
     EDeviceCablePortFlowType__Input = 0,
     EDeviceCablePortFlowType__Output = 1,
-    EDeviceCablePortFlowType__Any = 2
+    ‘”˘„ÿœÙ—Ÿ‹‘÷Ÿ¯„‹ÊÁ„e__Any = 2
 };
 
 enum EDeviceCablePortDataType : uint8_t
@@ -40307,13 +40215,6 @@ enum EFabricSongSyncTimingType : uint8_t
     EFabricSongSyncTimingType__Immediate = 0,
     EFabricSongSyncTimingType__NextBeat = 1,
     EFabricSongSyncTimingType__NextBar = 2
-};
-
-enum EFabricSongSyncPlaybackType : uint8_t
-{
-    EFabricSongSyncPlaybackType__ControlsTempo = 0,
-    EFabricSongSyncPlaybackType__FromCurrentTime = 1,
-    EFabricSongSyncPlaybackType__FromStart = 2
 };
 
 enum EFabricSongSyncClockState : uint8_t
@@ -40396,7 +40297,7 @@ enum ECreativeDynamicUIAnchor : uint8_t
     ECreativeDynamicUIAnchor__CenterRight = 5,
     ECreativeDynamicUIAnchor__BottomLeft = 6,
     ECreativeDynamicUIAnchor__BottomCenter = 7,
-    „‘⁄„€Ÿ‘‘Ÿ÷Ÿ‡Â⁄ˇÛÂﬂ€Á⁄œ„“ﬂ‘Á„÷ht = 8
+    ECreativeDynamicUIAnchor__BottomRight = 8
 };
 
 enum ECreativeDynamicUIAlignment : uint8_t
@@ -40416,7 +40317,7 @@ enum ECreativeDynamicUIAlignment : uint8_t
     ECreativeDynamicUIAlignment__RightTall = 12,
     ECreativeDynamicUIAlignment__TopWide = 13,
     ECreativeDynamicUIAlignment__CenteredWide = 14,
-    ECreativeDynamicUIAlignment__BottomWide = 15
+    ﬂÒ‰„÷„‘⁄„‘⁄„€⁄·ﬂ‹ˇÛment__BottomWide = 15
 };
 
 enum ECreativeDynamicUIAspectRatioType : uint8_t
@@ -40465,7 +40366,7 @@ enum EFortEmporiumItemPriceFilter : uint16_t
 
 enum EFortEmporiumItemFilterMode : uint8_t
 {
-    HHHHHÔFπeÿHHF7côxilterMode__Price = 0,
+    EFortEmporiumItemFilterMode__Price = 0,
     EFortEmporiumItemFilterMode__License = 1
 };
 
@@ -40511,10 +40412,7 @@ enum EMetaHumanBodyType : uint8_t
     EMetaHumanBodyType__m_srt_nrw = 12,
     EMetaHumanBodyType__m_srt_ovw = 13,
     EMetaHumanBodyType__m_srt_unw = 14,
-    EMetaHumanBodyType__m_tal_nrw = 15,
-    EMetaHumanBodyType__m_tal_ovw = 16,
-    EMetaHumanBodyType__m_tal_unw = 17,
-    EMetaHumanBodyType__Count = 18
+    EMetaHumanBodyType__m_tal_nrw = 15
 };
 
 enum EMetaHumanBodyBodyPartIndex : uint8_t
@@ -40537,7 +40435,7 @@ enum EGroomCacheImportType : uint8_t
 
 enum EHairAtlasTextureType : uint8_t
 {
-    FπeÿHHF7câdHHHHHHHFHHHHHHth = 0,
+    EHairAtlasTextureType__Depth = 0,
     EHairAtlasTextureType__Tangent = 1,
     EHairAtlasTextureType__Attribute = 2,
     EHairAtlasTextureType__Coverage = 3,
@@ -40674,7 +40572,7 @@ enum EGroomCacheAttributes : uint8_t
     EGroomCacheAttributes__Color = 4,
     EGroomCacheAttributes__PositionWidth = 3,
     EGroomCacheAttributes__PositionColor = 5,
-    Ÿ⁄Ÿﬂ‘ﬂ’Ÿ¯Attributes__WidthColor = 5,
+    EGroomCacheAttributes__WidthColor = 5,
     EGroomCacheAttributes__PositionWidthColor = 7
 };
 
@@ -40706,7 +40604,7 @@ enum EFollicleMaskChannel : uint8_t
 {
     EFollicleMaskChannel__R = 0,
     EFollicleMaskChannel__G = 1,
-    EFollicleMaskChannel__B = 2,
+    ‹„⁄⁄Á‡›’Á˚„‹Ânel__B = 2,
     EFollicleMaskChannel__A = 3
 };
 
@@ -40838,7 +40736,7 @@ enum EActivationFunction : uint8_t
 
 enum ERigLogicCalculationType : uint8_t
 {
-    HHHÔFπeÿHHF7cirHHonType__Scalar = 0,
+    ERigLogicCalculationType__Scalar = 0,
     ERigLogicCalculationType__SSE = 1,
     ERigLogicCalculationType__AVX = 2,
     ERigLogicCalculationType__NEON = 3,
@@ -40864,7 +40762,7 @@ enum ERigLogicRotationOrder : uint8_t
     ERigLogicRotationOrder__XZY = 1,
     ERigLogicRotationOrder__YXZ = 2,
     ERigLogicRotationOrder__YZX = 3,
-    ERigLogicRotationOrder__ZXY = 4,
+    ÓÔogicRotationOrder__ZXY = 4,
     ERigLogicRotationOrder__ZYX = 5
 };
 
@@ -41010,7 +40908,7 @@ enum EPilgrimAnalyticsResultsReturn : uint8_t
 enum EPilgrimAutoCalibrationSampleFlatteningMode : uint8_t
 {
     EPilgrimAutoCalibrationSampleFlatteningMode__None = -1,
-    EPilgrimAutoCalibrationSampleFlatteningMode__Logarithm = 1,
+    HHHHH„⁄Ÿ˙„‰ŸlibrationSampleFlatteningMode__Logarithm = 1,
     EPilgrimAutoCalibrationSampleFlatteningMode__Normalize = 2
 };
 
@@ -41109,7 +41007,7 @@ enum EPilgrimSongSortDirection : uint8_t
 enum EWidgetTouchKbmControllerTransitionType : uint8_t
 {
     EWidgetTouchKbmControllerTransitionType__Opacity = 0,
-    EWidgetTouchKbmControllerTransitionType__Collapse = 1,
+    Hœ‘ﬂÂÁÿ˘„ÿœÙ⁄Ÿﬂ‘ﬂ’⁄llerTransitionType__Collapse = 1,
     EWidgetTouchKbmControllerTransitionType__DoNothing = 2,
     EWidgetTouchKbmControllerTransitionType__Count = 3
 };
@@ -41189,7 +41087,7 @@ enum EFortLimeGameplayAnalyticsEvents : uint8_t
 {
     EFortLimeGameplayAnalyticsEvents__None = 0,
     EFortLimeGameplayAnalyticsEvents__Core_StartZone = 1,
-    EFortLimeGameplayAnalyticsEvents__PlayerContextLocationPerMinute = 2
+    HH˚È’‘HHameplayAnalyticsEvents__PlayerContextLocationPerMinute = 2
 };
 
 enum ELimePawnEmotionalStateMappingTest : uint8_t
@@ -41351,7 +41249,7 @@ enum EAddChainResult : uint8_t
     EAddChainResult__InvalidAttachIndex = 2,
     EAddChainResult__NoExitsLeft = 3,
     EAddChainResult__CannotFitShell = 4,
-    „‰H‹‹„‡ı‘ﬂ‘Ÿ⁄⁄Á‘‹”’„ˆ⁄ﬂÁerated = 5
+    EAddChainResult__NoShellsGenerated = 5
 };
 
 enum EJunoCreateCaveResult : uint8_t
@@ -41450,7 +41348,7 @@ enum EJunoCompareTagSetsResult : uint8_t
 
 enum EJunoResolveWorldSoftObjectPathResult : uint8_t
 {
-    HHHHHHHHHHHHHHHHHÔFπeÿHHF5ÃŸ|HHHHHHt__Success = 0,
+    EJunoResolveWorldSoftObjectPathResult__Success = 0,
     EJunoResolveWorldSoftObjectPathResult__NotAWorldObject = 1,
     EJunoResolveWorldSoftObjectPathResult__InvalidPath = 2
 };
@@ -41481,8 +41379,7 @@ enum EJunoWorldPartitionRuntimeHashType : uint8_t
 enum EJunoWorldRegistryType : uint8_t
 {
     EJunoWorldRegistryType__Invalid = 0,
-    EJunoWorldRegistryType__POI = 1,
-    EJunoWorldRegistryType__Enemy = 2
+    EJunoWorldRegistryType__POI = 1
 };
 
 enum EJunoGetWorldTileTransformResult : uint8_t
@@ -41557,7 +41454,7 @@ enum EJunoWorldTileAdditionalPOIPlacement : uint8_t
     EJunoWorldTileAdditionalPOIPlacement__OnePerTile = 6,
     EJunoWorldTileAdditionalPOIPlacement__OnePerFourTiles = 7,
     EJunoWorldTileAdditionalPOIPlacement__OnePerFourTilesExceptSessionOrigin = 8,
-    ‰„‹ﬂÙ‰H⁄ﬂ·ﬂ÷˘⁄Ÿﬂ’’„ı‘ÿ„Â–’„‹ﬂÙ÷”Ÿ÷„¯„⁄˘‘⁄„€„ÂÁ‹¯ˇ˘¯‹Á⁄Ÿﬂ‘ﬂ‰‰„‹ﬂÙ‰‹÷Ÿllback = 9,
+    EJunoWorldTileAdditionalPOIPlacement__OnePerFourTilesExceptSessionOriginFallback = 9,
     EJunoWorldTileAdditionalPOIPlacement__Rare = 10,
     EJunoWorldTileAdditionalPOIPlacement__UnitTests = 11
 };
@@ -41577,7 +41474,7 @@ enum EJunoAdditionalPOIWorldMode : uint8_t
 
 enum EJunoPOISlotState : uint8_t
 {
-    EJunoPOISlotState__Normal = 0,
+    (HHG°@L…`HHHHHHHFHHHHHHal = 0,
     EJunoPOISlotState__Unused = 1,
     EJunoPOISlotState__Cosmetic = 2,
     EJunoPOISlotState__CaveEntrance = 3,
@@ -41705,7 +41602,7 @@ enum EVerticalDirection : uint8_t
 enum ELandmassRoadTier : uint8_t
 {
     ELandmassRoadTier__Default = 0,
-    ELandmassRoadTier__Dirt = 1,
+    Á‚„massRoadTier__Dirt = 1,
     ELandmassRoadTier__Rural = 2,
     ELandmassRoadTier__Metropolitan = 3,
     ELandmassRoadTier__Suburban = 4,
@@ -41913,7 +41810,7 @@ enum ESelectRecipeButtonState : uint8_t
 {
     ESelectRecipeButtonState__SelectRecipeHeroState = 0,
     ESelectRecipeButtonState__SelectRecipeCommonState = 1,
-    „ÿﬂÂ„ˆ‘Â„‹„ı„‘tonState__DepositState = 2
+    ESelectRecipeButtonState__DepositState = 2
 };
 
 enum ECraftingStationsInventoryState : uint8_t
@@ -41982,7 +41879,7 @@ enum EFortCollectionBookPopupButtonType : uint8_t
     EFortCollectionBookPopupButtonType__Invalid = 0,
     EFortCollectionBookPopupButtonType__SelectItem = 1,
     EFortCollectionBookPopupButtonType__Preview = 2,
-    H—„ﬂ“„÷¯„ÿœÙ⁄Ÿ‘‘”ÿ”ÿŸ¯›ŸŸ⁄Ÿﬂpe__Purchase = 3,
+    EFortCollectionBookPopupButtonType__Purchase = 3,
     EFortCollectionBookPopupButtonType__Unslot = 4,
     EFortCollectionBookPopupButtonType__Back = 5
 };
@@ -42021,7 +41918,7 @@ enum EFrontEndRewardType : uint8_t
     EFrontEndRewardType__DifficultyIncrease = 6,
     EFrontEndRewardType__GiftBox = 7,
     EFrontEndRewardType__ItemCache = 8,
-    ÷Â⁄ontEndRewardType__PhoenixLevelUp = 9
+    EFrontEndRewardType__PhoenixLevelUp = 9
 };
 
 enum ECollectionBookRewardStatus : uint8_t
@@ -42099,9 +41996,7 @@ enum EUpgradeInfoImageSize : uint8_t
 enum EQuailEventExecutionContext : uint8_t
 {
     EQuailEventExecutionContext__GameClient = 0,
-    EQuailEventExecutionContext__GameServer = 1,
-    EQuailEventExecutionContext__MeshNetworkInner = 2,
-    EQuailEventExecutionContext__MeshNetworkRoot = 3
+    EQuailEventExecutionContext__GameServer = 1
 };
 
 enum EOodleNetworkEnableMode : uint8_t
@@ -42139,6 +42034,13 @@ enum ELearningAgentsOptionalAction : uint8_t
     ELearningAgentsOptionalAction__Valid = 1
 };
 
+enum ELearningAgentsActivationFunction : uint8_t
+{
+    ELearningAgentsActivationFunction__ReLU = 0,
+    ELearningAgentsActivationFunction__ELU = 1,
+    ELearningAgentsActivationFunction__TanH = 2
+};
+
 enum ELearningAgentsEitherObservation : uint8_t
 {
     ELearningAgentsEitherObservation__A = 0,
@@ -42154,7 +42056,7 @@ enum ELearningAgentsOptionalObservation : uint8_t
 enum ELearningAgentsCompletion : uint8_t
 {
     ELearningAgentsCompletion__Running = 0,
-    ELearningAgentsCompletion__Truncation = 1,
+    HHH·⁄ﬂ⁄⁄”ˆ⁄Ÿﬂ‘„‹ÿ€Ÿtion__Truncation = 1,
     ELearningAgentsCompletion__Termination = 2
 };
 
@@ -42205,7 +42107,9 @@ enum ELiveLinkClientStatus : uint8_t
 enum EVoteState : uint8_t
 {
     EVoteState__None = 0,
-    EVoteState__Setup = 1
+    EVoteState__Setup = 1,
+    EVoteState__Active = 2,
+    EVoteState__Completed = 3
 };
 
 enum EVoteSessionState : uint8_t
@@ -42267,7 +42171,7 @@ enum EMIDIEventType : uint8_t
     EMIDIEventType__NoteAfterTouch = 10,
     EMIDIEventType__ControlChange = 11,
     EMIDIEventType__ProgramChange = 12,
-    EMIDIEventType__ChannelAfterTouch = 13,
+    HHHH„·⁄Á‡tType__ChannelAfterTouch = 13,
     EMIDIEventType__PitchBend = 14
 };
 
@@ -42380,7 +42284,7 @@ enum EProceduralScatterTileRandomGenerator : uint8_t
 enum EProceduralScatterMethod : uint8_t
 {
     EProceduralScatterMethod__Density = 0,
-    EProceduralScatterMethod__SourcePoints = 1,
+    HHHHHœ‘ﬂ’⁄„‰Ÿ‡‘„˚÷„‘‘ÁÂı‹Á÷cePoints = 1,
     EProceduralScatterMethod__Grid = 2
 };
 
@@ -42491,13 +42395,6 @@ enum ELandscapeTextureHeightPatchEncoding : uint8_t
     ELandscapeTextureHeightPatchEncoding__NativePackedHeight = 2
 };
 
-enum ELandscapeTextureHeightPatchZeroHeightMeaning : uint8_t
-{
-    ELandscapeTextureHeightPatchZeroHeightMeaning__PatchZ = 0,
-    ELandscapeTextureHeightPatchZeroHeightMeaning__LandscapeZ = 1,
-    ELandscapeTextureHeightPatchZeroHeightMeaning__WorldZero = 2
-};
-
 enum EVerseDynamicUIConstraintType : uint8_t
 {
     EVerseDynamicUIConstraintType__Alignment = 0,
@@ -42577,7 +42474,7 @@ enum ERawDeviceReportTranslationBehavior : uint8_t
     ERawDeviceReportTranslationBehavior__TreatAsTrigger = 0,
     ERawDeviceReportTranslationBehavior__TreatAsAnalog = 1,
     ERawDeviceReportTranslationBehavior__TreatAsButton = 2,
-    ŸHHHHHH⁄Ÿ‘‘”’‘Á„÷nslationBehavior__TreatAsButtonBitmask = 3,
+    ERawDeviceReportTranslationBehavior__TreatAsButtonBitmask = 3,
     ERawDeviceReportTranslationBehavior__TreatAsPackedAxisPair = 4
 };
 
@@ -42709,7 +42606,7 @@ enum EInterchangePropertyTracks : uint8_t
 {
     EInterchangePropertyTracks__AffectDistanceFieldLighting = 0,
     EInterchangePropertyTracks__AffectDynamicIndirectLighting = 1,
-    EInterchangePropertyTracks__AffectIndirectLightingWhileHidden = 2,
+    ‘⁄ˇH·rchangePropertyTracks__AffectIndirectLightingWhileHidden = 2,
     EInterchangePropertyTracks__AutoActivate = 3,
     EInterchangePropertyTracks__BodyInstanceAngularDamping = 4,
     EInterchangePropertyTracks__BodyInstancebEnableGravity = 5,
@@ -42772,7 +42669,7 @@ enum EInterchangePropertyTracks : uint8_t
     EInterchangePropertyTracks__LightColor = 62,
     EInterchangePropertyTracks__LightDynamicShadowCascades = 63,
     EInterchangePropertyTracks__LightDynamicShadowDistanceMovableLight = 64,
-    ŸﬂH‘‡·ﬂ¸„‹ÊÁ“Ÿ˚„Â⁄Á‘’ﬂcks__LightDynamicShadowDistanceStationaryLight = 65,
+    EInterchangePropertyTracks__LightDynamicShadowDistanceStationaryLight = 65,
     EInterchangePropertyTracks__LightEnableLightShaftBloom = 66,
     EInterchangePropertyTracks__LightEnableLightShaftOcclusion = 67,
     EInterchangePropertyTracks__LightFalloffExponent = 68,
@@ -42844,7 +42741,7 @@ enum EInterchangePropertyTracks : uint8_t
     EInterchangePropertyTracks__CameraPostProcessSettingsAmbientOcclusionBias = 134,
     EInterchangePropertyTracks__CameraPostProcessSettingsAmbientOcclusionFadeDistance = 135,
     EInterchangePropertyTracks__CameraPostProcessSettingsAmbientOcclusionFadeRadius = 136,
-    ”ﬂ‰Áˆ„changePropertyTracks__CameraPostProcessSettingsAmbientOcclusionIntensity = 137,
+    EInterchangePropertyTracks__CameraPostProcessSettingsAmbientOcclusionIntensity = 137,
     EInterchangePropertyTracks__CameraPostProcessSettingsAmbientOcclusionMipBlend = 138,
     EInterchangePropertyTracks__CameraPostProcessSettingsAmbientOcclusionMipScale = 139,
     EInterchangePropertyTracks__CameraPostProcessSettingsAmbientOcclusionMipThreshold = 140,
@@ -42854,7 +42751,7 @@ enum EInterchangePropertyTracks : uint8_t
     EInterchangePropertyTracks__CameraPostProcessSettingsAmbientOcclusionStaticFraction = 144,
     EInterchangePropertyTracks__CameraPostProcessSettingsAmbientOcclusionTemporalBlendWeight = 145,
     EInterchangePropertyTracks__CameraPostProcessSettingsAutoExposureBias = 146,
-    EInterchangePropertyTracks__CameraPostProcessSettingsAutoExposureHighPercent = 147,
+    Á÷Ÿÿ€„H’Áﬂ„PropertyTracks__CameraPostProcessSettingsAutoExposureHighPercent = 147,
     EInterchangePropertyTracks__CameraPostProcessSettingsAutoExposureLowPercent = 148,
     EInterchangePropertyTracks__CameraPostProcessSettingsAutoExposureMaxBrightness = 149,
     EInterchangePropertyTracks__CameraPostProcessSettingsAutoExposureMinBrightness = 150,
@@ -42899,7 +42796,7 @@ enum EInterchangePropertyTracks : uint8_t
     EInterchangePropertyTracks__CameraPostProcessSettingsColorGainShadows = 189,
     EInterchangePropertyTracks__CameraPostProcessSettingsColorGamma = 190,
     EInterchangePropertyTracks__CameraPostProcessSettingsColorGammaHighlights = 191,
-    ‡·ﬂ‹‡·ﬂ = 192,
+    EInterchangePropertyTracks__CameraPostProcessSettingsColorGammaMidtones = 192,
     EInterchangePropertyTracks__CameraPostProcessSettingsColorGammaShadows = 193,
     EInterchangePropertyTracks__CameraPostProcessSettingsColorGradingIntensity = 194,
     EInterchangePropertyTracks__CameraPostProcessSettingsColorOffset = 195,
@@ -42910,7 +42807,7 @@ enum EInterchangePropertyTracks : uint8_t
     EInterchangePropertyTracks__CameraPostProcessSettingsColorSaturationHighlights = 200,
     EInterchangePropertyTracks__CameraPostProcessSettingsColorSaturationMidtones = 201,
     EInterchangePropertyTracks__CameraPostProcessSettingsColorSaturationShadows = 202,
-    EInterchangePropertyTracks__CameraPostProcessSettingsDepthOfFieldBladeCount = 203,
+    ’—Ÿ‰Á‡ı⁄Ÿﬂ‘Á÷”‘Áı÷Ÿ‹Ÿ’·⁄ﬂ‘‘„ı’’„ÂŸ÷¯‘’Ÿ¯Á÷„€Á’›ÂÁ÷ÙpthOfFieldBladeCount = 203,
     EInterchangePropertyTracks__CameraPostProcessSettingsDepthOfFieldDepthBlurAmount = 204,
     EInterchangePropertyTracks__CameraPostProcessSettingsDepthOfFieldDepthBlurRadius = 205,
     EInterchangePropertyTracks__CameraPostProcessSettingsDepthOfFieldFarBlurSize = 206,
@@ -42952,7 +42849,7 @@ enum EInterchangePropertyTracks : uint8_t
     EInterchangePropertyTracks__CameraPostProcessSettingsLocalExposureBlurredLuminanceBlend = 242,
     EInterchangePropertyTracks__CameraPostProcessSettingsLocalExposureBlurredLuminanceKernelSizePercent = 243,
     EInterchangePropertyTracks__CameraPostProcessSettingsLocalExposureDetailStrength = 244,
-    ‹„⁄÷„˝changePropertyTracks__CameraPostProcessSettingsLocalExposureHighlightContrastScale = 245,
+    EInterchangePropertyTracks__CameraPostProcessSettingsLocalExposureHighlightContrastScale = 245,
     EInterchangePropertyTracks__CameraPostProcessSettingsLocalExposureHighlightThreshold = 246,
     EInterchangePropertyTracks__CameraPostProcessSettingsLocalExposureMiddleGreyBias = 247,
     EInterchangePropertyTracks__CameraPostProcessSettingsLocalExposureShadowContrastScale = 248,
@@ -43053,13 +42950,6 @@ enum EInterchangePipelineConfigurationDialogResult : uint8_t
     EInterchangePipelineConfigurationDialogResult__ImportAll = 2
 };
 
-enum EInterchangeSkeletalMeshContentType : uint8_t
-{
-    EInterchangeSkeletalMeshContentType__All = 0,
-    EInterchangeSkeletalMeshContentType__Geometry = 1,
-    EInterchangeSkeletalMeshContentType__SkinningWeights = 2
-};
-
 enum EInterchangeMaterialXShaders : uint8_t
 {
     EInterchangeMaterialXShaders__OpenPBRSurface = 0,
@@ -43152,6 +43042,13 @@ enum EUsdModelCardFace : uint8_t
     EUsdModelCardFace__ZNeg = 32
 };
 
+enum EUsdDuplicateType : uint8_t
+{
+    EUsdDuplicateType__FlattenComposedPrim = 0,
+    EUsdDuplicateType__SingleLayerSpecs = 1,
+    EUsdDuplicateType__AllLocalLayerSpecs = 2
+};
+
 enum EUsdSaveDialogBehavior : uint8_t
 {
     EUsdSaveDialogBehavior__NeverSave = 0,
@@ -43175,7 +43072,7 @@ enum EUsdUpAxis : uint8_t
 enum EUsdPurpose : uint8_t
 {
     EUsdPurpose__Default = 0,
-    EUsdPurpose__Proxy = 1,
+    ”Á‚„„’Ÿÿ÷”¯roxy = 1,
     EUsdPurpose__Render = 2,
     EUsdPurpose__Guide = 4
 };
@@ -43283,7 +43180,7 @@ enum EInterchangeMaterialImportOption : uint8_t
 enum EInterchangeMaterialSearchLocation : uint8_t
 {
     EInterchangeMaterialSearchLocation__Local = 0,
-    HHHHHH‹ÁÂngeMaterialSearchLocation__UnderParent = 1,
+    EInterchangeMaterialSearchLocation__UnderParent = 1,
     EInterchangeMaterialSearchLocation__UnderRoot = 2,
     EInterchangeMaterialSearchLocation__AllAssets = 3,
     EInterchangeMaterialSearchLocation__DoNotSearch = 4
@@ -43301,7 +43198,7 @@ enum EDataSortTypeEnum : uint8_t
     EDataSortTypeEnum__ChaosNiagara_DataSortType_RandomShuffle = 1,
     EDataSortTypeEnum__ChaosNiagara_DataSortType_SortByMassMaxToMin = 2,
     EDataSortTypeEnum__ChaosNiagara_DataSortType_SortByMassMinToMax = 3,
-    EDataSortTypeEnum__ChaosNiagara_Max = 4
+    ‘ÁÈÁ÷Á·Áﬂ˙’ŸÁ‡€”⁄„ÿœÙ‘÷ŸıÁ_Max = 4
 };
 
 enum ERandomVelocityGenerationTypeEnum : uint8_t
@@ -43410,7 +43307,7 @@ enum EOutputResourceName : uint8_t
 enum ETemporalInputResourceName : uint8_t
 {
     ETemporalInputResourceName__Color = 0,
-    ETemporalInputResourceName__Albedo = 1,
+    H÷Ÿ‹ŸralInputResourceName__Albedo = 1,
     ETemporalInputResourceName__Normal = 2,
     ETemporalInputResourceName__Flow = 3,
     ETemporalInputResourceName__Output = 4
@@ -43465,14 +43362,6 @@ enum SocialNudgeFocusState : uint8_t
     SocialNudgeFocusState__NewEnumerator2 = 2
 };
 
-enum PlayerWindParticleEmitters : uint8_t
-{
-    PlayerWindParticleEmitters__NewEnumerator0 = 0,
-    PlayerWindParticleEmitters__NewEnumerator1 = 1,
-    PlayerWindParticleEmitters__NewEnumerator3 = 2,
-    PlayerWindParticleEmitters__NewEnumerator2 = 3
-};
-
 enum EnumEventWorldItemDrop : uint8_t
 {
     EnumEventWorldItemDrop__NewEnumerator0 = 0,
@@ -43489,16 +43378,16 @@ enum ECardinalDirection : uint8_t
     ECardinalDirection__NewEnumerator3 = 3
 };
 
-enum FluidDynamicForceMeshType : uint8_t
-{
-    FluidDynamicForceMeshType__NewEnumerator0 = 0,
-    FluidDynamicForceMeshType__NewEnumerator1 = 1
-};
-
 enum FluidBoundary : uint8_t
 {
     FluidBoundary__NewEnumerator0 = 0,
     FluidBoundary__NewEnumerator1 = 1
+};
+
+enum FluidDynamicForceMeshType : uint8_t
+{
+    FluidDynamicForceMeshType__NewEnumerator0 = 0,
+    FluidDynamicForceMeshType__NewEnumerator1 = 1
 };
 
 enum PreExplodeRampType : uint8_t
@@ -43517,6 +43406,14 @@ enum EIntTypes : uint8_t
     EIntTypes__NewEnumerator7 = 3
 };
 
+enum PlayerWindParticleEmitters : uint8_t
+{
+    PlayerWindParticleEmitters__NewEnumerator0 = 0,
+    PlayerWindParticleEmitters__NewEnumerator1 = 1,
+    PlayerWindParticleEmitters__NewEnumerator3 = 2,
+    PlayerWindParticleEmitters__NewEnumerator2 = 3
+};
+
 enum BlueprintLogLevel : uint8_t
 {
     BlueprintLogLevel__NewEnumerator0 = 0,
@@ -43527,12 +43424,15 @@ enum BlueprintLogLevel : uint8_t
     BlueprintLogLevel__NewEnumerator5 = 5
 };
 
-enum ECreativeColorSetType : uint8_t
+enum MinigameButtonsState : uint8_t
 {
-    ECreativeColorSetType__NewEnumerator0 = 0,
-    ECreativeColorSetType__NewEnumerator1 = 1,
-    ECreativeColorSetType__NewEnumerator2 = 2,
-    ECreativeColorSetType__NewEnumerator3 = 3
+    MinigameButtonsState__NewEnumerator6 = 0,
+    MinigameButtonsState__NewEnumerator0 = 1,
+    MinigameButtonsState__NewEnumerator1 = 2,
+    MinigameButtonsState__NewEnumerator2 = 3,
+    MinigameButtonsState__NewEnumerator3 = 4,
+    MinigameButtonsState__NewEnumerator4 = 5,
+    ÷Ÿ‘Á÷„€”⁄—„˙sState__NewEnumerator5 = 6
 };
 
 enum EAwardScoreType : uint8_t
@@ -43541,6 +43441,14 @@ enum EAwardScoreType : uint8_t
     EAwardScoreType__NewEnumerator1 = 1,
     EAwardScoreType__NewEnumerator2 = 2,
     EAwardScoreType__NewEnumerator3 = 3
+};
+
+enum ECreativeColorSetType : uint8_t
+{
+    ECreativeColorSetType__NewEnumerator0 = 0,
+    ECreativeColorSetType__NewEnumerator1 = 1,
+    ECreativeColorSetType__NewEnumerator2 = 2,
+    ECreativeColorSetType__NewEnumerator3 = 3
 };
 
 enum EBoolWithUnset : uint8_t
@@ -43586,17 +43494,6 @@ enum ENameplateVoiceState : uint8_t
     ENameplateVoiceState__NewEnumerator0 = 0,
     ENameplateVoiceState__NewEnumerator1 = 1,
     ENameplateVoiceState__NewEnumerator2 = 2
-};
-
-enum MinigameButtonsState : uint8_t
-{
-    MinigameButtonsState__NewEnumerator6 = 0,
-    MinigameButtonsState__NewEnumerator0 = 1,
-    MinigameButtonsState__NewEnumerator1 = 2,
-    MinigameButtonsState__NewEnumerator2 = 3,
-    MinigameButtonsState__NewEnumerator3 = 4,
-    MinigameButtonsState__NewEnumerator4 = 5,
-    MinigameButtonsState__NewEnumerator5 = 6
 };
 
 enum ERequesterType : uint8_t
