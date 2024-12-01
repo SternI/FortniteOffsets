@@ -11,17 +11,17 @@ public:
     static std::string ToString(int32_t index)
     {
         int32_t DecryptedIndex = DecryptIndex(index);
-        uint64_t NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x13078C08 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
+        uint64_t NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x139143F8 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
         uint16_t Pool = DotMem::Read<uint16_t>(NamePoolChunk);
 
-        if (((Pool ^ 0x16C0) & 0x7FE0) <= 0)
+        if ((((Pool >> 1) ^ 0xFFB7) & 0x3FF) <= 0)
         {
             DecryptedIndex = DecryptIndex(DotMem::Read<int32_t>(NamePoolChunk + 6));
-            NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x13078C08 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
+            NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x139143F8 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
             Pool = DotMem::Read<uint16_t>(NamePoolChunk);
         }
 
-        int32_t Length = (((Pool ^ 0x16C0u) >> 5) & 0x3FF) * ((Pool & 0x8000u) == 0 ? 1 : 2);
+        int32_t Length = ((Pool >> 1) ^ 0xFFB7) & 0x3FF * ((Pool & 1) != 0 ? 2 : 1);
 
         char NameBuffer[2048];
         Driver::ReadPhysical(PVOID(NamePoolChunk + 2), NameBuffer, Length);
@@ -33,8 +33,8 @@ public:
     {
         if (index)
         {
-            int32_t DecryptedIndex = ((uint32_t(index - 1) >> 3) | (uint32_t(index - 1) << 29)) - 374317418;
-            return DecryptedIndex ? DecryptedIndex : -374317419;
+            int32_t DecryptedIndex = ((index - 1) ^ 0xABAA4FBA) + 1;
+            return DecryptedIndex ? DecryptedIndex : 1414901830;
         }
 
         return 0;
@@ -44,19 +44,14 @@ public:
     {
         if (length)
         {
-            uint8_t* EncryptedBuffer = new uint8_t[length];
-            std::memcpy(EncryptedBuffer, buffer, length);
-
-            int v6 = ~(19185646 + 8710 * length);
+            int v4 = 8879 * length + 19162179;
             for (int i = 0; i < length; ++i)
             {
-                v6 = ~(19185646 + 8710 * v6);
-                buffer[length - i - 1] = v6 - 72 + ((EncryptedBuffer[i] >> 1) | (EncryptedBuffer[i] << 7));
+                buffer[i] ^= (v4 - 30) & 0xFF;
+                v4 = 8879 * v4 + 19162179;
             }
-
-            delete[] EncryptedBuffer;
         }
-        
+
         buffer[length] = '\0';
     }
 };
