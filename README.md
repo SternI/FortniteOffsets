@@ -12,10 +12,13 @@ Latest Version: **``++Fortnite+Release-33.00-CL-38324112-Windows``**
 
 ## ++Fortnite+Release-33.00-CL-38324112-Windows
 ### All Changed Offsets: [33.00 Changed Offsets](https://github.com/SternI/FortniteOffsets/blob/master/Changed%20Offsets/33.00%20Changed%20Offsets.txt)
-### Global Offsets
+### Offsets
 ```yaml
 UWorld: 0x13723C18
 GNames: 0x139143F8
+PlayerName: 0xAF8
+ProjectileSpeed: 0x1A24
+ProjectileGravity: 0x1DF0
 ```
 ### Functions
 ```yaml
