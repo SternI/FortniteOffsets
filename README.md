@@ -3,12 +3,18 @@
 # Fortnite Offsets
 
 #### Latest Fortnite Offsets Always Updated.
-Latest Version: **``++Fortnite+Release-32.11-CL-38371047-Windows``**
+Latest Version: **``++Fortnite+Release-33.00-CL-38324112-Windows``**
 
 # Current Text Section (va_text) Method
 ### It is no longer needed, so Base + Offset
 
 # Changes
+
+## ++Fortnite+Release-33.00-CL-38324112-Windows (dumping)
+### Offsets
+```yaml
+UWorld: 0x13723C18
+```
 
 ## ++Fortnite+Release-32.11-CL-38371047-Windows
 ### Offsets
