@@ -16,7 +16,10 @@ Latest Version: **``++Fortnite+Release-33.00-CL-38324112-Windows``**
 UWorld: 0x13723C18
 GNames: 0x139143F8
 StaticFindObject: 0x17FEE00
-ProcessEvent (Offset): 0x1870C8C
+UObject::ProcessEvent: 0x1870C8C
+FMemory::Malloc: 0x1706E28
+FMemory::Memzero: 0x5327500
+FMemory::Memcpy: 0x53274F4
 ```
 
 ## ++Fortnite+Release-32.11-CL-38371047-Windows
