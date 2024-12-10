@@ -17,6 +17,7 @@ GWorld: 0x170D9D88
 ```
 ### Functions
 ```yaml
+StaticFindObject : 0x267f424
 UObject::ProcessEvent: 0x21A42F8 (Index: 0x38)
 FMemory::Malloc: 0x24B6768
 FMemory::Memzero: 0x657F140
