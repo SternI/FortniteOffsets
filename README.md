@@ -11,15 +11,52 @@ Latest Version: **``++Fortnite+Release-33.10-CL-38630093-Windows``**
 # Changes
 
 ## ++Fortnite+Release-33.10-CL-38630093-Windows (dumping)
-### Offsets
+### Global Offsets
 ```yaml
 GWorld: 0x170D9D88
+```
+### Offsets
+```yaml
+UWorld.PersistentLevel: 0x40
+UWorld.NetDriver: 0x48
+UWorld.LineBatcher: 0x50
+UWorld.PersistentLineBatcher: 0x58
+UWorld.ForegroundLineBatcher: 0x60
+UWorld.NetworkManager: 0x68
+UWorld.PhysicsCollisionHandler: 0x70
+UWorld.ExtraReferencedObjects: 0x78
+UWorld.PerModuleDataObjects: 0x88
+UWorld.StreamingLevels: 0xa0
+UWorld.StreamingLevelsToConsider: 0xb0
+UWorld.ServerStreamingLevelsVisibility: 0xd8
+UWorld.StreamingLevelsPrefix: 0xe0
+UWorld.CurrentLevelPendingVisibility: 0xf8
+UWorld.CurrentLevelPendingInvisibility: 0x100
+UWorld.DemoNetDriver: 0x108
+UWorld.MyParticleEventManager: 0x110
+UWorld.DefaultPhysicsVolume: 0x118
 UWorld.CameraLocation: 0x128
 UWorld.CameraRotation: 0x138
 UWorld.WorldTime: 0x148
+UWorld.bAreConstraintsDirty: 0x156
+UWorld.NavigationSystem: 0x178
+UWorld.AuthorityGameMode: 0x180
 UWorld.GameState: 0x188
+UWorld.AISystem: 0x190
+UWorld.AvoidanceManager: 0x198
 UWorld.Levels: 0x1a0
+UWorld.LevelCollections: 0x1b0
 UWorld.OwningGameInstance: 0x200
+UWorld.ParameterCollectionInstances: 0x208
+UWorld.CanvasForRenderingToTarget: 0x218
+UWorld.CanvasForDrawMaterialToRenderTarget: 0x220
+UWorld.PhysicsField: 0x298
+UWorld.ComponentsThatNeedPreEndOfFrameSync: 0x2a0
+UWorld.ComponentsThatNeedEndOfFrameUpdate: 0x2f0
+UWorld.ComponentsThatNeedEndOfFrameUpdate_OnGameThread: 0x300
+UWorld.WorldComposition: 0x748
+UWorld.ContentBundleManager: 0x750
+UWorld.PSCPool: 0x818
 ```
 
 ## ++Fortnite+Release-33.00-CL-38504598-Windows
