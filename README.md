@@ -15,6 +15,13 @@ Latest Version: **``++Fortnite+Release-33.10-CL-38630093-Windows``**
 ```yaml
 GWorld: 0x170D9D88
 ```
+### Functions
+```yaml
+UObject::ProcessEvent: 0x21A42F8 (Index: 0x38)
+FMemory::Malloc: 0x24B6768
+FMemory::Memzero: 0x657F140
+FMemory::Memcpy: 0x657F134 
+```
 ### Offsets
 ```yaml
 UWorld.PersistentLevel: 0x40
@@ -67,7 +74,6 @@ GNames: 0x13930600
 ```
 ### Functions
 ```yaml
-StaticFindObject: 0x17A8760
 UObject::ProcessEvent: 0x16497FC
 FMemory::Malloc: 0x15E6DA0
 FMemory::Memzero: 0x5303BC0
