@@ -17,7 +17,7 @@ GWorld: 0x170D9D88
 ```
 ### Functions
 ```yaml
-UObject::ProcessEvent: 0x21A42F8 ( Index: 0x38)
+UObject::ProcessEvent: 0x21A42F8 (Index: 0x38)
 FMemory::Malloc: 0x24B6768
 FMemory::Memzero: 0x657F140
 FMemory::Memcpy: 0x657F134 
@@ -42,9 +42,9 @@ UWorld.CurrentLevelPendingInvisibility: 0x100
 UWorld.DemoNetDriver: 0x108
 UWorld.MyParticleEventManager: 0x110
 UWorld.DefaultPhysicsVolume: 0x118
-UWorld.CameraLocation: 0x128
-UWorld.CameraRotation: 0x138
-UWorld.WorldTime: 0x148
+UWorld.CameraLocation: 0x130
+UWorld.CameraRotation: 0x140
+UWorld.WorldTime: 0x150
 UWorld.bAreConstraintsDirty: 0x156
 UWorld.NavigationSystem: 0x178
 UWorld.AuthorityGameMode: 0x180
