@@ -13,7 +13,13 @@ Latest Version: **``++Fortnite+Release-33.10-CL-38630093-Windows``**
 ## ++Fortnite+Release-33.10-CL-38630093-Windows (dumping)
 ### Offsets
 ```yaml
-UWorld: 0x170D9D88
+GWorld: 0x170D9D88
+UWorld.CameraLocation: 0x128
+UWorld.CameraRotation: 0x138
+UWorld.WorldTime: 0x148
+UWorld.GameState: 0x188
+UWorld.Levels: 0x1a0
+UWorld.OwningGameInstance: 0x200
 ```
 
 ## ++Fortnite+Release-33.00-CL-38504598-Windows
