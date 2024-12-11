@@ -1,4 +1,4 @@
-// UObject.NamePrivate: 0xc
+// NamePrivate: 0x18
 class FName
 {
 public:
@@ -12,20 +12,19 @@ public:
     static std::string ToString(int32_t index)
     {
         int32_t DecryptedIndex = DecryptIndex(index);
-        uint64_t NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x13930600 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
+        uint64_t NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x17B01480 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
         uint16_t Pool = DotMem::Read<uint16_t>(NamePoolChunk);
 
-        if ((Pool ^ 0x4080u) < 0x40)
+        if ((Pool ^ 0x7C40u) < 0x40)
         {
             DecryptedIndex = DecryptIndex(DotMem::Read<int32_t>(NamePoolChunk + 2));
-            NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x13930600 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
+            NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x17B01480 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
             Pool = DotMem::Read<uint16_t>(NamePoolChunk);
-
         }
 
-        int32_t Length = ((Pool ^ 0x4080u) >> 6) * ((Pool & 1) != 0 ? 2 : 1);
+        int32_t Length = ((Pool ^ 0x7C40u) >> 6) * ((Pool & 1) != 0 ? 2 : 1);
 
-        char NameBuffer[2048];
+        char* NameBuffer = new char[Length + 1];
         Driver::ReadPhysical(PVOID(NamePoolChunk + 2), NameBuffer, Length);
         DecryptFName(NameBuffer, Length);
         return std::string(NameBuffer);
@@ -35,8 +34,8 @@ public:
     {
         if (index)
         {
-            int32_t DecryptedIndex = ((uint32_t(0x691F1F9 ^ (index - 1)) >> 12) | (uint32_t(0x691F1F9 ^ (index - 1)) << 20)) + 1;
-            return DecryptedIndex ? DecryptedIndex : -529557791;
+            int32_t DecryptedIndex = -((index - 1) ^ 0xF05509A2);
+            return DecryptedIndex ? DecryptedIndex : -262862429;
         }
 
         return 0;
@@ -46,12 +45,17 @@ public:
     {
         if (length)
         {
-            int v5 = (8 * length) | uint8_t(-58 - 75 * length);
+            uint8_t* EncryptedBuffer = new uint8_t[length];
+            std::memcpy(EncryptedBuffer, buffer, length);
+
+            int v6 = ~(8684 * length + 19315169);
             for (int i = 0; i < length; ++i)
             {
-                buffer[i] = (uint8_t(buffer[i] ^ v5) >> 1) | (uint8_t(buffer[i] ^ v5) << 7);
-                v5 = uint8_t(-58 - 75 * v5) | (8 * v5);
+                v6 = ~(8684 * v6 + 19315169);
+                buffer[length - i - 1] = (v6 - EncryptedBuffer[i]) + 110;
             }
+
+            delete[] EncryptedBuffer;
         }
 
         buffer[length] = '\0';
