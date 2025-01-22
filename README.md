@@ -3,12 +3,27 @@
 # Fortnite Offsets
 
 #### Latest Fortnite Offsets Always Updated.
-Latest Version: **``++Fortnite+Release-33.20-CL-39082670-Windows``**
+Latest Version: **``+++Fortnite+Release-33.20-CL-39277041-Windows``**
 
 # Current Text Section (va_text) Method
 ### It is no longer needed, so Base + Offset
 
 # Changes
+
+## +++Fortnite+Release-33.20-CL-39277041-Windows
+### Global Offsets
+```yaml
+GWorld: 0x164015B8
+GNames: 0x165F5000
+```
+### Functions
+```yaml
+StaticFindObject: 0x2028B24
+UObject::ProcessEvent: 0x21232B4 (Index: 0x43)
+FMemory::Malloc: 0x1F11A34
+FMemory::Memzero: 0x61944C0
+FMemory::Memcpy: 0x61944B4
+```
 
 ## ++Fortnite+Release-33.20-CL-39082670-Windows
 ### Global Offsets
