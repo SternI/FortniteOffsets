@@ -5,6 +5,11 @@
 #### Latest Fortnite SDKs & Offsets Always Updated.
 Latest Version: **``++Fortnite+Release-33.30-CL-39435251-Windows``**
 
+### If you're going to post this, please credit:  
+- [Discord](https://discord.gg/pnEvzVgdn9)  
+- [GitHub Repo](https://github.com/SternI/FortniteOffsets)  
+- Or simply mention Stern.
+
 # Changes
 
 ## ++Fortnite+Release-33.30-CL-39435251-Windows
@@ -1862,5 +1867,3 @@ ProjectileSpeed: 0x1d08
 ProjectileGravity: 0x1d0c
 PlayerName: 0xA68
 ```
-
-### If anyone going to post it somewhere Please Credit: https://discord.gg/pnEvzVgdn9 or just Stern
