@@ -1,12 +1,9 @@
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=SternI&label=Repo%20views&color=0e75b6&style=flat" alt="Repo Views" /> </p>
 
-# Fortnite Offsets
+# Fortnite SDKs & Offsets
 
-#### Latest Fortnite Offsets Always Updated.
+#### Latest Fortnite SDKs & Offsets Always Updated.
 Latest Version: **``++Fortnite+Release-33.30-CL-39435251-Windows``**
-
-# Current Text Section (va_text) Method
-### It is no longer needed, so Base + Offset
 
 # Changes
 
