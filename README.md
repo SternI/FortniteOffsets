@@ -5,6 +5,8 @@
 #### Latest Fortnite SDKs & Offsets Always Updated.
 Latest Version: **``++Fortnite+Release-34.00-CL-40228973-Windows``**
 
+## I'm looking for an injector or a valid certificate for DLLs to be able to get a fully perfect SDK dump. Feel free to contact me via Discord at 'sterndevs'.
+
 ### If you're going to post this, please credit:  
 - [Discord](https://discord.gg/pnEvzVgdn9)  
 - [GitHub Repo](https://github.com/SternI/FortniteOffsets)  
