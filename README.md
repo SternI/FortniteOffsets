@@ -3,7 +3,7 @@
 # Fortnite SDKs & Offsets
 
 #### Latest Fortnite SDKs & Offsets Always Updated.
-Latest Version: **``++Fortnite+Release-33.30-CL-39435251-Windows``**
+Latest Version: **``++Fortnite+Release-34.00-CL-40085084-Windows``**
 
 ### If you're going to post this, please credit:  
 - [Discord](https://discord.gg/pnEvzVgdn9)  
@@ -11,6 +11,50 @@ Latest Version: **``++Fortnite+Release-33.30-CL-39435251-Windows``**
 - Or simply mention Stern.
 
 # Changes
+
+## ++Fortnite+Release-34.00-CL-40085084-Windows
+### Global Offsets
+```yaml
+GWorld: 0x174A8638
+GNames: 0x176AF040
+```
+### Functions
+```yaml
+StaticFindObject: 0x2EC0224
+UObject::ProcessEvent: 0x25AE34C (Index: 0x20)
+```
+### Other Offsets
+```yaml
+UObject.NamePrivate: 0x18
+UWorld.CameraLocation: 0x140
+UWorld.CameraRotation: 0x150
+UWorld.WorldTimeSeconds: 0x160
+AFortWeaponRanged.ProjectileSpeed: 0x1d48
+AFortWeaponRanged.ProjectileGravity: 0x1dfc
+```
+
+## ++Fortnite+Release-33.30-CL-39768313-Windows
+### Global Offsets
+```yaml
+GWorld: 0x16348C08
+GNames: 0x16534240
+```
+### Functions
+```yaml
+StaticFindObject: 0x200C490
+UObject::ProcessEvent: 0x1EE6470 (Index: 0x27)
+FMemory::Malloc: ..
+FMemory::Memzero: ..
+FMemory::Memcpy: ..
+```
+### Other Offsets
+```yaml
+UWorld.CameraLocation: 0x128
+UWorld.CameraRotation: 0x138
+UWorld.WorldTimeSeconds: 0x148
+AFortWeaponRanged.ProjectileSpeed: 0x1ce4, 0x1ad0, 0x1ae8 (find the best for you ¯\_(ツ)_/¯)
+AFortWeaponRanged.ProjectileGravity: 0x1ce8
+```
 
 ## ++Fortnite+Release-33.30-CL-39435251-Windows
 ### Global Offsets
