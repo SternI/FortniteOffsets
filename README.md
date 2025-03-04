@@ -3,7 +3,7 @@
 # Fortnite SDKs & Offsets
 
 #### Latest Fortnite SDKs & Offsets Always Updated.
-Latest Version: **``++Fortnite+Release-34.00-CL-40228973-Windows``**
+Latest Version: **``++Fortnite+Release-34.00-CL-40398515-Windows``**
 
 ## I'm looking for an injector or a valid certificate for DLLs to be able to get a fully perfect SDK dump. Feel free to contact me via Discord at 'sterndevs'.
 
@@ -13,6 +13,28 @@ Latest Version: **``++Fortnite+Release-34.00-CL-40228973-Windows``**
 - Or simply mention Stern.
 
 # Changes
+
+## ++Fortnite+Release-34.00-CL-40398515-Windows
+### Global Offsets
+```yaml
+GWorld: 0x16EE8638
+GNames: 0x170F3C48
+```
+### Functions
+```yaml
+StaticFindObject: 0x219721C
+UObject::ProcessEvent: 0x1EF93C8 (Index: 0xe)
+```
+### Other Offsets
+```yaml
+UObject.NamePrivate: 0x18
+UWorld.CameraLocation: 0x138
+UWorld.CameraRotation: 0x148
+UWorld.WorldTimeSeconds: 0x158
+AFortWeaponRanged.ProjectileSpeed: 0x1ac8, 0x1de0, 0x1f70 (find the best for you ¯\_(ツ)_/¯)
+AFortWeaponRanged.ProjectileGravity: 0x1de4
+ULevel.Actors: 0x48
+```
 
 ## ++Fortnite+Release-34.00-CL-40228973-Windows
 ### Global Offsets

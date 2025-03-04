@@ -12,18 +12,18 @@ public:
     static std::string ToString(int32_t index)
     {
         int32_t DecryptedIndex = DecryptIndex(index);
-        uint64_t NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x16B71B40 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
+        uint64_t NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x170F3C48 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
         uint16_t Pool = DotMem::Read<uint16_t>(NamePoolChunk);
 
-        if (((Pool ^ 0x820) & 0x7FE0) == 0)
+        if ((((Pool >> 6) ^ 0xFF2C) & 0x3FF) == 0)
         {
-            DecryptedIndex = DecryptIndex(DotMem::Read<int32_t>(NamePoolChunk + 2));
-            NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x16B71B40 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
+            DecryptedIndex = DecryptIndex(DotMem::Read<int32_t>(NamePoolChunk + 6));
+            NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x170F3C48 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
             Pool = DotMem::Read<uint16_t>(NamePoolChunk);
         }
 
-        int32_t Length = ((Pool ^ 0x820u) >> 5) & 0x3FF;
-        Length *= (Pool & 0x8000u) == 0 ? 1 : 2;
+        int32_t Length = ((Pool >> 6) ^ 0xFF2C) & 0x3FF;
+        Length *= (Pool & 1) == 0 ? 1 : 2;
 
         std::vector<char> NameBuffer(Length + 1);
         Driver::ReadPhysical(PVOID(NamePoolChunk + 2), NameBuffer.data(), Length);
@@ -31,13 +31,12 @@ public:
         return std::string(NameBuffer.data());
     }
 
-
     static int32_t DecryptIndex(int32_t index)
     {
         if (index)
         {
-            int32_t DecryptedIndex = -((index - 1) ^ 0x1EC7C94);
-            return DecryptedIndex ? DecryptedIndex : 0x1EC7C95;
+            int32_t DecryptedIndex = ((index - 1 >> 1) | (index - 1 << 31)) + 0x2B77E5F9;
+            return DecryptedIndex ? DecryptedIndex : 0x2B77E5F8;
         }
 
         return 0;
@@ -47,12 +46,12 @@ public:
     {
         if (length)
         {
-            int v4 = 8077 * length + 20114609;
+            unsigned int v4 = 0x13437D4 + 8658 * length;
 
             for (int i = 0; i < length; i++)
             {
-                buffer[i] = (v4 + 30 - buffer[i]) & 0xFF;
-                v4 = 8077 * v4 + 20114609;
+                buffer[i] = (uint8_t(buffer[i] - v4 - 46) << 1) | (uint8_t(buffer[i] - v4 - 46) >> 7);
+                v4 = 0x13437D4 + 8658 * v4;
             }
 
         }
