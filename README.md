@@ -15,6 +15,7 @@ Latest Version: **``++Fortnite+Release-34.00-CL-40446427-Windows``**
 # Changes
 
 ## ++Fortnite+Release-34.00-CL-40446427-Windows
+### Thanks to Haze for helping me.
 ### Global Offsets
 ```yaml
 GWorld: 0x17719838
