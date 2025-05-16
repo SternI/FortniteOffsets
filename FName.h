@@ -1,4 +1,5 @@
-// UObject.NamePrivate: 0x8
+// GNames: 0x1897AD08
+// UObject.NamePrivate: 0x18
 class FName
 {
 public:
@@ -12,17 +13,18 @@ public:
     static std::string ToString(int32_t index)
     {
         int32_t DecryptedIndex = DecryptIndex(index);
-        uint64_t NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x17923240 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
+        uint64_t NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x1897AD08 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
         uint16_t Pool = DotMem::Read<uint16_t>(NamePoolChunk);
 
-        if ((Pool ^ 0x2800u) < 0x40) {
+        if (((Pool ^ 0x1A40) & 0x7FE0) == 0)
+        {
             DecryptedIndex = DecryptIndex(DotMem::Read<int32_t>(NamePoolChunk + 6));
-            NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x17923240 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
+            NamePoolChunk = DotMem::Read<uint64_t>(BaseAddress + (0x1897AD08 + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
             Pool = DotMem::Read<uint16_t>(NamePoolChunk);
         }
 
-        int32_t Length = (Pool ^ 0x2800u) >> 6;
-        Length *= (Pool & 1) == 0 ? 1 : 2;
+        int32_t Length = ((Pool ^ 0x1A40u) >> 5) & 0x3FF;
+        Length *= (Pool & 0x8000u) == 0 ? 1 : 2;
 
         std::vector<char> NameBuffer(Length + 1);
         Driver::ReadPhysical(PVOID(NamePoolChunk + 2), NameBuffer.data(), Length);
@@ -34,8 +36,8 @@ public:
     {
         if (index)
         {
-            int32_t DecryptedIndex = (((index - 1) >> 1) | ((index - 1) << 31)) + 0x6E08231F;
-            return DecryptedIndex ? DecryptedIndex : 0x6E08231E;
+            int32_t DecryptedIndex = _rotr(index - 1, 3) - 1459010364;
+            return DecryptedIndex ? DecryptedIndex : -1459010365;
         }
 
         return 0;
@@ -45,11 +47,13 @@ public:
     {
         if (length)
         {
-            int v4 = (16 * length) ^ (0x1349568 + 8442 * length);
+            std::vector<uint8_t> EncryptedBuffer(buffer, buffer + length);
 
-            for (int i = 0; i < length; i++) {
-                buffer[i] = (uint8_t(buffer[i] - v4 + 94) << 1) | (uint8_t(buffer[i] - v4 + 94) >> 7);
-                v4 = (16 * v4) ^ (0x1349568 + 8442 * v4);
+            int v8 = ~(8958 * length + 21238378);
+            for (int i = 0; i < length; i++)
+            {
+                v8 = ~(8958 * v8 + 21238378);
+                buffer[length - i - 1] = v8 - 44 + _rotr8(EncryptedBuffer[i], 1);
             }
         }
 
