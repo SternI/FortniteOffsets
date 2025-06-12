@@ -18,7 +18,7 @@ Latest Version: **``++Fortnite+Release-36.00-CL-43339403-Windows``**
 ```yaml
 GWorld: 0x17DB8A18, 0x181A0438 (both works)
 GEngine: 0x18031868
-GNames: 0x183C0400
+GNames: 0x183C1400
 ```
 ### Functions
 ```yaml

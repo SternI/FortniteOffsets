@@ -2,7 +2,7 @@
 
 #include <vector>
 
-static int32_t GNames = 0x183C0400;
+static int32_t GNames = 0x183C1400;
 static int32_t NamePrivate = 0x8;
 class FName
 {
