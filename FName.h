@@ -2,7 +2,7 @@
 
 #include <vector>
 
-static int32_t GNames = 0x183BA480;
+static int32_t GNames = 0x183C0400;
 static int32_t NamePrivate = 0x8;
 class FName
 {
@@ -45,7 +45,7 @@ public:
             Pool = DotMem::Read<uint16_t>(NamePoolChunk);
         }
 
-        int32_t Length =  ((Pool >> 5) ^ 0xFF38) & 0x3FF;
+        int32_t Length =  ((Pool >> 5) ^ 0xFFFFFF38) & 0x3FF;
         Length *= (Pool & 0x8000u) == 0 ? 1 : 2;
 
         std::vector<char> NameBuffer(Length + 1);
