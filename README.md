@@ -3,7 +3,7 @@
 # Fortnite SDKs & Offsets
 
 #### Latest Fortnite SDKs & Offsets Always Updated.
-Latest Version: **``++Fortnite+Release-36.00-CL-43214806-Windows``**
+Latest Version: **``++Fortnite+Release-36.00-CL-43339403-Windows``**
 
 ### If you're going to post this, please credit:  
 - [Discord](https://discord.gg/pnEvzVgdn9)  
@@ -11,6 +11,31 @@ Latest Version: **``++Fortnite+Release-36.00-CL-43214806-Windows``**
 - Or simply mention Stern.
 
 # Changes
+
+## ++Fortnite+Release-36.00-CL-43339403-Windows
+### SDK: [5.6.0-43339403+++Fortnite+Release-36.00](https://github.com/SternI/FortniteOffsets/blob/master/SDK/5.6.0-43339403+++Fortnite+Release-36.00.zip)
+### Global Offsets
+```yaml
+GWorld: 0x17DB8A18, 0x181A0438 (both works)
+GEngine: 0x18031868
+GNames: 0x183BA480
+```
+### Functions
+```yaml
+StaticFindObject: 0x20BAA30
+UObject::ProcessEvent: 0x21E4630 (Index: 0x45)
+FMemory::Memcpy: 0x66AEA20
+```
+### Other Offsets
+```yaml
+UObject.NamePrivate: 0x8
+UWorld.CameraLocation: 0x178
+UWorld.CameraRotation: 0x188
+UWorld.WorldTimeSeconds: 0x198
+AFortWeaponRanged.ProjectileSpeed: 0x1d88, 0x1e74, 0x2000 (find the best for you ¯\_(ツ)_/¯)
+AFortWeaponRanged.ProjectileGravity: 0x1e78
+ULevel.Actors: 0x1d0
+```
 
 ## ++Fortnite+Release-36.00-CL-43214806-Windows
 ### SDK: [5.6.0-43214806+++Fortnite+Release-36.00](https://github.com/SternI/FortniteOffsets/blob/master/SDK/5.6.0-43214806+++Fortnite+Release-36.00.zip)
