@@ -2,7 +2,7 @@
 
 #include <vector>
 
-static int32_t GNames = 0x183C1400;
+static int32_t GNames = 0x1889EB78;
 static int32_t NamePrivate = 0x8;
 class FName
 {
@@ -38,15 +38,14 @@ public:
         uint64_t NamePoolChunk = DotMem::Read<uint64_t>(DotMem::BaseAddress + (GNames + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
         uint16_t Pool = DotMem::Read<uint16_t>(NamePoolChunk);
 
-        if ((((Pool >> 5) ^ 0xFF38) & 0x3FF) == 0)
+        if ((((Pool >> 1) ^ 0xFE42) & 0x3FF) == 0)
         {
             DecryptedIndex = DecryptIndex(DotMem::Read<int32_t>(NamePoolChunk + 2));
             NamePoolChunk = DotMem::Read<uint64_t>(DotMem::BaseAddress + (GNames + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
             Pool = DotMem::Read<uint16_t>(NamePoolChunk);
         }
 
-        int32_t Length =  ((Pool >> 5) ^ 0xFFFFFF38) & 0x3FF;
-        Length *= (Pool & 0x8000u) == 0 ? 1 : 2;
+        int32_t Length = ((Pool >> 1) ^ 0xFE42) & 0x3FF;
 
         std::vector<char> NameBuffer(Length + 1);
         DotMem::ReadPhysical(PVOID(NamePoolChunk + 2), NameBuffer.data(), Length);
@@ -58,8 +57,8 @@ public:
     {
         if (index)
         {
-            int32_t DecryptedIndex = _rotr(index - 1, 1) + 0x42DCAB0B;
-            return DecryptedIndex ? DecryptedIndex : 0x42DCAB0A;
+            int32_t DecryptedIndex = _rotr((index - 1) ^ 0xD5923ED8, 12) + 1;
+            return DecryptedIndex ? DecryptedIndex : 0x1272A6DD;
         }
 
         return 0;
@@ -69,13 +68,11 @@ public:
     {
         if (length)
         {
-            std::vector<uint8_t> EncryptedBuffer(buffer, buffer + length);
-
-            int32_t v8 = 8618 * length + 21669824;
+            int32_t v5 = 8758 * length + 21743622;
             for (int32_t i = 0; i < length; i++)
             {
-                v8 = 8618 * v8 + 21669824;
-                buffer[length - 1 - i] = char(v8 + _rotr8(EncryptedBuffer[i], 1) + 58);
+                buffer[i] = _rotr8(buffer[i] ^ v5, 1);
+                v5 = 8758 * v5 + 21743622;
             }
         }
 
