@@ -2,8 +2,8 @@
 
 #include <vector>
 
-static int32_t GNames = 0x189C6A40;
-static int32_t NamePrivate = 0x8;
+static int32_t GNames = 0x15135300;
+static int32_t NamePrivate = 0x18;
 class FName
 {
 public:
@@ -38,14 +38,14 @@ public:
         uint64_t NamePoolChunk = DotMem::Read<uint64_t>(DotMem::BaseAddress + (GNames + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
         uint16_t Pool = DotMem::Read<uint16_t>(NamePoolChunk);
 
-        if (((Pool ^ 0x3D4) & 0x7FE) <= 0)
+        if (Pool < 0x40)
         {
             DecryptedIndex = DecryptIndex(DotMem::Read<int32_t>(NamePoolChunk + 2));
             NamePoolChunk = DotMem::Read<uint64_t>(DotMem::BaseAddress + (GNames + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
             Pool = DotMem::Read<uint16_t>(NamePoolChunk);
         }
 
-        int32_t Length = ((Pool ^ 0x3D4u) >> 1) & 0x3FF;
+        int32_t Length = Pool >> 6;
 
         std::vector<char> NameBuffer(Length + 1);
         DotMem::ReadPhysical(PVOID(NamePoolChunk + 2), NameBuffer.data(), Length);
@@ -57,8 +57,7 @@ public:
     {
         if (index)
         {
-            int32_t DecryptedIndex = _rotr((index - 1) ^ 0xC6B87EF7, 12) + 1;
-            return DecryptedIndex ? DecryptedIndex : 0x10839479;
+            return index;
         }
 
         return 0;
@@ -66,16 +65,6 @@ public:
 
     static void DecryptFName(char* buffer, int32_t length)
     {
-        if (length)
-        {            
-            int32_t v10 = 8709 * length + 21999086;
-            for (int32_t i = 0; i < length; i++)
-            {
-                buffer[i] = _rotr8(buffer[i] ^ v10, 1);
-                v10 = 8709 * v10 + 21999086;
-            }
-        }
-
         buffer[length] = '\0';
     }
 };
