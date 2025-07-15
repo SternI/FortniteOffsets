@@ -3,7 +3,7 @@
 # Fortnite SDKs & Offsets
 
 #### Latest Fortnite SDKs & Offsets Always Updated.
-Latest Version: **``++Fortnite+Release-36.10-CL-43847582-Windows``**
+Latest Version: **``++Fortnite+Release-36.20-CL-43847582-Windows``**
 
 ### If you're going to post this, please credit:  
 - [Discord](https://discord.gg/pnEvzVgdn9)  
@@ -12,8 +12,8 @@ Latest Version: **``++Fortnite+Release-36.10-CL-43847582-Windows``**
 
 # Changes
 
-## ++Fortnite+Release-36.10-CL-43847582-Windows
-### SDK: [5.6.0-43847582+++Fortnite+Release-36.10](https://github.com/SternI/FortniteOffsets/blob/master/SDK/5.6.0-43847582+++Fortnite+Release-36.10.zip)
+## ++Fortnite+Release-36.20-CL-43847582-Windows
+### SDK: [5.6.0-43847582+++Fortnite+Release-36.20](https://github.com/SternI/FortniteOffsets/blob/master/SDK/5.6.0-43847582+++Fortnite+Release-36.20.zip)
 ### Global Offsets
 ```yaml
 GWorld: 0x1488D840, 0x14E2C5F8 (both works)
