@@ -3,7 +3,7 @@
 # Fortnite SDKs & Offsets
 
 #### Latest Fortnite SDKs & Offsets Always Updated.
-Latest Version: **``++Fortnite+Release-36.20-CL-43847582-Windows``**
+Latest Version: **``++Fortnite+Release-36.20-CL-44118662-Windows``**
 
 ### If you're going to post this, please credit:  
 - [Discord](https://discord.gg/pnEvzVgdn9)  
@@ -11,6 +11,34 @@ Latest Version: **``++Fortnite+Release-36.20-CL-43847582-Windows``**
 - Or simply mention Stern.
 
 # Changes
+
+## ++Fortnite+Release-36.20-CL-44118662-Windows
+### SDK: [5.6.0-44118662+++Fortnite+Release-36.20](https://github.com/SternI/FortniteOffsets/blob/master/SDK/5.6.0-44118662+++Fortnite+Release-36.20.zip)
+### Global Offsets
+```yaml
+GWorld: 0x14942840, 0x14EE15F8 (both works)
+GEngine: 0x14F97328
+GNames: 0x151EA300
+```
+### Functions
+```yaml
+StaticFindObject: 0x1E6D864
+UObject::ProcessEvent: 0x1A41578 (Index: 0x4c)
+FMemory::Memset: 0x56D7A7E
+FMemory::Memcpy: 0x56D7A90
+FMemory::Memmove: 0x56D7A96
+FMemory::Memcmp: 0x56D7A9C
+```
+### Other Offsets
+```yaml
+UObject.NamePrivate: 0x18
+UWorld.CameraLocation: 0x160
+UWorld.CameraRotation: 0x170
+UWorld.WorldTimeSeconds: 0x180
+AFortWeaponRanged.ProjectileSpeed: 0x1d58, 0x21e4, 0x2570 (find the best for you ¯\_(ツ)_/¯)
+AFortWeaponRanged.ProjectileGravity: 0x2574
+ULevel.Actors: 0xa0
+```
 
 ## ++Fortnite+Release-36.20-CL-43847582-Windows
 ### SDK: [5.6.0-43847582+++Fortnite+Release-36.20](https://github.com/SternI/FortniteOffsets/blob/master/SDK/5.6.0-43847582+++Fortnite+Release-36.20.zip)

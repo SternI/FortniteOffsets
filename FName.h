@@ -2,7 +2,7 @@
 
 #include <vector>
 
-static int32_t GNames = 0x15135300;
+static int32_t GNames = 0x151EA300;
 static int32_t NamePrivate = 0x18;
 class FName
 {
@@ -55,12 +55,7 @@ public:
 
     static int32_t DecryptIndex(int32_t index)
     {
-        if (index)
-        {
-            return index;
-        }
-
-        return 0;
+        return index;
     }
 
     static void DecryptFName(char* buffer, int32_t length)
