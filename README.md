@@ -3,7 +3,7 @@
 # Fortnite SDKs & Offsets
 
 #### Latest Fortnite SDKs & Offsets Always Updated.
-Latest Version: **``++Fortnite+Release-37.00-CL-44501951-Windows``**
+Latest Version: **``++Fortnite+Release-37.00-CL-44765404-Windows``**
 
 ### If you're going to post this, please credit:  
 - [Discord](https://discord.gg/pnEvzVgdn9)  
@@ -12,11 +12,40 @@ Latest Version: **``++Fortnite+Release-37.00-CL-44501951-Windows``**
 
 # Changes
 
+## ++Fortnite+Release-37.00-CL-44765404-Windows
+### SDK: [5.7.0-44765404+++Fortnite+Release-37.00](/SDK/5.7.0-44765404+++Fortnite+Release-37.00.zip)
+### Global Offsets
+```yaml
+GWorld: 0x174E68A0, 0x17CDE608
+GEngine: 0x17D96380
+GNames: 0x17FE7380
+```
+### Functions
+```yaml
+StaticFindObject: 0x2D5FD14
+StaticLoadObject: 0x3CA15D8
+UObject::ProcessEvent: 0x28CE568 (Index: 0x4e)
+FMemory::Memset: 0x6F887FE
+FMemory::Memcpy: 0x6F88810
+FMemory::Memmove: 0x6F88816
+FMemory::Memcmp: 0x6F8881C
+```
+### Other Offsets
+```yaml
+UObject.NamePrivate: 0x18
+UWorld.CameraLocation: 0x178
+UWorld.CameraRotation: 0x188
+UWorld.WorldTimeSeconds: 0x198
+AFortWeaponRanged.ProjectileSpeed: 0x212c, 0x1d88 (find the best for you ¯\_(ツ)_/¯)
+AFortWeaponRanged.ProjectileGravity: 0x2130
+ULevel.Actors: 0x48
+```
+
 ## ++Fortnite+Release-37.00-CL-44501951-Windows
 ### SDK: [5.7.0-44501951+++Fortnite+Release-37.00](/SDK/5.7.0-44501951+++Fortnite+Release-37.00.zip)
 ### Global Offsets
 ```yaml
-GWorld: 0x1784F8A0, 0x18047488 (both works)
+GWorld: 0x1784F8A0, 0x18047488
 GEngine: 0x180FF220
 GNames: 0x183501C0
 ```
@@ -41,10 +70,10 @@ AFortWeaponRanged.ProjectileGravity: 0x25b0
 ULevel.Actors: 0x200
 ```
 
-## ++Fortnite+Release-36.20-CL-44367537-Windows
+## ++Fortnite+Release-36.30-CL-44367537-Windows
 ### Global Offsets
 ```yaml
-GWorld: 0x173AF320, 0x17AEE3A8 (both works)
+GWorld: 0x173AF320, 0x17AEE3A8
 GEngine: 0x17ADAA48
 GNames: 0x17DF93C0
 ```
@@ -73,7 +102,7 @@ ULevel.Actors: 0x208
 ### SDK: [5.6.0-44118662+++Fortnite+Release-36.20](/SDK/5.6.0-44118662+++Fortnite+Release-36.20.zip)
 ### Global Offsets
 ```yaml
-GWorld: 0x14942840, 0x14EE15F8 (both works)
+GWorld: 0x14942840, 0x14EE15F8
 GEngine: 0x14F97328
 GNames: 0x151EA300
 ```
@@ -101,7 +130,7 @@ ULevel.Actors: 0xa0
 ### SDK: [5.6.0-43847582+++Fortnite+Release-36.20](/SDK/5.6.0-43847582+++Fortnite+Release-36.20.zip)
 ### Global Offsets
 ```yaml
-GWorld: 0x1488D840, 0x14E2C5F8 (both works)
+GWorld: 0x1488D840, 0x14E2C5F8
 GEngine: 0x14EE2328
 GNames: 0x15135300
 ```
@@ -129,7 +158,7 @@ ULevel.Actors: 0xa0
 ### SDK: [5.6.0-43997926+++Fortnite+Release-36.10](/SDK/5.6.0-43997926+++Fortnite+Release-36.10.zip)
 ### Global Offsets
 ```yaml
-GWorld: 0x17FE0B70, 0x186C09C8 (both works)
+GWorld: 0x17FE0B70, 0x186C09C8
 GEngine: 0x187777B0
 GNames: 0x189C6A40
 ```
@@ -154,7 +183,7 @@ ULevel.Actors: 0x210
 ### SDK: [5.6.0-43713507+++Fortnite+Release-36.10](/SDK/5.6.0-43713507+++Fortnite+Release-36.10.zip)
 ### Global Offsets
 ```yaml
-GWorld: 0x17E76B70, 0x185565C8 (both works)
+GWorld: 0x17E76B70, 0x185565C8
 GEngine: 0x1860D3B0
 GNames: 0x1885D640
 ```
@@ -179,7 +208,7 @@ ULevel.Actors: 0x208
 ### SDK: [5.6.0-43486998+++Fortnite+Release-36.10](/SDK/5.6.0-43486998+++Fortnite+Release-36.10.zip)
 ### Global Offsets
 ```yaml
-GWorld: 0x17EB9B60, 0x18599748 (both works)
+GWorld: 0x17EB9B60, 0x18599748
 GEngine: 0x186504F0
 GNames: 0x1889EB78
 ```
@@ -204,7 +233,7 @@ ULevel.Actors: 0x1a0
 ### SDK: [5.6.0-43339403+++Fortnite+Release-36.00](/SDK/5.6.0-43339403+++Fortnite+Release-36.00.zip)
 ### Global Offsets
 ```yaml
-GWorld: 0x17DB8A18, 0x181A0438 (both works)
+GWorld: 0x17DB8A18, 0x181A0438
 GEngine: 0x18031868
 GNames: 0x183C1400
 ```
@@ -229,7 +258,7 @@ ULevel.Actors: 0x1d0
 ### SDK: [5.6.0-43214806+++Fortnite+Release-36.00](/SDK/5.6.0-43214806+++Fortnite+Release-36.00.zip)
 ### Global Offsets
 ```yaml
-GWorld: 0x17DBCA28, 0x181A4638 (both works)
+GWorld: 0x17DBCA28, 0x181A4638
 GEngine: 0x18035AD8
 GNames: 0x183BE640
 ```
