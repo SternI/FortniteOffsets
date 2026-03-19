@@ -26,6 +26,25 @@ inline uintptr_t GetGWorld() {
     if (!GWorld) return NULL;
     return _rotl64(GWorld, 32) ^ 0x97F199673D1F48C6uLL;
 }
+
+struct FInstancedStruct
+{
+    uintptr_t ScriptStruct;
+    uintptr_t StructMemory;
+};
+ 
+EFortRarity GetRarity(uintptr_t itemDefinition) {
+    auto DataList = DotMem::Read<TArray<FInstancedStruct>>(itemDefinition + 0x68);
+    for (auto i = 0; i < DataList.Num(); i++) {
+        auto Data = DataList[i];
+        if (Data.ScriptStruct == DotMem::BaseAddress + 0x16946C78) { // FortItemComponentData_Rarity struct
+            return DotMem::Read<EFortRarity>(Data.StructMemory);
+        }
+    }
+
+    return EFortRarity::EFortRarity_Common;
+}
+
 ```
 ### Functions
 ```yaml
