@@ -1,9 +1,10 @@
 #pragma once
 
 #include <vector>
+#include <string>
 
-static int32_t GNames = 0x183501C0;
-static int32_t NamePrivate = 0x8;
+static int32_t GNames = 0x19230DC0;
+static int32_t NamePrivate = 0x18;
 class FName
 {
 public:
@@ -34,47 +35,60 @@ public:
 
     static std::string ToString(int32_t index)
     {
-        int32_t DecryptedIndex = DecryptIndex(index);
-        uint64_t NamePoolChunk = DotMem::Read<uint64_t>(DotMem::BaseAddress + (GNames + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
-        uint16_t Pool = DotMem::Read<uint16_t>(NamePoolChunk);
-        int32_t Length = ((Pool >> 6) ^ 0xFF42) & 0x3FF;
+        uint32_t BlockCount = DotMem::Read<uint32_t>(DotMem::BaseAddress + GNames) + 1;
+        auto GetEntry = [&](uint32_t index) -> uint64_t
+        {
+            uint32_t BlockIndex = index >> 16;
+            if (BlockIndex >= BlockCount) return 0;
+
+            uint64_t Block = DotMem::Read<uint64_t>(DotMem::BaseAddress + GNames + 8 + (BlockIndex * 8));
+            if (!Block) return 0;
+
+            return Block + 2 * uint16_t(index);
+        };
+
+        int32_t Index = DecryptIndex(index);
+        uint64_t Entry = GetEntry(Index);
+        if (!Entry) return "";
+
+        uint16_t Header = DotMem::Read<uint16_t>(Entry);
+        int32_t Length = ((Header >> 1) & 0x3FF) ^ 0x30D;
 
         if (!Length)
         {
-            DecryptedIndex = DecryptIndex(DotMem::Read<int32_t>(NamePoolChunk + 6));
-            NamePoolChunk = DotMem::Read<uint64_t>(DotMem::BaseAddress + (GNames + 8 * (DecryptedIndex >> 16) + 16)) + 2 * (uint16_t)DecryptedIndex;
-            Pool = DotMem::Read<uint16_t>(NamePoolChunk);
-            Length = ((Pool >> 6) ^ 0xFF42) & 0x3FF;
+            Index = DecryptIndex(DotMem::Read<int32_t>(Entry + 6));
+            Entry = GetEntry(Index);
+            if (!Entry) return "";
+
+            Header = DotMem::Read<uint16_t>(Entry);
+            Length = ((Header >> 1) & 0x3FF) ^ 0x30D;
         }
 
-        if (!Length) return "";
+        std::vector<char> Buffer(Length + 1);
+        DotMem::ReadMemory(Entry + 2, Buffer.data(), Length);
+        DecryptName(Buffer.data(), Length);
 
-        std::vector<char> NameBuffer(Length + 1);
-        DotMem::ReadPhysical(PVOID(NamePoolChunk + 2), NameBuffer.data(), Length);
-        DecryptFName(NameBuffer.data(), Length);
-        return std::string(NameBuffer.data());
+        return std::string(Buffer.data());
     }
 
     static int32_t DecryptIndex(int32_t index)
     {
-        if (index)
-        {
-            int32_t DecryptedIndex = _rotr(index - 1, 3) - 0x4F027D5B;
-            return DecryptedIndex ? DecryptedIndex : 0xB0FD82A4;
-        }
-
-        return 0;
+        if (!index) return 0;
+        int32_t Decrypted = ((index - 1) ^ 0xB384BA0B) + 1;
+        return Decrypted ? Decrypted : 0x4C7B45F5;
     }
 
-    static void DecryptFName(char* buffer, int32_t length)
+    static void DecryptName(char *buffer, int32_t length)
     {
-        if (length)
-        {            
-            int32_t v8 = (16 * length) ^ (8926 * length + 22251098);
+        if (length > 0)
+        {
+            std::vector<uint8_t> Encrypted(buffer, buffer + length);
+
+            int32_t Key = length;
             for (int32_t i = 0; i < length; i++)
             {
-                buffer[i] = char(_rotl8(uint8_t(buffer[i] - v8 - 68), 1));
-                v8 = (16 * v8) ^ (8926 * v8 + 22251098);
+                Key = 8763 * Key + 571555849;
+                buffer[i] = Encrypted[i] ^ (Key - 12);
             }
         }
 
