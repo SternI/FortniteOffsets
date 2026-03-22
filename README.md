@@ -22,4 +22,5 @@ If you repost this, please credit one of the following:
 ---
 
 ## Versions
-### [++Fortnite+Release-40.00-CL-51995682-Windows](/Offsets/++Fortnite+Release-40.00-CL-51995682-Windows.md)
+- [Old Versions](OldVersions.md)
+- [++Fortnite+Release-40.00-CL-51995682-Windows](/Offsets/++Fortnite+Release-40.00-CL-51995682-Windows.md) (Latest)
