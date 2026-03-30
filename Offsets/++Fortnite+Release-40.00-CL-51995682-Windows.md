@@ -1,5 +1,5 @@
 ## ++Fortnite+Release-40.00-CL-51995682-Windows
-### SDK: [ZIP](/SDK/++Fortnite+Release-40.00-CL-51995682-Windows.zip)
+### SDK: [Viewer](https://agametracker.iamstern.xyz/sdk/++Fortnite+Release-40.00-CL-51995682-Windows?game=fortnite) | [ZIP](/SDK/++Fortnite+Release-40.00-CL-51995682-Windows.zip)
 ### Global Offsets
 ```yaml
 GWorld: 0x19401C60
