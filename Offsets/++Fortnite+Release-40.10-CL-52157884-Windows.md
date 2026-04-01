@@ -1,10 +1,57 @@
-#pragma once
+## ++Fortnite+Release-40.10-CL-52157884-Windows
+### SDK: No SDK (lazy)
+### Global Offsets
+```yaml
+GWorld: 0x1895DE60
+GEngine: 0x1895F6B8
+GNames: 0x18814B40
+```
+```cpp
+inline uintptr_t GetGWorld() {
+    auto GWorld = DotMem::Read<uintptr_t>(DotMem::BaseAddress + 0x1895DE60);
+    if (!GWorld) return NULL;
+    return ~_rotl64(GWorld ^ 0xCF76574CLL, 48)
+}
 
-#include <vector>
-#include <string>
+struct FInstancedStruct
+{
+    uintptr_t ScriptStruct;
+    uintptr_t StructMemory;
+};
+ 
+EFortRarity GetRarity(uintptr_t itemDefinition) {
+    auto DataList = DotMem::Read<TArray<FInstancedStruct>>(itemDefinition + 0x68);
+    for (auto i = 0; i < DataList.Num(); i++) {
+        auto Data = DataList[i];
+        if (Data.ScriptStruct == DotMem::BaseAddress + 0x15FAA268) { // FortItemComponentData_Rarity struct
+            return DotMem::Read<EFortRarity>(Data.StructMemory);
+        }
+    }
 
-static int32_t GNames = 0x18814B40;
-static int32_t NamePrivate = 0x20;
+    return EFortRarity::EFortRarity_Common;
+}
+
+```
+### Functions
+```yaml
+StaticFindObject: 0x8D9F7D
+UObject::ProcessEvent: 0x62DD6 (Index: 0x29)
+```
+### Other Offsets
+```yaml
+UWorld::CameraLocation: 0x160
+UWorld::CameraRotation: 0x170
+UWorld::WorldTimeSeconds: 0x180
+ULevel::Actors: 0x98
+
+UObject::InternalIndex: 0x8
+UObject::ClassPrivate: 0x10
+UObject::OuterPrivate: 0x18
+UObject::NamePrivate: 0x20
+```
+
+### FName
+```cpp
 class FName
 {
 public:
@@ -96,3 +143,4 @@ public:
         buffer[length] = '\0';
     }
 };
+```
