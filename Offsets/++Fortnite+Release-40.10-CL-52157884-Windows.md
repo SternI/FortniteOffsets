@@ -28,7 +28,7 @@ EFortRarity GetRarity(uintptr_t itemDefinition) {
         }
     }
 
-    return EFortRarity::EFortRarity_Common;
+    return EFortRarity::EFortRarity_Uncommon;
 }
 
 ```
