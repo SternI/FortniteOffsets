@@ -5,6 +5,7 @@
 GWorld: 0x1895DE60
 GEngine: 0x1895F6B8
 GNames: 0x18814B40
+GRarityStruct: 0x15FAA268
 ```
 ```cpp
 inline uintptr_t GetGWorld() {
