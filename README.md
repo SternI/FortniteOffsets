@@ -8,7 +8,7 @@
 
 ---
 
-> **Latest version:** `++Fortnite+Release-40.20-CL-52900211-Windows`
+> **Latest version:** `++Fortnite+Release-42.30-CL-58813929-Windows`
 
 ---
 
@@ -23,6 +23,8 @@ If you repost this, please credit one of the following:
 
 ## Versions
 - [Old Versions](OldVersions.md)
+- [++Fortnite+Release-42.30-CL-58813929-Windows](/Offsets/++Fortnite+Release-42.30-CL-58813929-Windows.md)
+- [++Fortnite+Release-42.30-CL-58557680-Windows](/Offsets/++Fortnite+Release-42.30-CL-58557680-Windows.md)
 - [++Fortnite+Release-40.20-CL-52900211-Windows](/Offsets/++Fortnite+Release-40.20-CL-52900211-Windows.md)
 - [++Fortnite+Release-40.20-CL-52463280-Windows](/Offsets/++Fortnite+Release-40.20-CL-52463280-Windows.md)
 - [++Fortnite+Release-40.10-CL-52157884-Windows](/Offsets/++Fortnite+Release-40.10-CL-52157884-Windows.md)
