@@ -1,0 +1,2 @@
+## ++Fortnite+Release-42.40-CL-59343437-Windows
+### SDK: [Viewer](https://agametracker.iamstern.xyz/sdk/++Fortnite+Release-42.40-CL-59343437-Windows?game=fortnite) | [ZIP](/SDK/++Fortnite+Release-42.40-CL-59343437-Windows.zip)
